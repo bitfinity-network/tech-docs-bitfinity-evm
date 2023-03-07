@@ -111,7 +111,6 @@ const config = {
       colorMode: {
         respectPrefersColorScheme: true,
       },
-      image: 'img/og_image.png',
       sidebar: {
         hideable: true,
       },
