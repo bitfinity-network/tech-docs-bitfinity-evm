@@ -13,12 +13,12 @@ const config = {
   //TODO:Change it to throw once /bridge/bridge-overview is ready
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.svg',
+  favicon: 'img/logo_white.svg',
   organizationName: 'aurora-is-near',
   projectName: 'doc.bitfinity.network',
 
   stylesheets: [
-    'https://rsms.me/inter/inter.css',
+    'https://fonts.googleapis.com/css2?family=Inter&display=swap',
   ],
  
 
@@ -116,10 +116,14 @@ const config = {
         hideable: true,
       },
       navbar: {
+        title: 'Documentation',
         logo: {
           alt: 'EVMC logo',
-          src: 'img/docs_logo.svg',
-          srcDark: 'img/docs_logo_white.svg',
+          src: 'img/logo_dark.svg',
+          srcDark: 'img/logo_white.svg',
+          style : {
+            marginRight: '20.5rem',
+          }
         },
         items: [
           {
