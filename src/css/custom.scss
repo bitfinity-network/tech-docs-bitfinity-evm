@@ -6,14 +6,18 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #78d64b;
-  --ifm-color-primary-dark: #66d133;
-  --ifm-color-primary-darker: #60c82e;
-  --ifm-color-primary-darkest: #4fa526;
-  --ifm-color-primary-light: #8adb63;
-  --ifm-color-primary-lighter: #92de6e;
-  --ifm-color-primary-lightest: #ade692;
   --ifm-code-font-size: 95%;
+  --ifm-color-primary: #393737;
+  --ifm-color-primary-dark: #333232;
+  --ifm-color-primary-darker: #302f2f;
+  --ifm-color-primary-darkest: #282727;
+  --ifm-color-primary-light: #454343;
+  --ifm-color-primary-lighter: #423f3f;
+  --ifm-color-primary-lightest: #4a4848;
+}
+
+[data-theme='dark'] {
+  --ifm-color-primary: rgba(255, 255, 255, 1); 
 }
 
 .docusaurus-highlight-code-line {
@@ -28,12 +32,12 @@ html[data-theme='dark'] .docusaurus-highlight-code-line {
 }
 
 body {
-  font-family: 'IBM Plex Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 code,
 pre {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Inter', monospace;
 }
 
 p {
@@ -45,7 +49,7 @@ p {
 }
 
 h1 {
-  font-family: 'IBM Plex Mono', monospace;
+  font-family: 'Inter', monospace;
   font-style: normal;
 }
 

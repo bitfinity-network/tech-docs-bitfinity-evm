@@ -10,15 +10,17 @@ const config = {
   tagline: 'Documentation and Tutorials for EVMC',
   url: 'https://doc.bitfinity.network',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  //TODO:Change it to throw once /bridge/bridge-overview is ready
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.svg',
   organizationName: 'aurora-is-near',
   projectName: 'doc.bitfinity.network',
 
   stylesheets: [
-    'https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,500,700|IBM+Plex+Sans:400,500,700',
+    'https://rsms.me/inter/inter.css',
   ],
+ 
 
   plugins: [
     [
@@ -65,10 +67,11 @@ const config = {
             to: '/integrate/indexers/covalent',
             from: ['/develop/indexers/covalent'],
           },
-          {
-            to: '/bridge/bridge-overview',
-            from: ['/learn/bridge/eth'],
-          },
+          //TODO:Uncomment this once the doc is ready at this path
+          // {
+          //   to: '/bridge/bridge-overview',
+          //   from: ['/learn/bridge/eth'],
+          // },
           {
             to: '/',
             from: ['/develop/changelog', '/develop/roadmap'],
