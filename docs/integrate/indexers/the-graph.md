@@ -44,7 +44,7 @@ cd graph-node
 In order wire your local graph node with EVMC Testnet RPC, you should change
 the value of `ethereum` section in `docker/docker-compose.yaml` file from
  `mainnet:http://host.docker.internal:8545` to
- `'aurora:https://testnet.aurora.dev'`.
+ `'aurora:https://testnet.bitfinity.network'`.
 
 ```yaml
 ....
@@ -54,7 +54,7 @@ the value of `ethereum` section in `docker/docker-compose.yaml` file from
       postgres_pass: let-me-in
       postgres_db: graph-node
       ipfs: 'ipfs:5001'
-      ethereum: 'aurora:https://testnet.aurora.dev'
+      ethereum: 'aurora:https://testnet.bitfinity.network'
       GRAPH_LOG: info
 ...
 ```

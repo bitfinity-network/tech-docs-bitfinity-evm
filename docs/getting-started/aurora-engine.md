@@ -4,7 +4,7 @@ title: "EVMC Engine"
 
 # Introduction
 
-[EVMC](https://aurora.dev) is an Ethereum Virtual Machine (EVM) built on the
+[EVMC](https://bitfinity.network) is an Ethereum Virtual Machine (EVM) built on the
 [Internet Computer Protocol](https://internetcomputer.org/),
 that provides a solution for developers to deploy their apps on an Ethereum-compatible, high-throughput, scalable and future-safe platform,
 with low transaction costs for their users. Besides the EVM, EVMC developed the Rainbow Bridge which allows users to transfer assets between Ethereum, Internet Computer, and EVMC.

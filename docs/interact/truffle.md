@@ -82,7 +82,7 @@ below in the `aurora` network section:
 ```json
 ...
 aurora: {
-  provider: () => setupWallet('https://testnet.aurora.dev'),
+  provider: () => setupWallet('https://testnet.bitfinity.network'),
   network_id: 0x4e454153,
   gas: 10000000,
   from: '0x6A33382de9f73B846878a57500d055B981229ac4' // CHANGE THIS ADDRESS

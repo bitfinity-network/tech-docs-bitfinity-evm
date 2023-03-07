@@ -33,7 +33,7 @@ over the course of summer we plan to optimise EVMC and take care of the DAO form
 In Autumn, we plan to deliver several major features, such as introduction of fast bridging of the most popular tokens,
 ability to pay fees in stable coins and simplified UX for non-blockchain users. We’re planning to deliver a sharded version of EVMC early next year.
 
-[web site]:  https://aurora.dev/about
+[web site]:  https://bitfinity.network/about
 
 ## How do I get started with EVMC?
 
@@ -43,7 +43,7 @@ Currently, the ETH Connector is deployed and functional on Testnet, with the ERC
 In this way, project owners should be able to test their deployments on EVMC fully in May, followed by production deployments in June of 2021.
 For those interested in getting started, a set of [EVMC Documents] is currently available.
 
-[EVMC Documents]: https://doc.aurora.dev/
+[EVMC Documents]: https://doc.bitfinity.network/
 
 ## How will bridging tokens between Ethereum and EVMC work?
 

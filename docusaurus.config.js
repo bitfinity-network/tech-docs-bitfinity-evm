@@ -8,13 +8,13 @@ const darkCodeTheme = require('prism-react-renderer/themes/okaidia');
 const config = {
   title: 'EVMC Documentation',
   tagline: 'Documentation and Tutorials for EVMC',
-  url: 'https://doc.aurora.dev',
+  url: 'https://doc.bitfinity.network',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.svg',
   organizationName: 'aurora-is-near',
-  projectName: 'doc.aurora.dev',
+  projectName: 'doc.bitfinity.network',
 
   stylesheets: [
     'https://fonts.googleapis.com/css?family=IBM+Plex+Mono:400,500,700|IBM+Plex+Sans:400,500,700',
@@ -87,7 +87,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          editUrl: 'https://github.com/aurora-is-near/doc.aurora.dev/edit/master',
+          editUrl: 'https://github.com/infinity-swap/tech-docs-evmc/edit/master',
         },
         theme: {
           customCss: [
