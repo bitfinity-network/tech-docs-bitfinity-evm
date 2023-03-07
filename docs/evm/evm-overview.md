@@ -11,24 +11,19 @@ including adopting ETH as the base currency_. Beyond the base scope, the EVM als
 for extra precompiles. Such precompiles enable the EVM to interact with the rest of the Internet Computer ecosystem.
 
 :::tip
-We implore you to interact through the EVM through MetaMask or Hardhat as we provide
-an identical experience through our RPC. However, you may also interact with it through [Internet Computer
-workspaces], the [Internet Computer CLI], or the [EVMC CLI].
+We suggest you interact through the EVM through MetaMask or Hardhat as we provide
+an identical experience through our RPC. However, you may also interact with it through the [Internet Computer CLI].
 
-[Internet Computer workspaces]: https://github.com/near/workspaces
-
-[Internet Computer CLI]: https://github.com/near/near-cli
-
-[EVMC CLI]: https://github.com/aurora-is-near/aurora-cli
+[Internet Computer CLI]: https://internetcomputer.org/docs/current/references/cli-reference/dfx-parent
 :::
 
 :::caution
-Since the underlying measure of computational work is _Internet Computer gas_, an edge case that arises is when
-the transaction runs out of Internet Computer gas before running out of _EVM gas_.
+Since the underlying measure of computational work is _Internet Computer cycles_, an edge case that arises is when
+the transaction runs out of Internet Computer cycles before running out of _EVM gas_.
 
 _In this case the transaction will be considered as failed on EVMC_, but this may or may not be
 compatible with what the outcome on Ethereum would have been (if the gas limit was actually high
-enough for the transaction to complete had Internet Computer gas not been the limiting factor).
+enough for the transaction to complete had Internet Computer cycles not been the limiting factor).
 
 This case will not come up for the vast majority of transactions, and indeed will become
 less likely as we improve the efficiency of our EVM contract (thus allowing Internet Computer gas to go further
