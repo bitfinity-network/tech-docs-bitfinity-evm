@@ -25,9 +25,9 @@ In the top-right corner of the MetaMask interface, click the network selection d
 
 Fill in the form with the following information:
 
-* Network Name: EVMC Testnet
+* Network Name: Bitfinity TestNet
 * New RPC URL: `https://testnet.bitfinity.network/`
-* Chain ID: 1313161555
+* Chain ID: 355113
 * Currency Symbol: ETH
 
 ![MetaMask-create-bitfinity-rpc](/img/metamask_create_bitfinity_rpc.png)
