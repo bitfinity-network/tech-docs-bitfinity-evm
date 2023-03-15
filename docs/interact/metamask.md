@@ -30,7 +30,7 @@ Fill in the form with the following information:
 * Chain ID: 1313161555
 * Currency Symbol: ETH
 
-![MetaMask-create-aurora-rpc](/img/metamask_create_aurora_rpc.png)
+![MetaMask-create-bitfinity-rpc](/img/metamask_create_bitfinity_rpc.png)
 
 :::note
 All the EVMC RPC endpoint URLs and chain IDs can be found on our [Networks](../getting-started/network-endpoints.md) page.

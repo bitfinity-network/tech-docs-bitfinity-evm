@@ -14,7 +14,7 @@ const config = {
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.svg',
-  organizationName: 'aurora-is-near',
+  organizationName: 'bitfinity',
   projectName: 'doc.bitfinity.network',
 
   stylesheets: [
@@ -45,7 +45,7 @@ const config = {
           },
           {
             to: '/interact/block-explorer',
-            from: ['/interact/aurorascan'],
+            from: ['/interact/bitfinityscan'],
           },
           {
             to: '/evm/rpc',
@@ -143,7 +143,7 @@ const config = {
       algolia: {
         appId: 'BEGR6ON9SL',
         apiKey: 'e0a8f49db413df8c28341a74f2a799ae',
-        indexName: 'doc-aurora',
+        indexName: 'doc-bitfinity',
         contextualSearch: true,
       },
     }),

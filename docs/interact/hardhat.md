@@ -27,15 +27,15 @@ if you don't yet have the yarn command installed locally.
 - To install the prerequisite packages, clone the examples repository:
 
 ```bash
-git clone https://github.com/aurora-is-near/aurora-examples.git
-cd aurora-examples/hardhat/erc20/
+git clone https://github.com/infinity-swap/bitfinity-examples.git
+cd bitfinity-examples/hardhat/erc20/
 ```
 
 - Add your EVMC Private key (from MetaMask) to __.env__ file and
 then run yarn : <br/>
 
 ```bash
-echo "AURORA_PRIVATE_KEY=YOUR_AURORA_PRIVATE_KEY_HERE" >> .env
+echo "BITFINITY_PRIVATE_KEY=YOUR_BITFINITY_PRIVATE_KEY_HERE" >> .env
 yarn install
 ```
 
@@ -49,8 +49,8 @@ minter is the contract deployer address, and the decimals are `0`
 To deploy the `ERC-20` token contract, use the following command:
 
 ```bash
-$ make deploy NETWORK=testnet_aurora
-yarn hardhat run scripts/deploy.js --network testnet_aurora
+$ make deploy NETWORK=testnet_bitfinity
+yarn hardhat run scripts/deploy.js --network testnet_bitfinity
 yarn run v1.22.10
 Deploying contracts with the account: 0x6A33382de9f73B846878a57500d055B981229ac4
 Account balance: 2210010200000000000
@@ -88,7 +88,7 @@ task("balance", "Prints an account's balance")
 To get the `ETH` balance, use the following command:
 
 ```bash
-npx hardhat balance --network testnet_aurora --account 0x6A33382de9f73B846878a57500d055B981229ac4
+npx hardhat balance --network testnet_bitfinity --account 0x6A33382de9f73B846878a57500d055B981229ac4
 2.2100102 ETH
 ```
 
@@ -118,7 +118,7 @@ task("totalSupply", "Total supply of ERC-20 token")
 To get the `totalSupply`, use the following command:
 
 ```bash
-$ npx hardhat totalSupply --token $TOKEN_ADDRESS --network testnet_aurora
+$ npx hardhat totalSupply --token $TOKEN_ADDRESS --network testnet_bitfinity
 Total Supply is 1000000
 ```
 
@@ -145,7 +145,7 @@ task("transfer", "ERC-20 transfer")
 To call `transfer`, use the following command:
 
 ```bash
-$ npx hardhat transfer --token $TOKEN_ADDRESS --amount 10 --spender 0x2531a4D108619a20ACeE88C4354a50e9aC48ecfe --network testnet_aurora
+$ npx hardhat transfer --token $TOKEN_ADDRESS --amount 10 --spender 0x2531a4D108619a20ACeE88C4354a50e9aC48ecfe --network testnet_bitfinity
 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266 has transferred 10 tokens to 0x2531a4D108619a20ACeE88C4354a50e9aC48ecfe
 ```
 
@@ -170,7 +170,7 @@ task("balanceOf", "Total supply of ERC-20 token")
 To get the `balance`, use the following command:
 
 ```bash
-$ npx hardhat balanceOf --token $TOKEN_ADDRESS --account 0x6A33382de9f73B846878a57500d055B981229ac4 --network testnet_aurora
+$ npx hardhat balanceOf --token $TOKEN_ADDRESS --account 0x6A33382de9f73B846878a57500d055B981229ac4 --network testnet_bitfinity
 Account 0x6A33382de9f73B846878a57500d055B981229ac4 has a total token balance:  999970 WTM
 ```
 
@@ -200,7 +200,7 @@ module.exports = {};
 To call `approve`, use the following command:
 
 ```bash
-npx hardhat approve --token $TOKEN_ADDRESS --spender 0x8722C88e82AbCC639148Ab6128Cd63333B2Ad771 --amount 10 --network testnet_aurora
+npx hardhat approve --token $TOKEN_ADDRESS --spender 0x8722C88e82AbCC639148Ab6128Cd63333B2Ad771 --amount 10 --network testnet_bitfinity
 0x6A33382de9f73B846878a57500d055B981229ac4 has approved 10 tokens to 0x8722C88e82AbCC639148Ab6128Cd63333B2Ad771
 ```
 
@@ -228,14 +228,14 @@ To call `transferFrom`, use the following command:
 
 ```bash
 # export the recipient private key
-AURORA_PRIVATE_KEY="THE RECIPIENT PRIVATE KEY" npx hardhat transferFrom --token $TOKEN_ADDRESS --sender 0x6A33382de9f73B846878a57500d055B981229ac4  --amount 10 --network testnet_aurora
+bitfinity_PRIVATE_KEY="THE RECIPIENT PRIVATE KEY" npx hardhat transferFrom --token $TOKEN_ADDRESS --sender 0x6A33382de9f73B846878a57500d055B981229ac4  --amount 10 --network testnet_bitfinity
 0x8722C88e82AbCC639148Ab6128Cd63333B2Ad771 has received 10 tokens from 0x6A33382de9f73B846878a57500d055B981229ac4
 ```
 
 Checking the balance of `0x8722C88e82AbCC639148Ab6128Cd63333B2Ad771`:
 
 ```bash
-npx hardhat balanceOf --token $TOKEN_ADDRESS --account 0x8722C88e82AbCC639148Ab6128Cd63333B2Ad771  --network testnet_aurora
+npx hardhat balanceOf --token $TOKEN_ADDRESS --account 0x8722C88e82AbCC639148Ab6128Cd63333B2Ad771  --network testnet_bitfinity
 Account 0x8722C88e82AbCC639148Ab6128Cd63333B2Ad771 has a total token balance:  10 WTM
 ```
 

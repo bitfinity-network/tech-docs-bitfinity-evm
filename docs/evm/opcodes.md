@@ -180,7 +180,7 @@ blocks (not including the current block). For all other inputs, it returns zero.
 that is returned is computed based on the block height and properties of the
 EVMC Engine contract (chain ID and account ID).
 
-Concretely, as of [#213](https://github.com/aurora-is-near/aurora-engine/pull/213/), the value
+Concretely, the value
 returned is:
 
 ```text
@@ -200,7 +200,7 @@ column in the [networks table](../getting-started/network-endpoints)).
 
 This opcode returns the EVM address of the EVMC Engine.
 
-For example, for the EVMC Engine deployment on the `aurora` account,
+For example, for the EVMC Engine deployment on the `bitfinity` account,
 `COINBASE` returns _0x4444588443C3a91288c5002483449Aba1054192b_.
 
 ### `DIFFICULTY` {#difficulty}
