@@ -63,23 +63,12 @@ function CustomFooterLinks() {
         <li className="footer__item">
           <Link
             className="footer__link-item"
-            href="https://github.com/aurora-is-near"
+            href="https://github.com/infinity-swap"
             target="_blank"
             rel="nofollow noopener noreferrer"
             title="EVMC on GitHub"
           >
             <FontAwesomeIcon icon={faGithub} size="lg" />
-          </Link>
-        </li>
-        <li className="footer__item">
-          <Link
-            className="footer__link-item"
-            href="https://gov.near.org/c/dev/aurora/46"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            title="EVMC on Discourse"
-          >
-            <FontAwesomeIcon icon={faDiscourse} size="lg" />
           </Link>
         </li>
         <li className="footer__item">
@@ -96,7 +85,7 @@ function CustomFooterLinks() {
         <li className="footer__item">
           <Link
             className="footer__link-item"
-            href="https://t.me/auroraisnear"
+            href="https://t.me/infinityswapofficial"
             target="_blank"
             rel="nofollow noopener noreferrer"
             title="EVMC on Telegram"
@@ -107,34 +96,12 @@ function CustomFooterLinks() {
         <li className="footer__item">
           <Link
             className="footer__link-item"
-            href="https://stackoverflow.com/questions/tagged/aurora+near"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            title="EVMC on Stack Overflow"
-          >
-            <FontAwesomeIcon icon={faStackOverflow} size="lg" />
-          </Link>
-        </li>
-        <li className="footer__item">
-          <Link
-            className="footer__link-item"
-            href="https://twitter.com/auroraisnear"
+            href="https://twitter.com/infinity_swap"
             target="_blank"
             rel="nofollow noopener noreferrer"
             title="EVMC on Twitter"
           >
             <FontAwesomeIcon icon={faTwitter} size="lg" />
-          </Link>
-        </li>
-        <li className="footer__item">
-          <Link
-            className="footer__link-item"
-            href="https://www.youtube.com/channel/UC5inYyvUO10iL65hBPFtpvg"
-            target="_blank"
-            rel="nofollow noopener noreferrer"
-            title="EVMC on YouTube"
-          >
-            <FontAwesomeIcon icon={faYoutube} size="lg" />
           </Link>
         </li>
       </ul>
