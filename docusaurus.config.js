@@ -13,7 +13,7 @@ const config = {
   //TODO:Change it to throw once /bridge/bridge-overview is ready
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/logo_white.svg',
+  favicon: 'img/favicon.svg',
   organizationName: 'aurora-is-near',
   projectName: 'doc.bitfinity.network',
 
