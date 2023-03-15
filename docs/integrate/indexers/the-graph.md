@@ -44,7 +44,7 @@ cd graph-node
 In order wire your local graph node with EVMC Testnet RPC, you should change
 the value of `ethereum` section in `docker/docker-compose.yaml` file from
  `mainnet:http://host.docker.internal:8545` to
- `'aurora:https://testnet.bitfinity.network'`.
+ `'bitfinity:https://testnet.bitfinity.network'`.
 
 ```yaml
 ....
@@ -54,7 +54,7 @@ the value of `ethereum` section in `docker/docker-compose.yaml` file from
       postgres_pass: let-me-in
       postgres_db: graph-node
       ipfs: 'ipfs:5001'
-      ethereum: 'aurora:https://testnet.bitfinity.network'
+      ethereum: 'bitfinity:https://testnet.bitfinity.network'
       GRAPH_LOG: info
 ...
 ```
@@ -79,7 +79,7 @@ deploy a subgraph. The subgraph defines how the data on Ethereum will be
 indexed and stored on the graph node.
 
 In this tutorial, we are going to use the subgraph example called
-[GravatarRegistry](https://github.com/aurora-is-near/example-subgraph) (a simple
+[GravatarRegistry](https://github.com/infinity-swap/example-subgraph) (a simple
 on-chain Gravatar). The GravatarRegistry contract has two events:
 
 ```javascript
@@ -96,7 +96,7 @@ block number is `74885768`.
 Clone subgraph example repo.
 
 ```bash
-git clone https://github.com/aurora-is-near/example-subgraph.git
+git clone https://github.com/infinity-swap/example-subgraph.git
 cd example-subgraph
 ```
 
@@ -112,7 +112,7 @@ Update the `address` and (the `startBlock` optional) in `subgraph.yaml` as follo
 
 ```yaml
     ...
-    network: aurora
+    network: bitfinity
     source:
       address: '0x8773e6832f44b2C17AC78592ffCe407C62d8c36E'
       abi: Gravity
@@ -120,7 +120,7 @@ Update the `address` and (the `startBlock` optional) in `subgraph.yaml` as follo
     ...
 ```
 
-Also make sure you are pointing into `aurora` as a network.
+Also make sure you are pointing into `bitfinity` as a network.
 
 ### Generating types
 

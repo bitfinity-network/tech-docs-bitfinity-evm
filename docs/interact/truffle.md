@@ -61,9 +61,9 @@ npm install -g truffle
 ### Install dependencies
 
 ```bash
-git clone https://github.com/aurora-is-near/aurora-examples.git
+git clone https://github.com/infinity-swap/bitfinity-examples.git
 
-cd aurora-examples/truffle/erc721-example/
+cd bitfinity-examples/truffle/erc721-example/
 
 yarn 
 ```
@@ -77,11 +77,11 @@ export MNEMONIC='YOUR MNEMONIC HERE'
 ```
 
 Now in `truffle-config.js`, you will need to change the `from` address as shown
-below in the `aurora` network section:
+below in the `bitfinity` network section:
 
 ```json
 ...
-aurora: {
+bitfinity: {
   provider: () => setupWallet('https://testnet.bitfinity.network'),
   network_id: 0x4e454153,
   gas: 10000000,
@@ -99,7 +99,7 @@ To deploy the `CovidVaccineToken` contract, you can run the `yarn` command as
 follows:
 
 ```bash
-yarn deploy:aurora
+yarn deploy:bitfinity
 ....
 _deploy_contracts.js
 =====================
@@ -135,13 +135,13 @@ Please make sure that you are using the same deployer address as a minter
 address, otherwise the `mint` transaction will revert.
 
 ```bash
-% truffle console --network aurora
-truffle(aurora)> const cvt = await CovidVaccineToken.deployed()
-truffle(aurora)> const minter = accounts[0]
-truffle(aurora)> const participant = accounts[1]
-truffle(aurora)> await cvt.minter() == minter
+% truffle console --network bitfinity
+truffle(bitfinity)> const cvt = await CovidVaccineToken.deployed()
+truffle(bitfinity)> const minter = accounts[0]
+truffle(bitfinity)> const participant = accounts[1]
+truffle(bitfinity)> await cvt.minter() == minter
 true
-truffle(aurora)> await cvt.mint(participant, {from: minter})
+truffle(bitfinity)> await cvt.mint(participant, {from: minter})
 ```
 
 You should notice that none of the participants are allowed to transfer their
@@ -155,7 +155,7 @@ participant (e.g., the participant address
 In the Truffle console:
 
 ```bash
-truffle(aurora)> await cvt.safeTransferFrom(participant, accounts[2], 1, {from: participant})
+truffle(bitfinity)> await cvt.safeTransferFrom(participant, accounts[2], 1, {from: participant})
 Uncaught Error: execution reverted:
 ...
 reason: 'Invalid Transfer',
@@ -190,11 +190,11 @@ As shown below, a participant can only send the NFT token if the receiver for
 this token is the minter (`accounts[0]`).
 
 ```bash
-truffle(aurora)> const tokenID = 1
-truffle(aurora)> await cvt.ownerOf(tokenID) == participant
+truffle(bitfinity)> const tokenID = 1
+truffle(bitfinity)> await cvt.ownerOf(tokenID) == participant
 true
-truffle(aurora)> await cvt.safeTransferFrom(participant, minter, tokenID, {from: participant})
-truffle(aurora)> await cvt.ownerOf(tokenID) == minter
+truffle(bitfinity)> await cvt.safeTransferFrom(participant, minter, tokenID, {from: participant})
+truffle(bitfinity)> await cvt.ownerOf(tokenID) == minter
 true
 ```
 
@@ -205,7 +205,7 @@ transferring the token back to the minter, the participant can decide to burn th
 NFT token by calling the `burn` function:
 
 ```bash
-truffle(aurora)> await cvt.burn(1, {from: participant}) // 1 is the tokenID
+truffle(bitfinity)> await cvt.burn(1, {from: participant}) // 1 is the tokenID
 ```
 
 ### Redistribute tokens
@@ -214,8 +214,8 @@ Finally, the minter can send the same token (if not burnt) to a new participant
 in the line:
 
 ```bash
-truffle(aurora)> await cvt.safeTransferFrom(minter, accounts[2], 1, {from: minter})
-truffle(aurora)> await cvt.ownerOf(1) == accounts[2]
+truffle(bitfinity)> await cvt.safeTransferFrom(minter, accounts[2], 1, {from: minter})
+truffle(bitfinity)> await cvt.ownerOf(1) == accounts[2]
 true
 ```
 

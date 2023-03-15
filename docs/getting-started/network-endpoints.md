@@ -11,9 +11,9 @@ following networks:
 
 | Network             | Engine ID                  | Chain ID                | Endpoint URL                 |
 |---------------------|----------------------------|-------------------------|------------------------------|
-| [Mainnet](#mainnet) | [`evmc`][aurora@Mainnet] | 1313161554 (0x4e454152) | <https://mainnet.evmc.dev> |
-| [Testnet](#testnet) | [`evmc`][aurora@Testnet] | 1313161555 (0x4e454153) | <https://testnet.evmc.dev> |
-| Localnet            | `evmc.test.ic`         | 1313161556 (0x4e454154) | <http://localhost:8545>      |
+| [Mainnet](#mainnet) | [`evmc`][bitfinity@Mainnet] | 355110 (0x4e454152) | <https://mainnet.evmc.dev> |
+| [Testnet](#testnet) | [`evmc`][bitfinity@Testnet] | 355113 (0x4e454153) | <https://testnet.evmc.dev> |
+| Localnet            | `evmc.test.ic`         | 355113 (0x4e454154) | <http://localhost:8545>      |
 
 Find the status page and public incident log at
 [api.evmc.dev](https://api.evmc.dev).
@@ -50,6 +50,6 @@ The Testnet Web3 endpoint is at: `https://testnet.evmc.dev` (port 443)
 
 The Testnet Websocket endpoint is at: `wss://testnet.evmc.dev`
 
-[aurora@Mainnet]: https://explorer.near.org/accounts/aurora
+[bitfinity@Mainnet]: https://explorer.near.org/accounts/bitfinity
 
-[aurora@Testnet]: https://explorer.testnet.near.org/accounts/aurora
+[bitfinity@Testnet]: https://explorer.testnet.near.org/accounts/bitfinity

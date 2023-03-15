@@ -105,7 +105,7 @@ Method | Status | Notes
   contain all zeroes.
 
 - The `eth_coinbase` method returns the EVM address of the EVMC Engine.
-  For example, for the EVMC Engine deployment on the `aurora` account,
+  For example, for the EVMC Engine deployment on the `bitfinity` account,
   `COINBASE` returns _0x4444588443C3a91288c5002483449Aba1054192b_.
 
 - There is no concept of uncle (aka ommer) blocks.
@@ -122,11 +122,11 @@ Method | Status | Notes
 
 - The nonstandard Geth tracing APIs are not supported at present, but we do
   have plans to implement them going forward.
-  ([#12](https://github.com/aurora-is-near/aurora-relayer/issues/12))
+  ([#12](https://github.com/infinity-swap/bitfinity-relayer/issues/12))
 
 - The nonstandard Parity tracing APIs are not supported at present, but we do
   have plans to implement them going forward.
-  ([#13](https://github.com/aurora-is-near/aurora-relayer/issues/13))
+  ([#13](https://github.com/infinity-swap/bitfinity-relayer/issues/13))
 
 - The `eth_getFilterChanges` only returns logs since the filter was created,
   regardless of the block passed in to create the filter.
@@ -134,9 +134,9 @@ Method | Status | Notes
 ## Source Code
 
 The EVMC Relayer source code repository is at:
-[github.com/aurora-is-near/aurora-relayer](https://github.com/aurora-is-near/aurora-relayer).
+[github.com/infinity-swap/bitfinity-relayer](https://github.com/infinity-swap/bitfinity-relayer).
 
-> ⚠ WARNING: aurora-relayer repository in its current state will be gradually deprecated.
+> ⚠ WARNING: bitfinity-relayer repository in its current state will be gradually deprecated.
 > Deprecation will happen in 2 steps:
 >
 > 1. Replacing current “Indexer” with a different implementation written in go-lang/rust.
