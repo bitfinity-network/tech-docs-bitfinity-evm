@@ -121,7 +121,7 @@ const config = {
           src: 'img/logo_dark.svg',
           srcDark: 'img/logo_white.svg',
           style : {
-            marginRight: '20.5rem',
+            marginRight: '13.5rem',
           }
         },
         items: [
