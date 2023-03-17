@@ -90,7 +90,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          editUrl: 'https://github.com/infinity-swap/tech-docs-evmc/edit/master',
+          editUrl: 'https://github.com/infinity-swap/tech-docs-evmc/edit/main',
         },
         theme: {
           customCss: [
