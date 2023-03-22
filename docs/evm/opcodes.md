@@ -210,7 +210,7 @@ This opcode always returns zero as there is no difficulty in Internet Computer o
 In the future, if and when [EIP-4399] is merged in, this would instead return
 Internet Computer's provided randomness value.
 
-[EIP-4399]: https://github.com/ethereum/EIPs/blob/master/EIPS/eip-4399.md
+[EIP-4399]: https://github.com/ethereum/EIPs/blob/main/EIPS/eip-4399.md
 
 ### `GASLIMIT` {#gas-limit}
 

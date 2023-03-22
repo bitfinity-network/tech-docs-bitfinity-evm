@@ -90,7 +90,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          editUrl: 'https://github.com/infinity-swap/tech-docs-evmc/edit/master',
+          editUrl: 'https://github.com/infinity-swap/tech-docs-evmc/edit/main',
         },
         theme: {
           customCss: [
@@ -98,11 +98,12 @@ const config = {
           ],
         },
         gtag: {
-          trackingID: 'GTM-MX4G4L5',
+          trackingID: 'G-Q4JXE0ZPND',
           anonymizeIP: true,
         },
       }),
     ],
+   
   ],
 
   themeConfig:
