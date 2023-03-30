@@ -13,18 +13,10 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 [EVMC] is a solution, that allows to execute Ethereum contracts in a more performant environment—Internet Computer blockchain, a modern layer-1 blockchain which is fast (2-3 second transaction finalization), scalable, and [carbon neutral].
 EVMC is an Ethereum Virtual Machine (EVM) implemented as a smart contract on [Internet Computer Protocol]. We are here to help scale Ethereum ecosystem for developers to operate their apps on an Ethereum-compatible, high-throughput, scalable, and future-safe platform, with low transaction costs for their users.
 
-EVMC provides the Ethereum 1.0 development experience, with layer-2-like speed and scalability. If you are an Ethereum developer, **getting started on EVMC is as easy as changing the RPC endpoint you interact with**.
+EVMC provides the Ethereum 1.0 development experience, with layer-2-like speed and scalability. If you are an Ethereum developer, **getting started on the Bitfinity EVM is as easy as changing the RPC endpoint you interact with**.
 
 EVMC supports all tools available in the Ethereum ecosystem — [MetaMask], [Truffle], [Hardhat], [Remix], etc.
-Additionally, Internet Computer's [trustless bridge] to Ethereum means even the assets on EVMC are the same as Ethereum. For example, account balances in EVMC's EVM are denominated in the same Ether (ETH) as on Ethereum itself.
-
-<ThemedImage
-  alt="Docusaurus themed image"
-  sources={{
-    light: useBaseUrl('/img/scheme.svg'),
-    dark: useBaseUrl('/img/scheme_white.svg'),
-  }}
-/>
+Additionally, Internet Computer's [trustless bridge] to Ethereum means even the assets on EVMC are the same as Ethereum. For example, account balances in Bitfinity EVM are denominated in the same Ether (ETH) as on Ethereum itself.
 
 ## EVMC Developer cheatsheet
 
@@ -39,15 +31,6 @@ There's no easy way to map Internet Computer Gas to Ethereum Gas.
 If you see `"error": "wasm execution failed with error: FunctionCallError(HostError(GasLimitExceeded))"`, it means you've hit that limit.
 It's often possible to optimise the contract to overcome the issue (reducing transaction batch sizes, optimising big transactions).
 We're working hard on making the issue non-existent, but it's important to know it's present at the moment.
-
-### Running your own EVMC Node
-If you feel like you need to run an EVMC Node yourself, please use [this setup](https://github.com/infinity-swap/partner-relayer-deploy).
-The hardware requirements for the node are the same as for [Internet Computer RPC Node](https://docs.near.org/docs/develop/node/rpc/hardware-rpc#recommended-hardware-specifications) though we recommend having 20-30% more storage.
-
-### Adding assets to the bridge
-We have recently released this [UI interface](https://rainbowbridge.app/deploy) to deploy and view bridge tokens.
-The metadata status update is also available.
-And to add your assets to the bridge you need to create a PR in [bridge-assets](https://github.com/infinity-swap/bridge-assets) (see readme).
 
 ### EVMC Testnet Faucet
 To request some ETH on EVMC Testnet, go to [EVMC Testnet Faucet](https://bitfinity.network/faucet)
