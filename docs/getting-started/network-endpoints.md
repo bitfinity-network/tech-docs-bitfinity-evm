@@ -11,8 +11,8 @@ following networks:
 
 | Network             | Engine ID                  | Chain ID                | Endpoint URL                 |
 |---------------------|----------------------------|-------------------------|------------------------------|
-| [Mainnet](#mainnet) | [`evmc`][bitfinity@Mainnet] | 355110 (0x4e454152) | <https://mainnet.evmc.dev> |
-| [Testnet](#testnet) | [`evmc`][bitfinity@Testnet] | 355113 (0x4e454153) | <https://testnet.evmc.dev> |
+| [Mainnet](#mainnet) | [`evmc`][bitfinity@Mainnet] | 355110 (0x4e454152) | <https://mainnet.bitfinity.network> |
+| [Testnet](#testnet) | [`evmc`][bitfinity@Testnet] | 355113 (0x4e454153) | <https://testnet.bitfinity.network> |
 | Localnet            | `evmc.test.ic`         | 355113 (0x4e454154) | <http://localhost:8545>      |
 
 Find the status page and public incident log at
@@ -50,6 +50,6 @@ The Testnet Web3 endpoint is at: `https://testnet.evmc.dev` (port 443)
 
 The Testnet Websocket endpoint is at: `wss://testnet.evmc.dev`
 
-[bitfinity@Mainnet]: https://explorer.near.org/accounts/bitfinity
+[bitfinity@Mainnet]: https://bitfinity.network/
 
-[bitfinity@Testnet]: https://explorer.testnet.near.org/accounts/bitfinity
+[bitfinity@Testnet]: https://bitfinity.network/

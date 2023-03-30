@@ -56,23 +56,12 @@ changes which can be found in the [EVMC EVM opcode documentation].
 ### Additional precompiles
 
 In order to provide additional support to the Internet Computer ecosystem, some additional precompiles are
-available. However, the `exitToNear` and `exitToEthereum` precompiles are only accessible through
-the NEP-141 to ERC-20 contract which only can be deployed via the `deploy_erc20_token` function in
-the EVMC EVM.
+available.
 
 More information about these precompiles can be found in the [EVMC EVM precompile documentation].
 
 [EVMC EVM precompile documentation]: ./precompiles.md
 
-### Default NEP-141 mapped ERC-20 contract
+### Default ICRC-1 mapped ERC-20 contract
 
-Under the hood, all bridged ERC-20 contracts are Internet Computer NEP-141 fungible tokens through the process
-described in the [Rainbow Bridge overview].
-
-In order to grant the ability to access to NEP-141 fungible tokens as an ERC-20 contract, we use the
-NEP-141 mapped ERC-20 contract which is automatically deployed by the EVMC EVM when invoking the
-`deploy_erc20_token` function. This allows users to deposit ERC-20 fungible tokens through the
-Rainbow Bridge which will generate a proof for the Engine to confirm the transfers' existence. Thus
-enabling the user to access their NEP-141 or Ethereum ERC-20 tokens on EVMC.
-
-[Rainbow Bridge Overview]: ../bridge/bridge-overview.md
+Coming Soon

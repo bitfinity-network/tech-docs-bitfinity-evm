@@ -12,12 +12,6 @@ Definitions below from [evm.codes].
 
 [evm.codes]: https://www.evm.codes/precompiled
 
-:::info
-`exitToNear` and `exitToEthereum` precompiles can only be invoked from EVMC EVM self-deployed
-NEP-141 mapped ERC-20 contract. These ERC-20 contracts are deployed by invoking
-the `deploy_erc20_token` function.
-:::
-
 <div class="evm-precompiles"></div>
 
 | Address                                                               | Name                     | Minimum Gas | Input                           | Output          | Description                                                                     |
@@ -35,8 +29,6 @@ the `deploy_erc20_token` function.
 | [0x723ffbaba940e75e7bf5f6d61dcbf8d9a4de0fd7](#predecessor-account-id) | **predecessorAccountId** | 0           | `.`                             | `accountId`     | Returns the Internet Computer predecessor account ID                                         |
 | [0x0a3540f79be10ef14890e87c1a0040a68cc6af71](#get-promise-results)    | **getPromiseResults**    | 125         | `.`                             | `data`          | Returns a Borsh serialized vector of PromiseResult                              |
 | [0x536822d27de53629ef1f84c60555689e9488609f](#prepaid-gas)            | **prepaidGas**           | 0           | `.`                             | `value`         | Returns the prepaid gas in Internet Computer                                                 |
-| [0xe9217bc70b7ed1f598ddd3199e80b093fa71124f](#exit-to-near)           | **exitToNear**           | 0           | `flag, <amount>, nearAccountId` | `.`             | Used in exiting from EVMC to the Internet Computer ecosystem as NEP-141 fungible tokens    |
-| [0xb0bd02f6a392af548bdf1cfaee5dfa0eefcc8eab](#exit-to-ethereum)       | **exitToEthereum**       | 0           | `flag, <amount>, ethAddress`    | `.`             | Used in exiting from EVMC to Ethereum over the Rainbow bridge                 |
 
 :::note
 Some precompiles currently have a gas value of 0. This is temporary as it is difficult to determine
@@ -322,78 +314,8 @@ No input is required.
 
 **Spec**: Pending AIP
 
-Transfers either ETH or a NEP-141 mapped ERC-20 token from the EVMC EVM to Near as NEP-141.
-
-This can only be invoked through Engine self-deployed NEP-141 mapped ERC-20
-contracts using the `deploy_erc20_token` method on the EVM.
-
-:::note
-For completeness, the details are included anyways even though you can not directly interface with
-this precompile.
-:::
-
-### Inputs
-
-There are two kinds of inputs depending on if you are withdrawing ETH or ERC-20 from a NEP-141
-mapped ERC-20 contract.
-
-#### ETH withdraw
-
-| Byte range     |    Name    | Description                                                                |
-|:---------------|:----------:|:---------------------------------------------------------------------------|
-| `[0]` (1 byte) |    flag    | The flag must be set as 0x0 for ETH transfer                               |
-| `[1; length]`  | account_id | The Internet Computer recipient account which will receive ETH tokens as NEP-141 tokens |
-
-#### ERC-20 withdraw
-
-| Byte range           |    Name    | Description                                                                   |
-|:---------------------|:----------:|:------------------------------------------------------------------------------|
-| `[0]` (1 byte)       |    flag    | The flag must be set as 0x1 for ERC-20 transfer                               |
-| `[1; 32]` (32 bytes) |   amount   | The amount value which is required only for ERC-20 transfers                  |
-| `[33; length]`       | account_id | The Internet Computer recipient account which will receive ERC-20 tokens as NEP-141 tokens |
-
-### Output
-
-There is no output except for log emissions which will trigger the transfer of NEP-141 tokens.
-
 ## Exit to Ethereum
 
 **Spec**: Pending AIP
-
-Transfers either ETH or a NEP-141 mapped ERC-20 token from the EVMC EVM to Ethereum over
-the [Rainbow Bridge](../bridge/bridge-overview.md).
-
-This can only be invoked through Engine self-deployed NEP-141 mapped ERC-20
-contracts using the `deploy_erc20_token` method on the EVM.
-
-:::note
-For completeness, the details are included anyways even though you can not directly interface with
-this precompile.
-:::
-
-### Inputs
-
-There are two kinds of inputs depending on if you are withdrawing ETH or ERC-20 from a NEP-141
-mapped ERC-20 contract.
-
-#### ETH withdraw
-
-| Byte range           |    Name     | Description                                                         |
-|:---------------------|:-----------:|:--------------------------------------------------------------------|
-| `[0]` (1 byte)       |    flag     | The flag must be set as 0x0 for ETH transfer                        |
-| `[1; 20]` (20 bytes) | eth_address | The ETH recipient address which will receive ETH tokens on Ethereum |
-
-#### ERC-20 withdraw
-
-| Byte range            |    Name     | Description                                                            |
-|:----------------------|:-----------:|:-----------------------------------------------------------------------|
-| `[0]` (1 byte)        |    flag     | The flag must be set as 0x1 for ERC-20 transfer                        |
-| `[1; 32]` (32 bytes)  |   amount    | The amount value which is required only for ERC-20 transfers           |
-| `[33; 52]` (20 bytes) | eth_address | The ETH recipient address which will receive ERC-20 tokens on Ethereum |
-
-### Output
-
-There is no output except for log emissions which will trigger the transfer from EVMC EVM to the
-Ethereum blockchain.
 
 [yellow paper]: https://ethereum.github.io/yellowpaper/paper.pdf
