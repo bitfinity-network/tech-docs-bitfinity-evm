@@ -36,19 +36,19 @@ observations).
 
 #### HTTPS
 
-The Mainnet Web3 endpoint is at: `https://mainnet.evmc.dev` (port 443)
+The Mainnet Web3 endpoint is at: `https://mainnet.bitfinity.network` (port 443)
 
 #### WSS
 
-The Mainnet Websocket endpoint is at: `wss://mainnet.evmc.dev`
+The Mainnet Websocket endpoint is at: `wss://mainnet.bitfinity.network`
 
 ### Testnet
 
-The Testnet Web3 endpoint is at: `https://testnet.evmc.dev` (port 443)
+The Testnet Web3 endpoint is at: `https://testnet.bitfinity.network` (port 443)
 
 #### WSS
 
-The Testnet Websocket endpoint is at: `wss://testnet.evmc.dev`
+The Testnet Websocket endpoint is at: `wss://testnet.bitfinity.network`
 
 [bitfinity@Mainnet]: https://bitfinity.network/
 
