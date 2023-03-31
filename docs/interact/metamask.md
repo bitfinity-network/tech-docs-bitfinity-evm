@@ -122,35 +122,6 @@ Click `Add Tokens`:
 ![MetaMask-add-token-confirm](/img/metamask_add_token_confirm.png)
 
 The token has now been added to MetaMask and we can use the MetaMask interface to view the token balance and to transfer the token to others.
-
-## Transferring an ERC-20 Token with MetaMask
-
-Continuing from the previous step, click the `Send` button in the MetaMask interface:
-
-![MetaMask-my-token](/img/metamask_my_token.png)
-
-Select a recipient (if you have multiple accounts in MetaMask you can simply select another account), and an amount of tokens to send.
-Click `Next`:
-
-![MetaMask-send-my-token](/img/metamask_send_my_token.png)
-
-:::note
-Once again the gas price should be set to zero, but this will change going forward.
-:::
-
-Click `Confirm` to send the transaction to the network:
-
-![MetaMask-send-my-token-confirm](/img/metamask_send_my_token_confirm.png)
-
-After a few moments the transaction will be confirmed by the network.
-You can see the updated balance your account holds in the MetaMask interface:
-
-![MetaMask-my-token-sent-account1](/img/metamask_my_token_sent_account1.png)
-
-If you transferred to another MetaMask account you hold then you can follow the aforementioned instructions for adding the token to MetaMask on the other account, and view its balance also.
-
-![MetaMask-add-token-account2](/img/metamask_add_token_account2.png)
-
 ## Summary
 
 In this tutorial we connected MetaMask to the EVMC Testnet, deployed an ERC-20 token contract using Remix, and transferred that token using MetaMask.
