@@ -85,7 +85,7 @@ bitfinity: {
   provider: () => setupWallet('https://testnet.bitfinity.network'),
   network_id: 0x56b29,
   gas: 10000000,
-  from: '0x6A33382de9f73B846878a57500d055B981229ac4' // CHANGE THIS ADDRESS
+  from: setupWallet('https://testnet.bitfinity.network') 
 },
 ```
 
@@ -141,7 +141,7 @@ truffle(bitfinity)> const minter = accounts[0]
 truffle(bitfinity)> const participant = accounts[1]
 truffle(bitfinity)> await cvt.minter() == minter
 true
-truffle(bitfinity)> await cvt.mint(participant, {from: minter})
+truffle(bitfinity)> await cvt.mint(participant, {from: minter, nonce: await web3.eth.getTransactionCount(minter)})
 ```
 
 You should notice that none of the participants are allowed to transfer their
@@ -155,7 +155,7 @@ participant (e.g., the participant address
 In the Truffle console:
 
 ```bash
-truffle(bitfinity)> await cvt.safeTransferFrom(participant, accounts[2], 1, {from: participant})
+truffle(bitfinity)> await cvt.safeTransferFrom(participant, accounts[2], 1, {from: participant, nonce: await web3.eth.getTransactionCount(participant)})
 Uncaught Error: execution reverted:
 ...
 reason: 'Invalid Transfer',
@@ -193,7 +193,7 @@ this token is the minter (`accounts[0]`).
 truffle(bitfinity)> const tokenID = 1
 truffle(bitfinity)> await cvt.ownerOf(tokenID) == participant
 true
-truffle(bitfinity)> await cvt.safeTransferFrom(participant, minter, tokenID, {from: participant})
+truffle(bitfinity)> await cvt.safeTransferFrom(participant, minter, tokenID, {from: participant, nonce: await web3.eth.getTransactionCount(participant)})
 truffle(bitfinity)> await cvt.ownerOf(tokenID) == minter
 true
 ```
@@ -205,7 +205,7 @@ transferring the token back to the minter, the participant can decide to burn th
 NFT token by calling the `burn` function:
 
 ```bash
-truffle(bitfinity)> await cvt.burn(1, {from: participant}) // 1 is the tokenID
+truffle(bitfinity)> await cvt.burn(1, {from: participant, nonce: await web3.eth.getTransactionCount(participant)}) // 1 is the tokenID
 ```
 
 ### Redistribute tokens
@@ -214,7 +214,7 @@ Finally, the minter can send the same token (if not burnt) to a new participant
 in the line:
 
 ```bash
-truffle(bitfinity)> await cvt.safeTransferFrom(minter, accounts[2], 1, {from: minter})
+truffle(bitfinity)> await cvt.safeTransferFrom(minter, accounts[2], 1, {from: minter, nonce: await web3.eth.getTransactionCount(minter)})
 truffle(bitfinity)> await cvt.ownerOf(1) == accounts[2]
 true
 ```
