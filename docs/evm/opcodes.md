@@ -64,11 +64,11 @@ The original source of the below chart comes from the [Ethereum docs].
 | 3E    | RETURNDATACOPY | [A3](https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a3-copy-operations)                 | `dstOst, ost, len`                               | `.`                             | mem[dstOst:dstOst+len-1] := returndata[ost:ost+len-1]                         | copy returned data from last external call                                                                                                            |
 | 3F    | EXTCODEHASH    | [A5](https://github.com/wolflo/evm-opcodes/blob/main/gas.md#a5-balance-extcodesize-extcodehash) | `addr`                                           | `hash`                          |                                                                               | hash = addr.exists ? keccak256(addr.code) : 0                                                                                                         |
 | 40    | **BLOCKHASH**  | 20                                                                                              | `blockNum`                                       | `blockHash(blockNum)`           |                                                                               | hash = `sha256(0x0, chain_id, evm_account_id, block_height)`                                                                                          |
-| 41    | **COINBASE**   | 2                                                                                               | `.`                                              | `block.coinbase`                |                                                                               | (2^256-1) `0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff`                                                                        |
+| 41    | **COINBASE**   | 2                                                                                               | `.`                                              | `block.coinbase`                |                                                                               | return `0x0`                                                                        |
 | 42    | TIMESTAMP      | 2                                                                                               | `.`                                              | `block.timestamp`               |                                                                               | timestamp of current block                                                                                                                            |
 | 43    | NUMBER         | 2                                                                                               | `.`                                              | `block.number`                  |                                                                               | number of current block                                                                                                                               |
 | 44    | **DIFFICULTY** | 2                                                                                               | `.`                                              | `block.difficulty`              |                                                                               | returns 0                                                                                                                                             |
-| 45    | **GASLIMIT**   | 2                                                                                               | `.`                                              | `block.gaslimit`                |                                                                               | (2^256-1) `0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff`                                                                        |
+| 45    | **GASLIMIT**   | 2                                                                                               | `.`                                              | `block.gaslimit`                |                                                                               | (30000000) `0x1c9c380`                                                                        |
 | 46    | CHAINID        | 2                                                                                               | `.`                                              | `chain_id`                      |                                                                               | push current [chain id](https://eips.ethereum.org/EIPS/eip-155) onto stack                                                                            |
 | 47    | SELFBALANCE    | 5                                                                                               | `.`                                              | `address(this).balance`         |                                                                               | balance of executing contract, in wei                                                                                                                 |
 | 48    | BASEFEE        | 2                                                                                               | `.`                                              | `block.basefee`                 |                                                                               | base fee of current block                                                                                                                             |
@@ -198,22 +198,14 @@ column in the [networks table](../getting-started/network-endpoints)).
 
 ### `COINBASE` {#coinbase}
 
-This opcode returns the EVM address of the EVMC Engine.
-
-For example, for the EVMC Engine deployment on the `bitfinity` account,
-`COINBASE` returns _0x4444588443C3a91288c5002483449Aba1054192b_.
+This opcode will always return `0x0`
 
 ### `DIFFICULTY` {#difficulty}
 
 This opcode always returns zero as there is no difficulty in Internet Computer or EVMC.
 
-In the future, if and when [EIP-4399] is merged in, this would instead return
-Internet Computer's provided randomness value.
-
-[EIP-4399]: https://github.com/ethereum/EIPs/blob/main/EIPS/eip-4399.md
-
 ### `GASLIMIT` {#gas-limit}
 
-This opcode always returns
-_0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff_
-(2^256-1).
+This opcode returns the block gas limit which has been set for the Bitfinity, this value can change anytime.
+_0x1c9c380_
+(30000000).

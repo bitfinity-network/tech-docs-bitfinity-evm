@@ -33,9 +33,9 @@ Method | Status | Notes
 [eth_getBlockTransactionCountByHash] | ✅ |
 [eth_getBlockTransactionCountByNumber] | ✅ |
 [eth_getCode] | ✅ |
-[eth_getCompilers] | ❌ |
-[eth_getFilterChanges] | ❌ |
-[eth_getFilterLogs] | ❌ |
+[eth_getCompilers] | ❌ | Unsupported
+[eth_getFilterChanges] | ❌ | Unsupported
+[eth_getFilterLogs] | ❌ | Unsupported
 [eth_getLogs] | ✅ |
 [eth_getProof] | ❌ | EIP-1186
 [eth_getStorageAt] | ✅ |
@@ -51,9 +51,9 @@ Method | Status | Notes
 [eth_getWork] | ❌ | Unsupported
 [eth_hashrate] | ✅ |
 [eth_mining] | ✅ |
-[eth_newBlockFilter] | ❌ |
-[eth_newFilter] | ❌ |
-[eth_newPendingTransactionFilter] | ❌ |
+[eth_newBlockFilter] | ❌ | Unsupported
+[eth_newFilter] | ❌ | Unsupported
+[eth_newPendingTransactionFilter] | ❌ | Unsupported
 [eth_pendingTransactions] | ❌ | [Undocumented](https://github.com/ethereum/go-ethereum/issues/1648#issuecomment-130591933)
 [eth_protocolVersion] | ✅ |
 [eth_sendRawTransaction] | ✅ |
@@ -78,11 +78,11 @@ Method | Status | Notes
 [shh_newIdentity] | ❌ | Discontinued
 [shh_post] | ❌ | Discontinued
 [shh_uninstallFilter] | ❌ | Discontinued
-[shh_version] | ❌ | Discontinued
-[txpool_content] | ❌ | Geth extension
-[txpool_inspect] | ❌ | Geth extension
-[txpool_status] | ❌ | Geth extension
-[parity_pendingTransactions] | ❌ | Parity extension
+[shh_version] | ❌ | Discontinued | Unsupported
+[txpool_content] | ❌ | Unsupported
+[txpool_inspect] | ❌ | Unsupported
+[txpool_status] | ❌ | Unsupported
+[parity_pendingTransactions] | ❌ | Unsupported
 
 **Legend**: ❌ = not supported. 🚧 = work in progress. ✅ = supported.
 
@@ -104,24 +104,13 @@ Method | Status | Notes
   Additionally, PoW-related block metadata such as `nonce` and `difficulty`
   contain all zeroes.
 
-- There is no concept of uncle (aka ommer) blocks.
-  The `eth_getUncleByBlockHashAndIndex` and `eth_getUncleByBlockNumberAndIndex`
-  methods always return `null`.
-  The `eth_getUncleCountByBlockHash` and `eth_getUncleCountByBlockNumber`
-  methods return zero for valid block IDs and `null` for invalid block IDs.
-  Additionally, uncle-related block metadata such as `sha3Uncles` contain
-  all zeroes.
+- There is no concept of uncle (aka ommer) blocks in the Bitfinity
 
 - There is no access to pending transactions.
-  The `eth_newPendingTransactionFilter` method creates a filter that returns
-  nothing when polled with `eth_getFilterChanges`.
 
 - The nonstandard Geth tracing APIs are not supported at present.
 
 - The nonstandard Parity tracing APIs are not supported at present.
-
-- The `eth_getFilterChanges` only returns logs since the filter was created,
-  regardless of the block passed in to create the filter.
 
 ## Source Code
 
