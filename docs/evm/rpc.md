@@ -33,9 +33,9 @@ Method | Status | Notes
 [eth_getBlockTransactionCountByHash] | ✅ |
 [eth_getBlockTransactionCountByNumber] | ✅ |
 [eth_getCode] | ✅ |
-[eth_getCompilers] | ✅ |
-[eth_getFilterChanges] | ✅ |
-[eth_getFilterLogs] | ✅ |
+[eth_getCompilers] | ❌ |
+[eth_getFilterChanges] | ❌ |
+[eth_getFilterLogs] | ❌ |
 [eth_getLogs] | ✅ |
 [eth_getProof] | ❌ | EIP-1186
 [eth_getStorageAt] | ✅ |
@@ -51,10 +51,10 @@ Method | Status | Notes
 [eth_getWork] | ❌ | Unsupported
 [eth_hashrate] | ✅ |
 [eth_mining] | ✅ |
-[eth_newBlockFilter] | ✅ |
-[eth_newFilter] | ✅ |
-[eth_newPendingTransactionFilter] | ✅ |
-[eth_pendingTransactions] | ✅ | [Undocumented](https://github.com/ethereum/go-ethereum/issues/1648#issuecomment-130591933)
+[eth_newBlockFilter] | ❌ |
+[eth_newFilter] | ❌ |
+[eth_newPendingTransactionFilter] | ❌ |
+[eth_pendingTransactions] | ❌ | [Undocumented](https://github.com/ethereum/go-ethereum/issues/1648#issuecomment-130591933)
 [eth_protocolVersion] | ✅ |
 [eth_sendRawTransaction] | ✅ |
 [eth_sendTransaction] | ❌ | Unsupported
@@ -79,10 +79,10 @@ Method | Status | Notes
 [shh_post] | ❌ | Discontinued
 [shh_uninstallFilter] | ❌ | Discontinued
 [shh_version] | ❌ | Discontinued
-[txpool_content] | ✅ | Geth extension
-[txpool_inspect] | ✅ | Geth extension
-[txpool_status] | ✅ | Geth extension
-[parity_pendingTransactions] | ✅ | Parity extension
+[txpool_content] | ❌ | Geth extension
+[txpool_inspect] | ❌ | Geth extension
+[txpool_status] | ❌ | Geth extension
+[parity_pendingTransactions] | ❌ | Parity extension
 
 **Legend**: ❌ = not supported. 🚧 = work in progress. ✅ = supported.
 
@@ -104,10 +104,6 @@ Method | Status | Notes
   Additionally, PoW-related block metadata such as `nonce` and `difficulty`
   contain all zeroes.
 
-- The `eth_coinbase` method returns the EVM address of the EVMC Engine.
-  For example, for the EVMC Engine deployment on the `bitfinity` account,
-  `COINBASE` returns _0x4444588443C3a91288c5002483449Aba1054192b_.
-
 - There is no concept of uncle (aka ommer) blocks.
   The `eth_getUncleByBlockHashAndIndex` and `eth_getUncleByBlockNumberAndIndex`
   methods always return `null`.
@@ -120,27 +116,14 @@ Method | Status | Notes
   The `eth_newPendingTransactionFilter` method creates a filter that returns
   nothing when polled with `eth_getFilterChanges`.
 
-- The nonstandard Geth tracing APIs are not supported at present, but we do
-  have plans to implement them going forward.
-  ([#12](https://github.com/infinity-swap/bitfinity-relayer/issues/12))
+- The nonstandard Geth tracing APIs are not supported at present.
 
-- The nonstandard Parity tracing APIs are not supported at present, but we do
-  have plans to implement them going forward.
-  ([#13](https://github.com/infinity-swap/bitfinity-relayer/issues/13))
+- The nonstandard Parity tracing APIs are not supported at present.
 
 - The `eth_getFilterChanges` only returns logs since the filter was created,
   regardless of the block passed in to create the filter.
 
 ## Source Code
-
-The EVMC Relayer source code repository is at:
-[github.com/infinity-swap/bitfinity-relayer](https://github.com/infinity-swap/bitfinity-relayer).
-
-> ⚠ WARNING: bitfinity-relayer repository in its current state will be gradually deprecated.
-> Deprecation will happen in 2 steps:
->
-> 1. Replacing current “Indexer” with a different implementation written in go-lang/rust.
-> 2. Replacing “JSON-RPC Endpoint” with an implementation in go-lang.
 
 [web3_clientVersion]: https://ethereum.org/en/developers/docs/apis/json-rpc/#web3_clientversion
 [web3_sha3]: https://ethereum.org/en/developers/docs/apis/json-rpc/#web3_sha3
