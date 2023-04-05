@@ -63,7 +63,7 @@ As you can see from our roadmap, we’ll be dramatically improving those transfe
 
 ## Why will transfers take so long?
 
-The EVMC Bridge technical architecture is designed to be “trustless”, meaning there’s no reliance on third-parties for authorizations.
+The Neuro Bridge technical architecture is designed to be “trustless”, meaning there’s no reliance on third-parties for authorizations.
 Trustless transfers align with the ethos of decentralized finance, but do require more time, given that network confirmations to ensure transaction finality.
 There are, however, technical ways in which we can, and will, shorten transfer times in future updates to the bridge.
 
