@@ -26,6 +26,6 @@ $ pnpm start
 
 ## Deployment
 
-The docs are automatically built and deployed to [doc.bitfinity.network](https://docs.bitfinity.network/) with each commit to `main`.
+The docs are automatically built and deployed to [docs.bitfinity.network](https://docs.bitfinity.network/) with each commit to `main`.
 
 [Node]:     https://nodejs.org
