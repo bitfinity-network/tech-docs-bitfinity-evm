@@ -1,0 +1,49 @@
+---
+sidebar_position: 1
+sidebar_label: Welcome
+slug: /
+---
+
+import ThemedImage from '@theme/ThemedImage';
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
+# What is the Bitfinity EVM?
+
+[Bitfinity] is a solution, that allows to execute Ethereum contracts in a more performant environment—Internet Computer blockchain, a modern layer-1 blockchain which is fast and scalable.
+Bitfinity is an Ethereum Virtual Machine (EVM) implemented as a smart contract on [Internet Computer Protocol]. We are here to help scale Ethereum ecosystem for developers to operate their apps on an Ethereum-compatible, high-throughput, scalable, and future-safe platform, with low transaction costs for their users.
+
+Bitfinity provides the Ethereum 1.0 development experience, with layer-2-like speed and scalability. If you are an Ethereum developer, **getting started on the Bitfinity EVM is as easy as changing the RPC endpoint you interact with**.
+
+Bitfinity supports all tools available in the Ethereum ecosystem — [MetaMask], [Truffle], [Hardhat], [Remix], etc.
+
+## Notice
+
+Please use endpoint https://4fe7g-7iaaa-aaaak-aegcq-cai.raw.ic0.app instead of https://testnet.bitfinity.network
+
+## Bitfinity Developer cheatsheet
+
+### Gas fees
+
+Transaction cost ~\$0.02
+
+### Maximum gas per transaction (a monthly updated section)
+
+The main issue we have on EVMC and we're constantly working on improving is the maximum gas per transaction limit.
+The nature of the issue comes from the fact that the block time on Internet Computer is 1 second (for comparison it's 14 seconds on Ethereum).
+Usually, the transaction must fit in a block.
+There's no easy way to map Internet Computer Gas to Ethereum Gas.
+If you see `"error": "wasm execution failed with error: FunctionCallError(HostError(GasLimitExceeded))"`, it means you've hit that limit.
+It's often possible to optimise the contract to overcome the issue (reducing transaction batch sizes, optimising big transactions).
+We're working hard on making the issue non-existent, but it's important to know it's present at the moment.
+
+### EVMC Testnet Faucet
+
+To request some ETH on EVMC Testnet, go to [EVMC Testnet Faucet](https://bitfinity.network/faucet)
+Still have questions? Check out our [answers to frequently asked questions (FAQs)](./faq.md).
+
+[internet computer protocol]: https://internetcomputer.org/
+[bitfinity]: https://bitfinity.network
+[metamask]: https://metamask.io
+[truffle]: https://www.trufflesuite.com/truffle
+[hardhat]: https://hardhat.org
+[remix]: https://remix.ethereum.org
