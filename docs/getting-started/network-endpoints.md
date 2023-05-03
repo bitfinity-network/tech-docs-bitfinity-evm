@@ -21,13 +21,8 @@ You can also subscribe to incident notifications there.
 
 :::note
 EVMC runs on top of Internet Computer, meaning that the underlying Internet Computer gas is the real measure of
-computational work. However, for compatibility with Ethereum we want our users to be able to pay for
-transactions with ether (ETH). To enable this, the EVMC infrastructure includes relayers which
-encapsulate ordinary EVM transactions into Internet Computer transactions, submit them on-chain, and return the
-transaction result.
+computational work. 
 
-Transaction cost ~$0.02 (this value is not calculated automatically, just based on our
-observations).
 :::
 
 ## Endpoints
