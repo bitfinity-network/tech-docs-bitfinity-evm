@@ -22,16 +22,6 @@ Bitfinity supports all tools available in the Ethereum ecosystem — [MetaMask],
 
 Transaction cost ~\$0.02
 
-### Maximum gas per transaction (a monthly updated section)
-
-The main issue we have on EVMC and we're constantly working on improving is the maximum gas per transaction limit.
-The nature of the issue comes from the fact that the block time on Internet Computer is 1 second (for comparison it's 14 seconds on Ethereum).
-Usually, the transaction must fit in a block.
-There's no easy way to map Internet Computer Gas to Ethereum Gas.
-If you see `"error": "wasm execution failed with error: FunctionCallError(HostError(GasLimitExceeded))"`, it means you've hit that limit.
-It's often possible to optimise the contract to overcome the issue (reducing transaction batch sizes, optimising big transactions).
-We're working hard on making the issue non-existent, but it's important to know it's present at the moment.
-
 ### EVMC Testnet Faucet
 
 To request some ETH on EVMC Testnet, go to [EVMC Testnet Faucet](https://bitfinity.network/faucet)
