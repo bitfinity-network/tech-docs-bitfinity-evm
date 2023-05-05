@@ -6,7 +6,7 @@ sidebar_position: 2
 ## Introduction
 
 [Covalent](https://www.covalenthq.com/?utm_source=bitfinity&utm_medium=partner-docs) provides a unified API to bring full transparency
-and visibility to assets across all blockchains including EVMC's Mainnet and Testnet.
+and visibility to assets across all blockchains including Bitfinity's Mainnet and Testnet.
 
 To get started, sign up for an [**API Key**](https://www.covalenthq.com/platform/?utm_source=bitfinity&utm_medium=partner-docs).
 
@@ -14,7 +14,7 @@ To get started, sign up for an [**API Key**](https://www.covalenthq.com/platform
 | :-----------: | :-----------: |
 | ![Developer Mode](https://www.covalenthq.com/static/images/partner-docs/developer_mode.png) | ![Analyst Mode](https://www.covalenthq.com/static/images/partner-docs/analyst_mode.png)|
 
-The Covalent API is RESTful and offers the following out-of-the-box for *EVMC*:
+The Covalent API is RESTful and offers the following out-of-the-box for *Bitfinity*:
 
 | **Covalent API** |         |
 | ----------- | ----------- |
@@ -115,7 +115,7 @@ Check out our collection of ready-to-ship [**Code Templates**](https://github.co
 
 Here are some additional resources to help you get started with the Covalent API:
 
-- [EVMC Network Details](https://www.covalenthq.com/docs/networks/bitfinity/?utm_source=bitfinity&utm_medium=partner-docs)
+- [Bitfinity Network Details](https://www.covalenthq.com/docs/networks/bitfinity/?utm_source=bitfinity&utm_medium=partner-docs)
 - [Covalent API Reference](https://covalenthq.com/docs/api/?utm_source=bitfinity&utm_medium=partner-docs)
 - [Project Showcase](https://www.covalenthq.com/docs/project-showcase/?utm_source=bitfinity&utm_medium=partner-docs)
 - [API FAQs](https://www.covalenthq.com/docs/developer/faq/?utm_source=bitfinity&utm_medium=partner-docs)

@@ -13,7 +13,7 @@ Moreover it has extra nice features such as the interactive JavaScript console
 and the user defined tasks.
 
 The main objective of this tutorial is to show how to deploy and interact with
-the Solidity smart contracts on EVMC using Hardhat. This tutorial assumes that
+the Solidity smart contracts on Bitfinity using Hardhat. This tutorial assumes that
 you are familiar with `Hardhat` and the ERC-20 tokens. For more details about
 the fungible token standard, please refer to
 the [ERC-20 Standard specification](https://eips.ethereum.org/EIPS/eip-20).
@@ -31,7 +31,7 @@ git clone https://github.com/infinity-swap/bitfinity-examples.git
 cd bitfinity-examples/hardhat/erc20/
 ```
 
-- Add your EVMC Private key (from MetaMask) to __.env__ file and
+- Add your Bitfinity Private key (from MetaMask) to __.env__ file and
 then run yarn : <br/>
 
 ```bash
@@ -281,8 +281,8 @@ Account 0x8722C88e82AbCC639148Ab6128Cd63333B2Ad771 has a total token balance:  1
 
 ## Conclusion
 
-In this tutorial we deployed an ERC-20 token using Hardhat on the EVMC
+In this tutorial we deployed an ERC-20 token using Hardhat on the Bitfinity
 Testnet, transferred, and approved ERC-20 tokens. Moreover, we added other
 utility tasks such as getting the total supply, and the account balance.
-The only difference is we changed the Ethereum Mainnet to the EVMC
+The only difference is we changed the Ethereum Mainnet to the Bitfinity
 RPC endpoint.

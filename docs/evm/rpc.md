@@ -4,7 +4,7 @@ title: "JSON-RPC"
 
 # Compatibility with the Web3 JSON-RPC Protocol
 
-The EVMC Relayer implements the Web3 JSON-RPC protocol.
+The Bitfinity Relayer implements the Web3 JSON-RPC protocol.
 
 ## Methods
 
@@ -98,7 +98,7 @@ Method | Status | Notes
 
 - Ethereum is a proof-of-work (PoW) network, and Internet Computer is a proof-of-stake (PoS)
   network.
-  Therefore with EVMC all mining-related methods such as `eth_getWork`,
+  Therefore with Bitfinity all mining-related methods such as `eth_getWork`,
   `eth_submitHashrate`, and `eth_submitWork` are not supported and return
   an error code.
   Additionally, PoW-related block metadata such as `nonce` and `difficulty`

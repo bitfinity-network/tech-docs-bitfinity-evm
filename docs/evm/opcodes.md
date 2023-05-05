@@ -178,7 +178,7 @@ due to limitations. However, it does respect the logic that a non-zero value is 
 most recent 256
 blocks (not including the current block). For all other inputs, it returns zero. The non-zero value
 that is returned is computed based on the block height and properties of the
-EVMC Engine contract (chain ID and account ID).
+Bitfinity Engine contract (chain ID and account ID).
 
 Concretely, the value
 returned is:
@@ -191,7 +191,7 @@ where `||` is byte concatenation, and it is assumed `h` (a 64-bit number) is con
 big endian encoding.
 The leading zero byte in the concatenation is a version byte which may change if a new blockhash
 scheme is introduced in the future.
-The `chain_id` depends on the network the EVMC Engine contract is deployed to (
+The `chain_id` depends on the network the Bitfinity Engine contract is deployed to (
 see [networks table](../getting-started/network-endpoints)).
 The `account_id` is the name of the Internet Computer account where the contract is deployed (see the Engine ID
 column in the [networks table](../getting-started/network-endpoints)).
@@ -202,7 +202,7 @@ This opcode will always return `0x0`
 
 ### `DIFFICULTY` {#difficulty}
 
-This opcode always returns zero as there is no difficulty in Internet Computer or EVMC.
+This opcode always returns zero as there is no difficulty in Internet Computer or Bitfinity.
 
 ### `GASLIMIT` {#gas-limit}
 

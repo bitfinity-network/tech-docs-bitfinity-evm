@@ -11,16 +11,16 @@ following networks:
 
 | Network             | Engine ID                  | Chain ID                | Endpoint URL                 |
 |---------------------|----------------------------|-------------------------|------------------------------|
-| [Mainnet](#mainnet) | [`evmc`][bitfinity@Mainnet] | 355110 (0x4e454152) | <https://mainnet.bitfinity.network> |
-| [Testnet](#testnet) | [`evmc`][bitfinity@Testnet] | 355113 (0x4e454153) | <https://testnet.bitfinity.network> |
-| Localnet            | `evmc.test.ic`         | 355113 (0x4e454154) | <http://localhost:8545>      |
+| [Mainnet](#mainnet) | [`Bitfinity`][bitfinity@Mainnet] | 355110 (0x4e454152) | <https://mainnet.bitfinity.network> |
+| [Testnet](#testnet) | [`Bitfinity`][bitfinity@Testnet] | 355113 (0x4e454153) | <https://testnet.bitfinity.network> |
+| Localnet            | `Bitfinity.test.ic`         | 355113 (0x4e454154) | <http://localhost:8545>      |
 
 Find the status page and public incident log at
-[api.evmc.dev](https://api.evmc.dev).
+[api.Bitfinity.dev](https://api.Bitfinity.dev).
 You can also subscribe to incident notifications there.
 
 :::note
-EVMC runs on top of Internet Computer, meaning that the underlying Internet Computer gas is the real measure of
+Bitfinity runs on top of Internet Computer, meaning that the underlying Internet Computer gas is the real measure of
 computational work. 
 
 :::
