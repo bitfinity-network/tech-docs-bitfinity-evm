@@ -17,7 +17,7 @@ In this tutorial we will walk through connecting MetaMask to the EVMC Testnet, d
 Screenshots in this tutorial are taken from the MetaMask browser extension version 9.5.5.
 :::
 
-## Connecting MetaMask to EVMC
+## Connecting MetaMask to the Bitfinity EVM
 
 In the top-right corner of the MetaMask interface, click the network selection drop-down and then click `Custom RPC`.
 
