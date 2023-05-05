@@ -8,14 +8,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/okaidia');
 const config = {
   title: 'Bitfinity Documentation',
   tagline: 'Documentation and Tutorials for Bitfinity',
-  url: 'https://doc.bitfinity.network',
+  url: 'https://docs.bitfinity.network',
   baseUrl: '/',
   //TODO:Change it to throw once /bridge/bridge-overview is ready
   onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.svg',
   organizationName: 'bitfinity',
-  projectName: 'doc.bitfinity.network',
+  projectName: 'docs.bitfinity.network',
 
   stylesheets: [
     'https://fonts.googleapis.com/css2?family=Inter&display=swap',
@@ -90,7 +90,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          editUrl: 'https://github.com/infinity-swap/tech-docs-Bitfinity/edit/main',
+          editUrl: 'https://github.com/infinity-swap/tech-docs-bitfinity-evm/edit/main',
         },
         theme: {
           customCss: [
