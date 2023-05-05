@@ -66,7 +66,7 @@ function CustomFooterLinks() {
             href="https://github.com/infinity-swap"
             target="_blank"
             rel="nofollow noopener noreferrer"
-            title="EVMC on GitHub"
+            title="Bitfinity on GitHub"
           >
             <FontAwesomeIcon icon={faGithub} size="lg" />
           </Link>
@@ -77,7 +77,7 @@ function CustomFooterLinks() {
             href="https://discord.bitfinity.network"
             target="_blank"
             rel="nofollow noopener noreferrer"
-            title="EVMC on Discord"
+            title="Bitfinity on Discord"
           >
             <FontAwesomeIcon icon={faDiscord} size="lg" />
           </Link>
@@ -88,7 +88,7 @@ function CustomFooterLinks() {
             href="https://t.me/infinityswapofficial"
             target="_blank"
             rel="nofollow noopener noreferrer"
-            title="EVMC on Telegram"
+            title="Bitfinity on Telegram"
           >
             <FontAwesomeIcon icon={faTelegram} size="lg" />
           </Link>
@@ -99,7 +99,7 @@ function CustomFooterLinks() {
             href="https://twitter.com/infinity_swap"
             target="_blank"
             rel="nofollow noopener noreferrer"
-            title="EVMC on Twitter"
+            title="Bitfinity on Twitter"
           >
             <FontAwesomeIcon icon={faTwitter} size="lg" />
           </Link>

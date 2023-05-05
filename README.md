@@ -13,9 +13,9 @@
 ## Development
 
 ```console
-$ git clone https://github.com/infinity-swap/tech-docs-evmc
+$ git clone https://github.com/infinity-swap/tech-docs-Bitfinity
 
-$ cd tech-docs-evmc
+$ cd tech-docs-Bitfinity
 
 $ curl -fsSL https://get.pnpm.io/install.sh | sh -
 

@@ -6,8 +6,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/okaidia');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'EVMC Documentation',
-  tagline: 'Documentation and Tutorials for EVMC',
+  title: 'Bitfinity Documentation',
+  tagline: 'Documentation and Tutorials for Bitfinity',
   url: 'https://doc.bitfinity.network',
   baseUrl: '/',
   //TODO:Change it to throw once /bridge/bridge-overview is ready
@@ -90,7 +90,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          editUrl: 'https://github.com/infinity-swap/tech-docs-evmc/edit/main',
+          editUrl: 'https://github.com/infinity-swap/tech-docs-Bitfinity/edit/main',
         },
         theme: {
           customCss: [
@@ -118,7 +118,7 @@ const config = {
       navbar: {
         title: 'Documentation',
         logo: {
-          alt: 'EVMC logo',
+          alt: 'Bitfinity logo',
           src: 'img/logo_dark.svg',
           srcDark: 'img/logo_white.svg',
           style : {

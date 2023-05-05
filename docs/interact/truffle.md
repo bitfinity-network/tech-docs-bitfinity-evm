@@ -9,7 +9,7 @@ sidebar_position: 5
 
 [Truffle](https://www.trufflesuite.com/) is a widely used development
 environment and testing framework for Ethereum smart contracts. In this
-tutorial, we will show by example how to use Truffle with the EVMC Testnet.
+tutorial, we will show by example how to use Truffle with the Bitfinity Testnet.
 
 This tutorial assumes that you are familiar with Truffle and the non-fungible
 tokens (NFT) concept. For more details about the non-fungible token standard,
@@ -23,7 +23,7 @@ This example is originally forked from the [OpenZeppelin
 examples](https://docs.openzeppelin.com/contracts/4.x/erc721). However, the code
 has been changed to fit the use case of this tutorial. The use case is about how
 to deploy and manage the life cycle of a simple COVID-19 vaccine NFT token 💊💊
-using Truffle on the EVMC Testnet.
+using Truffle on the Bitfinity Testnet.
 
 ![Truffle NFT example](/img/truffle_nft_example.png)
 
@@ -68,7 +68,7 @@ cd bitfinity-examples/truffle/erc721-example/
 yarn 
 ```
 
-## Connecting Truffle to EVMC
+## Connecting Truffle to Bitfinity
 
 Export your `MNEMONIC` as follows:
 
@@ -91,7 +91,7 @@ bitfinity: {
 
 The `truffle-config.js` configuration will pick up your `MNEMONIC` environment
 variable and recover the address that will be used for sending and signing
-transactions on the EVMC network.
+transactions on the Bitfinity network.
 
 ## Deploying the Contract
 
@@ -221,5 +221,5 @@ true
 
 ## Summary
 
-In this simple tutorial, we deployed an NFT contract to the EVMC Testnet using
+In this simple tutorial, we deployed an NFT contract to the Bitfinity Testnet using
 Truffle and interacted with the contract's functions.

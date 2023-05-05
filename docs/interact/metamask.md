@@ -7,11 +7,11 @@ sidebar_position: 1
 
 ## Introduction
 
-[MetaMask] is a convenient UI for interacting with Ethereum-compatible blockchains (such as EVMC).
+[MetaMask] is a convenient UI for interacting with Ethereum-compatible blockchains (such as Bitfinity).
 For the purpose of this guide, we will assume you are already familiar with MetaMask and have it installed.
 If you need help getting started with MetaMask itself, [check out their documentation](https://metamask.io/faqs.html).
 
-In this tutorial we will walk through connecting MetaMask to the EVMC Testnet, deploying a simple ERC-20 contract using [Remix], and transferring the new token using MetaMask.
+In this tutorial we will walk through connecting MetaMask to the Bitfinity Testnet, deploying a simple ERC-20 contract using [Remix], and transferring the new token using MetaMask.
 
 :::note
 Screenshots in this tutorial are taken from the MetaMask browser extension version 9.5.5.
@@ -33,10 +33,10 @@ Fill in the form with the following information:
 ![MetaMask-create-bitfinity-rpc](/img/metamask_create_bitfinity_rpc.png)
 
 :::note
-All the EVMC RPC endpoint URLs and chain IDs can be found on our [Networks](../getting-started/network-endpoints.md) page.
+All the Bitfinity RPC endpoint URLs and chain IDs can be found on our [Networks](../getting-started/network-endpoints.md) page.
 :::
 
-Click `Save`, and you should see `EVMC Testnet` is now the network selected in MetaMask.
+Click `Save`, and you should see `Bitfinity Testnet` is now the network selected in MetaMask.
 To see MetaMask in action, we will connect it to [Remix] and perform some transactions.
 
 ## Deploying an ERC-20 Token using Remix
@@ -102,11 +102,11 @@ Click the copy button to copy the address of the newly deployed contract.
 
 ![Remix-deploy-contract-confirmed](/img/remix_deploy_contract_confirmed.png)
 
-Now that the contract is deployed on the EVMC network, we can interact with it via MetaMask.
+Now that the contract is deployed on the Bitfinity network, we can interact with it via MetaMask.
 
 ## Adding an ERC-20 Token to MetaMask
 
-In the MetaMask interface (with the EVMC Testnet network still selected), click the `Add Token` button:
+In the MetaMask interface (with the Bitfinity Testnet network still selected), click the `Add Token` button:
 
 ![MetaMask-add-token-button](/img/metamask_add_token_button.png)
 
@@ -124,8 +124,8 @@ Click `Add Tokens`:
 The token has now been added to MetaMask and we can use the MetaMask interface to view the token balance and to transfer the token to others.
 ## Summary
 
-In this tutorial we connected MetaMask to the EVMC Testnet, deployed an ERC-20 token contract using Remix, and transferred that token using MetaMask.
-The only difference to doing this on the original Ethereum network was setting the RPC endpoint to be EVMC's.
+In this tutorial we connected MetaMask to the Bitfinity Testnet, deployed an ERC-20 token contract using Remix, and transferred that token using MetaMask.
+The only difference to doing this on the original Ethereum network was setting the RPC endpoint to be Bitfinity's.
 
 [MetaMask]: https://metamask.io
 [Remix]: https://remix.ethereum.org

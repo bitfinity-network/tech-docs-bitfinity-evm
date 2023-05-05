@@ -13,7 +13,7 @@ DApps.
 
 This tutorial covers the following topics:
 
-- Running a Graph node on EVMC.
+- Running a Graph node on Bitfinity.
 - Creating and deploying a subgraph.
 - Querying events from the subgraph.
 
@@ -41,7 +41,7 @@ cd graph-node
 
 ### Configure
 
-In order wire your local graph node with EVMC Testnet RPC, you should change
+In order wire your local graph node with Bitfinity Testnet RPC, you should change
 the value of `ethereum` section in `docker/docker-compose.yaml` file from
  `mainnet:http://host.docker.internal:8545` to
  `'bitfinity:https://testnet.bitfinity.network'`.
@@ -87,7 +87,7 @@ event NewGravatar(uint id, address owner, string displayName, string imageUrl);
 event UpdatedGravatar(uint id, address owner, string displayName, string imageUrl);
 ```
 
-The contract was already deployed on EVMC Testnet. The deployed `GravatarRegistry`
+The contract was already deployed on Bitfinity Testnet. The deployed `GravatarRegistry`
 contract address is `0x8773e6832f44b2C17AC78592ffCe407C62d8c36E` and the start
 block number is `74885768`.
 
@@ -253,7 +253,7 @@ get the results as shown below:
 
 ## Summary
 
-In this tutorial, we started a Graph node locally, then we wired our node to EVMC
+In this tutorial, we started a Graph node locally, then we wired our node to Bitfinity
 Testnet RPC. We also configured a subgraph example and deployed that subgraph
 on our local graph node. Finally the graph node was able to collect and index
-the subgraph example (GravatarRegistry) events from EVMC Testnet.
+the subgraph example (GravatarRegistry) events from Bitfinity Testnet.

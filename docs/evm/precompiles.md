@@ -5,7 +5,7 @@ sidebar_position: 2
 
 # Precompiles
 
-The EVMC EVM supports all Ethereum precompiles as well as extra precompiles designed to interact
+The Bitfinity EVM supports all Ethereum precompiles as well as extra precompiles designed to interact
 with the Internet Computer blockchain. The ones denoted in **bold** are extra.
 
 Definitions below from [evm.codes].
