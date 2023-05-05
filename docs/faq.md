@@ -45,7 +45,7 @@ To access your tokens and apps on Bitfinity, you’ll need to add Bitfinity as a
 
 ## Which tokens will be supported?
 
-Initially, ETH—the base fee token of Bitfinity—will be supported, followed by a select list of popular ERC-20 tokens, and then any arbitrary assets.
+Initially, BFT—the base fee token of Bitfinity—will be supported, followed by all SNS tokens, ckBTC, a select list of popular ERC-20 tokens, and then any arbitrary assets.
 
 ## How long will transfers take?
 
