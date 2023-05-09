@@ -28,7 +28,7 @@ Fill in the form with the following information:
 * Network Name: Bitfinity TestNet
 * New RPC URL: `https://testnet.bitfinity.network/`
 * Chain ID: 355113
-* Currency Symbol: ETH
+* Currency Symbol: BFT
 
 ![MetaMask-create-bitfinity-rpc](/img/metamask_create_bitfinity_rpc.png)
 
