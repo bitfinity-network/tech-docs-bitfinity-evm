@@ -90,7 +90,7 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          editUrl: 'https://github.com/infinity-swap/tech-docs-bitfinity-evm/edit/main',
+          editUrl: 'https://github.com/bitfinity-network/tech-docs-bitfinity-evm/edit/main',
         },
         theme: {
           customCss: [
@@ -127,7 +127,7 @@ const config = {
         },
         items: [
           {
-            href: 'https://github.com/infinity-swap',
+            href: 'https://github.com/bitfinity-network',
             label: 'GitHub',
             position: 'right',
           },

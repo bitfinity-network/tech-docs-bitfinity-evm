@@ -28,20 +28,20 @@ using Truffle on the Bitfinity Testnet.
 ![Truffle NFT example](/img/truffle_nft_example.png)
 
 1. The minter address (which is managed by the vaccination program manager) can
-distribute (mint) the vaccine tickets (NFT tokens 💊💊💊) to the people who are
-part of the vaccination program.
+   distribute (mint) the vaccine tickets (NFT tokens 💊💊💊) to the people who are
+   part of the vaccination program.
 
 2. When participants receive the tokens 💊, they can get access to the vaccine
-by spending the NFT token.
+   by spending the NFT token.
 
 3. This means either burning the NFT token or sending it back to the minter
-address.
+   address.
 
 4. If the participant chooses to send it back then the minter can redistribute
-that token 🎫 to another participant in the line.
+   that token 🎫 to another participant in the line.
 
 5. Then the new participant will have access to the same vaccine token that has
-been used by the previous participant.
+   been used by the previous participant.
 
 ## Installing Prerequisites
 
@@ -55,17 +55,17 @@ To install the prerequisite packages, clone the examples repository and then run
 ### Install Truffle
 
 ```bash
-npm install -g truffle 
+npm install -g truffle
 ```
 
 ### Install dependencies
 
 ```bash
-git clone https://github.com/infinity-swap/bitfinity-examples.git
+git clone https://github.com/bitfinity-network/bitfinity-examples.git
 
 cd bitfinity-examples/truffle/erc721-example/
 
-yarn 
+yarn
 ```
 
 ## Connecting Truffle to Bitfinity
@@ -85,7 +85,7 @@ bitfinity: {
   provider: () => setupWallet('https://testnet.bitfinity.network'),
   network_id: 0x56b29,
   gas: 10000000,
-  from: setupWallet('https://testnet.bitfinity.network') 
+  from: setupWallet('https://testnet.bitfinity.network')
 },
 ```
 
@@ -167,13 +167,13 @@ This is exactly the same error message we have in our NFT contract in
 
 ```solidity
 function safeTransferFrom(
-    address from, 
-    address to, 
+    address from,
+    address to,
     uint256 tokenId
-) 
-    public 
-    virtual 
-    override 
+)
+    public
+    virtual
+    override
     {
         require(
             minter == msg.sender || to == minter,
