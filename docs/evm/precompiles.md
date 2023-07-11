@@ -32,7 +32,7 @@ Definitions below from [evm.codes].
 
 :::note
 Some precompiles currently have a gas value of 0. This is temporary as it is difficult to determine
-an exact gas value. However, the ones that this applies to the gas cost are generally negligible.
+an exact gas value. However, the gas costs for the ones that this applies to are generally negligible.
 :::
 
 ## ECRecover

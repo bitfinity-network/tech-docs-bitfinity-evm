@@ -3,7 +3,6 @@ title: "The Graph"
 sidebar_position: 1
 ---
 
-
 ## Introduction
 
 [The Graph](https://thegraph.com/) is an indexing service which collects
@@ -43,8 +42,8 @@ cd graph-node
 
 In order wire your local graph node with Bitfinity Testnet RPC, you should change
 the value of `ethereum` section in `docker/docker-compose.yaml` file from
- `mainnet:http://host.docker.internal:8545` to
- `'bitfinity:https://testnet.bitfinity.network'`.
+`mainnet:http://host.docker.internal:8545` to
+`'bitfinity:https://testnet.bitfinity.network'`.
 
 ```yaml
 ....
@@ -79,7 +78,7 @@ deploy a subgraph. The subgraph defines how the data on Ethereum will be
 indexed and stored on the graph node.
 
 In this tutorial, we are going to use the subgraph example called
-[GravatarRegistry](https://github.com/infinity-swap/example-subgraph) (a simple
+[GravatarRegistry](https://github.com/bitfinity-network/example-subgraph) (a simple
 on-chain Gravatar). The GravatarRegistry contract has two events:
 
 ```javascript
@@ -96,7 +95,7 @@ block number is `74885768`.
 Clone subgraph example repo.
 
 ```bash
-git clone https://github.com/infinity-swap/example-subgraph.git
+git clone https://github.com/bitfinity-network/example-subgraph.git
 cd example-subgraph
 ```
 
@@ -168,11 +167,11 @@ parameters, and save them in `gravatar`.
 
 ```javascript
 export function handleNewGravatar(event: NewGravatar): void {
-  let gravatar = new Gravatar(event.params.id.toHex())
-  gravatar.owner = event.params.owner
-  gravatar.displayName = event.params.displayName
-  gravatar.imageUrl = event.params.imageUrl
-  gravatar.save()
+  let gravatar = new Gravatar(event.params.id.toHex());
+  gravatar.owner = event.params.owner;
+  gravatar.displayName = event.params.displayName;
+  gravatar.imageUrl = event.params.imageUrl;
+  gravatar.save();
 }
 ```
 

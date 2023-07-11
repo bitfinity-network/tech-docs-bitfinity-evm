@@ -63,7 +63,7 @@ function CustomFooterLinks() {
         <li className="footer__item">
           <Link
             className="footer__link-item"
-            href="https://github.com/infinity-swap"
+            href="https://github.com/bitfinity-network"
             target="_blank"
             rel="nofollow noopener noreferrer"
             title="Bitfinity on GitHub"
