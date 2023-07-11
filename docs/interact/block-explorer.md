@@ -18,4 +18,4 @@ collator data, specific transfers between tokens, and a list of ERC-20 tokens on
 
 ## Deploying locally
 
-It is possible to launch a standalone version of the blockchain explorer system that gives and access to the Bitfinity blocks and transactions. Please find the detailed instructions in the [documentation](https://github.com/infinity-swap/erigon/tree/EPROD-178_implement_block_importer/cmd/blockimporter/Readme.md) here.
+It is possible to launch a standalone version of the blockchain explorer system that gives and access to the Bitfinity blocks and transactions. Please find the detailed instructions in the [documentation](https://github.com/bitfinity-network/erigon/tree/EPROD-178_implement_block_importer/cmd/blockimporter/Readme.md) here.
