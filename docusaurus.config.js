@@ -115,6 +115,7 @@ const config = {
       sidebar: {
         hideable: true,
       },
+      image: 'img/og-1.jpeg',
       navbar: {
         title: 'Documentation',
         logo: {
