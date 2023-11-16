@@ -122,6 +122,7 @@ Click `Add Tokens`:
 ![MetaMask-add-token-confirm](/img/metamask_add_token_confirm.png)
 
 The token has now been added to MetaMask and we can use the MetaMask interface to view the token balance and to transfer the token to others.
+
 ## Summary
 
 In this tutorial we connected MetaMask to the Bitfinity Testnet, deployed an ERC-20 token contract using Remix, and transferred that token using MetaMask.
