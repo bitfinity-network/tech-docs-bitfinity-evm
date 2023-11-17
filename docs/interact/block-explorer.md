@@ -1,21 +1,22 @@
 ---
 title: Block Explorer
-sidebar_position: 2
+sidebar_position: 7
 ---
 
-## Introduction
+## Public Explorer
 
-Block explorer allows accessing the bockchain information from Bitfinity (blocks, transactions, etc) that is updated in real-time.
+[Bitfinity's block explorer](https://explorer.bitfinity.network/) is based on the [otterscan](https://github.com/wmitsuda/otterscan) project and provides real-time access to blockchain data (blocks, transactions, etc.). It interfaces with a custom [erigon](https://github.com/ledgerwatch/erigon) node for continuous updates from Bitfinity.
 
-It is based on the [otterscan](https://github.com/wmitsuda/otterscan) project that targets the custom [erigon](https://github.com/ledgerwatch/erigon) node that continuously gets new information from the Bitfinity.
+The Block Explorer offers users and developers access to tools and network statistics for in-depth insights into Bitfinity's EVM. Users can view transactions, addresses, and blocks. Developers can access charts and statistics related to smart contract execution, collator data, specific token transfers, and a list of ERC-20 tokens on Bitfinity.
 
-By using Block Explorer, users and developers can get access to the developer tools and network statistics that provide
-extended insights into Bitfinity's EVM.
+## Local Deployment
 
-Users are able to view transactions, addresses, and blocks.
-Developers can get a wide range of charts and statistics related to smart contract execution,
-collator data, specific transfers between tokens, and a list of ERC-20 tokens on Bitfinity.
+You can launch a standalone version of the block explorer for access to Bitfinity's blocks and transactions. 
 
-## Deploying locally
+To do this, you will need to run a forked Erigon Node against the Bitfinity EVM. And once this has been stood up, you can run Otterscan or Bitfinity-Otterscan against this node. 
 
-It is possible to launch a standalone version of the blockchain explorer system that gives and access to the Bitfinity blocks and transactions. Please find the detailed instructions in the [documentation](https://github.com/bitfinity-network/erigon/tree/EPROD-178_implement_block_importer/cmd/blockimporter/Readme.md) here.
+[bitfinity-eragon](https://github.com/bitfinity-network/erigon)
+
+[otterscan](https://github.com/wmitsuda/otterscan)
+
+[bitfinity-otterscan](https://github.com/bitfinity-network/otterscan/tree/v1.30.0-modified)

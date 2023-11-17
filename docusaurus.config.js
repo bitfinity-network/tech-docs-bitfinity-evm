@@ -32,10 +32,6 @@ const config = {
             from: ['/develop/start/truffle'],
           },
           {
-            to: '/getting-started/network-endpoints',
-            from: ['/develop/networks', '/develop/compat/gas', `/compat/gas`],
-          },
-          {
             to: '/interact/metamask',
             from: ['/develop/start/metamask'],
           },

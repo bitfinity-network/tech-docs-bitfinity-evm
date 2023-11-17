@@ -1,17 +1,32 @@
 ---
-title: Minting Tokens
-sidebar_position: 5
+title: Testnet Tokens
+sidebar_position: 2
 ---
 
-# Minting Tokens
+# Minting Testnet Tokens
 
 ## Introduction
 
-Minting is the process of creating new tokens. In the context of the Bitfinity, minting is the process of creating new tokens on the Bitfinity Testnet. The Bitfinity Testnet supports minting tokens for the Native Asset.
+The [Bitfinity Testnet](https://bitfinity.network) supports minting testnet tokens which users can pay for gas fees when deploying their dapps.
 
-## Minting
+We support minting testnet tokens in a number of ways. 
 
-We have two endpoints for minting tokens. We support both IC and Ethereum users. For the JSON-RPC endpoint, we use the `ic_mintEVMToken` method, while for the IC endpoint, we use the `mint_evm_tokens` method.
+* Discord 
+* Web Interface 
+* JSON RPC 
+* Internet Computer Interface
+
+## Minting on Discord
+
+We have two endpoints for minting tokens. We support both IC and Ethereum users. For the JSON-RPC endpoint, we use the `ic_mint_native_token` method, while for the IC endpoint, we use the `mint_native_tokens` method.
+
+## Minting through the Website 
+
+
+
+## Minting through JSON RPC
+
+We have two endpoints for minting tokens. We support both IC and Ethereum users. For the JSON-RPC endpoint, we use the `ic_mint_native_token` method, while for the IC endpoint, we use the `mint_native_tokens` method.
 
 ## Examples
 
@@ -38,6 +53,9 @@ curl -X POST -H "Content-Type: application/json" -d '{"jsonrpc": "2.0", "id": 1,
 ```bash
 dfx canister call --network=ic BITFINITY_CANISTER_URL mint_evm_tokens '(opt \"0x1234567890123456789012345678901234567890\", 10000000000000000000)'
 ```
+
+## Minting through the IC 
+
 
 ## Final Notes
 
