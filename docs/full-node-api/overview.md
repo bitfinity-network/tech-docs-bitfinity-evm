@@ -4,7 +4,11 @@ title: "Overview"
 
 # Overview
 
-The purpose of this tool is to reproduce state of an EVM canister off-chain and keep it in-sync using Ethereum JSON-RPC API as data source.
+The purpose of this tool, which we describe as the evm-archiver, is to reproduce the full state and (optionally full) history of the Bitfinity EVM off-chain.
 
-The `evm-archiver` provides read-only Ethereum JSON-RPC API too. This allows to use it as data source for another instance of the `evm-archiver`, or just to get `evm-canister` data from off-chain source.
+The `evm-archiver` provides read-only JSON-RPC API access for a full node.
+
+It can  retrieve the bootrstap chain state and history from an another instance of an `evm-archiver`, or directly on-chain from the Bitfinity EVM on the IC, running as an `evm-canister.
+
+In the usage section, we show how to operate an EVM archiver and call its API. The binaries for the EVM archiver can be found here [TBC].
 
