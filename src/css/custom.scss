@@ -71,7 +71,32 @@ p {
 }
 
 .theme-doc-sidebar-menu {
-  font-size: 14px;
+  font-size: 16px;
+  max-width: 300px;
+}
+.theme-doc-sidebar-container {
+  max-width: 300px;
+
+}
+
+.markdown {
+  padding-left: 30px; /* Adjust this value to suit your needs */
+}
+
+.menu::-webkit-scrollbar {
+  display: none;
+}
+
+.menu {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.menu__link--active {
+  color: #3c87ff; /* Adjust this value to the color you want */
+}
+.table-of-contents__link--active {
+  color: #3c87ff; /* Adjust this value to the color you want */
 }
 
 h1 {

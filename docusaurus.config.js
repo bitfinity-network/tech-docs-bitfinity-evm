@@ -117,21 +117,28 @@ const config = {
       },
       image: 'img/og-1.jpeg',
       navbar: {
-        title: 'Documentation',
+        title: '| Documentation',
         logo: {
+          href: 'https://bitfinity.network',
           alt: 'Bitfinity logo',
           src: 'img/logo_dark.svg',
           srcDark: 'img/logo_white.svg',
           style : {
-            marginRight: '13.5rem',
+            marginRight: '0rem',
           }
         },
         items: [
+          {
+            href: 'https://bitfinity.network',
+            label: 'Home',
+            position: 'right',
+          },
           {
             href: 'https://github.com/bitfinity-network',
             label: 'GitHub',
             position: 'right',
           },
+          
         ],
       },
       footer: {
