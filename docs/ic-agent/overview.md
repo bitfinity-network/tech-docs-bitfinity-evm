@@ -34,3 +34,63 @@ To reserve an EVM address, users must call the `reserve_address` endpoint with t
 - Transaction hash: The transaction hash returned by the `send_raw_transaction` endpoint
 
 If the transaction hash is valid, the EVM canister will reserve the address. The reserved address can then be used to send transactions to the EVM canister, but it will only be reserved for the IC Agent's principal.
+
+### Example
+
+### Using the register-agent tool
+
+The `register-agent` tool can be used to register an EVM address for an IC principal. It can be found in this [repository](<https://github.com/bitfinity-network/bitfinity-evm-sdk/tree/main/src/register-evm-agent>). In the [releases](<https://github.com/bitfinity-network/bitfinity-evm-sdk/releases/tag/v0.9.x>) section, you can find the latest version of the tool.
+
+The tool can be used as follows:
+
+```bash
+register-evm-agent reserve -k <private_key> -g <gas price> -n <network> -i <identity_path> --evm <evm_canister_principal> --canister-id <reserve_canister_principal>
+```
+
+- *private_key* is the Private key for the identity you're going to use to reserve your canister.
+- *gas_price* is the gas price for the transaction that will be used as a proof.
+- *network* is the network to run against: default is local, the value can be both ic or a custom URL.
+- *identity_path* is the path to the identity you're going to use to reserve your canister
+- *evm_canister_principal* is the principal for the EVM canister
+- *reserve_canister_principal* is the principal of the canister you're going to associate to the reserved address
+
+This command will send the transaction to the EVM canister and reserve the address for the IC principal. On Success, it will print `Address successfully reserved`.
+
+For full documentation, please refer to the [README](<<https://github.com/bitfinity-network/bitfinity-evm-sdk/tree/main/src/register-evm-agent/README.md>)
+
+### Using the DFX CLI
+
+If you have DFX installed, you can use the following command to register an EVM address for an IC principal:
+
+:::note
+You strictly need to follow the steps mentioned above to register an EVM address for an IC principal.
+:::
+
+#### Step 1: Create and send a transaction
+
+```bash
+transaction = record {
+    from = "\<USER_ADDRESS>\";
+    to = "\<USER_ADDRESS>\";
+    value = 0x0;
+    data = vec { <IC_AGENT_PRINCIPAL> };
+    gas = 0x989680;
+    gas_price = 0xa;
+    nonce = 0x0;
+}
+
+dfx canister call <evm_canister_principal> --ic send_raw_transaction "(transaction)"
+```
+
+#### Step 2: Reserve an EVM address
+
+:::note
+The transaction hash is returned by the `send_raw_transaction` endpoint.
+:::
+
+```bash
+
+dfx canister call <evm_canister_principal> --ic reserve_address "(<IC_AGENT_PRINCIPAL>, <TRANSACTION_HASH>)"
+```
+
+Theses steps will reserve an EVM address for the IC principal. The reserved address can then be used to send transactions to the EVM canister, but it will only be reserved for the IC Agent's principal.
