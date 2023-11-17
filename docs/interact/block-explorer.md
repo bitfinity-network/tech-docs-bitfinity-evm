@@ -5,7 +5,7 @@ sidebar_position: 2
 
 ## Introduction
 
-Block explorer allows accessing the bockchain information from Bitfinity (blocks, transactions, etc) that is updated in real-time.
+Block explorer allows accessing the blockchain information from Bitfinity (blocks, transactions, etc) that is updated in real-time.
 
 It is based on the [otterscan](https://github.com/wmitsuda/otterscan) project that targets the custom [erigon](https://github.com/ledgerwatch/erigon) node that continuously gets new information from the Bitfinity.
 
@@ -19,3 +19,7 @@ collator data, specific transfers between tokens, and a list of ERC-20 tokens on
 ## Deploying locally
 
 It is possible to launch a standalone version of the blockchain explorer system that gives and access to the Bitfinity blocks and transactions. Please find the detailed instructions in the [documentation](https://github.com/bitfinity-network/erigon/tree/EPROD-178_implement_block_importer/cmd/blockimporter/Readme.md) here.
+
+## View the Block Explorer
+
+The Block Explorer is available at [https://explorer.bitfinity.network](https://explorer.bitfinity.network/)

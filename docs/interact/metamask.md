@@ -68,12 +68,20 @@ contract MyToken is ERC20 {
 This code is a slightly modified (the Solidity compiler and [OpenZeppelin] versions are newer) version of the [example from Solidity by Example].
 
 Click the `Solidity Compile` button on the far left panel (the second icon down);
-ensure your selected Solidity compiler version is 0.8 (minor versions within 0.8, e.g., 0.8.4 work too), and click `Compile ERC20Token.sol`.
+ensure your selected Solidity compiler version is 0.8 (minor versions within 0.8, e.g., 0.8.4 work too), enable optimization,  and set the EVM version to `paris` and click `Compile MyToken.sol`.
+
+:::note
+The `paris` EVM version is required to be selected for Bitfinity.
+:::
 
 ![Remix-solidity-compile](/img/remix_solidity_compile.png)
 
 Once the contract is compiled, click the `Deploy & run transactions` button in the far left panel (the icon below the Solidity compiler).
 In the `ENVIRONMENT` drop-down select `Injected Web3`.
+
+:::note
+You can override the gas limit in the `Deploy & run transactions` panel. The default is 3000000, which is sufficient for this example.
+:::
 
 ![Remix-inject-web3](/img/remix_injected_web3.png)
 
@@ -122,6 +130,7 @@ Click `Add Tokens`:
 ![MetaMask-add-token-confirm](/img/metamask_add_token_confirm.png)
 
 The token has now been added to MetaMask and we can use the MetaMask interface to view the token balance and to transfer the token to others.
+
 ## Summary
 
 In this tutorial we connected MetaMask to the Bitfinity Testnet, deployed an ERC-20 token contract using Remix, and transferred that token using MetaMask.

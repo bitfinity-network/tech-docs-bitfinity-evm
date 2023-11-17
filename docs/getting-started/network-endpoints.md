@@ -11,15 +11,34 @@ following networks:
 
 | Network             | Engine ID                  | Chain ID                | Endpoint URL                 |
 |---------------------|----------------------------|-------------------------|------------------------------|
-| [Mainnet](#mainnet) | [`Bitfinity`][bitfinity@Mainnet] | 355110 (0x56b29) | <https://mainnet.bitfinity.network> |
-| [Testnet](#testnet) | [`Bitfinity`][bitfinity@Testnet] | 355113 (0x56b29) | <https://testnet.bitfinity.network> |
-| Localnet            | `Bitfinity.test.ic`         | 355113 (0x56b29) | <http://localhost:8545>      |
+| [Mainnet](#mainnet) | [Bitfinity][bitfinity@Mainnet] | 355110 (0x56b29) | <https://mainnet.bitfinity.network> |
+| [Testnet](#testnet) | [Bitfinity][bitfinity@Testnet] | 355113 (0x56b29) | <https://testnet.bitfinity.network> |
 
 :::note
 Bitfinity runs on top of Internet Computer, meaning that the underlying Internet Computer gas is the real measure of
 computational work.
 
 :::
+
+## Canister IDs
+
+### Mainnet
+
+| Canister Name | Canister ID |
+|---------------|-------------|
+| Bitfinity     | N/A         |
+
+### Testnet
+
+| Canister Name | Canister ID |
+|---------------|-------------|
+| Bitfinity     | `4fe7g-7iaaa-aaaak-aegcq-cai` |
+
+### Devnet
+
+| Canister Name | Canister ID |
+|---------------|-------------|
+| Bitfinity     | `emz6j-kiaaa-aaaak-ae35a-cai` |
 
 ## Endpoints
 
