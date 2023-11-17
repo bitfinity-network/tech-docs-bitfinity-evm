@@ -17,10 +17,7 @@ const config = {
   organizationName: 'bitfinity',
   projectName: 'docs.bitfinity.network',
 
-  stylesheets: [
-    'https://fonts.googleapis.com/css2?family=Inter&display=swap',
-  ],
- 
+  stylesheets: ['https://fonts.googleapis.com/css2?family=Inter&display=swap'],
 
   plugins: [
     [
@@ -45,7 +42,7 @@ const config = {
           },
           {
             to: '/evm/rpc',
-            from: ['/compact/rpc', '/develop/compat/rpc']
+            from: ['/compact/rpc', '/develop/compat/rpc'],
           },
           {
             to: '/evm/evm-overview',
@@ -86,12 +83,11 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           routeBasePath: '/',
-          editUrl: 'https://github.com/bitfinity-network/tech-docs-bitfinity-evm/edit/main',
+          editUrl:
+            'https://github.com/bitfinity-network/tech-docs-bitfinity-evm/edit/main',
         },
         theme: {
-          customCss: [
-            require.resolve('./src/css/custom.scss')
-          ],
+          customCss: [require.resolve('./src/css/custom.scss')],
         },
         gtag: {
           trackingID: 'G-Q4JXE0ZPND',
@@ -99,7 +95,6 @@ const config = {
         },
       }),
     ],
-   
   ],
 
   themeConfig:
