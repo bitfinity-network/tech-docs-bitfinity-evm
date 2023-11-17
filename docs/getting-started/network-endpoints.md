@@ -1,22 +1,23 @@
 ---
-title: "Networks Endpoints"
+title: "Network"
+sidebar_position: 0
+
 ---
 
-# Networks
+# Network
 
 Ethereum Virtual Machine (EVM) support is currently available on the
-following networks:
+following networks on testnet. Mainnet is due to be supported by Jan 2024:
 
 <div class="networks-table"></div>
 
 | Network             | Engine ID                  | Chain ID                | Endpoint URL                 |
 |---------------------|----------------------------|-------------------------|------------------------------|
-| [Mainnet](#mainnet) | [Bitfinity][bitfinity@Mainnet] | 355110 (0x56b29) | <https://mainnet.bitfinity.network> |
+| [Mainnet](#mainnet) | [Bitfinity][bitfinity@Mainnet] | 355110 (0x56b29) | To be announced |
 | [Testnet](#testnet) | [Bitfinity][bitfinity@Testnet] | 355113 (0x56b29) | <https://testnet.bitfinity.network> |
 
 :::note
-Bitfinity runs on top of Internet Computer, meaning that the underlying Internet Computer gas is the real measure of
-computational work.
+Bitfinity computation is paid for in the Bitfinity native token.
 
 :::
 
@@ -26,7 +27,7 @@ computational work.
 
 | Canister Name | Canister ID |
 |---------------|-------------|
-| Bitfinity     | N/A         |
+| Bitfinity     | TBA         |
 
 ### Testnet
 
@@ -34,11 +35,6 @@ computational work.
 |---------------|-------------|
 | Bitfinity     | `4fe7g-7iaaa-aaaak-aegcq-cai` |
 
-### Devnet
-
-| Canister Name | Canister ID |
-|---------------|-------------|
-| Bitfinity     | `emz6j-kiaaa-aaaak-ae35a-cai` |
 
 ## Endpoints
 
