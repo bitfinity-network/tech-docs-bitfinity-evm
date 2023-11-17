@@ -6,19 +6,19 @@ title: "FAQs"
 
 ### I'm an app developer. Why should I choose Bitfinity over other EVMs?
 
-Bitfinity gives you access to new assets on Bitcoin, but with a familiar EVM development environment. You can use Bitcoin and BRC20  in Solidity smart-contracts.
+Bitfinity gives you access to new assets on Bitcoin, but with a familiar EVM development environment. You can use Bitcoin and BRC20 in Solidity smart-contracts.
 
-Bitfinity is also high throughput and fast finality, finality is 1-2 seconds and throughput is comparable to Solana. 
+Bitfinity is high throughput and fast finality. Finality is 1-2 seconds and throughput is up to 1000 TPS. 
 
 ### What are the basic performance metrics?
 
 Bitfinity EVM can operate at more than 100 times the throughput of the Ethereum Mainnet.
-And so Bitfinity helps to scale up the Bitcoin blockchain. Youc an also send Twinned/Wrapped Bitcoin on Bitfinity at lightning speeds.  
+Bitfinity helps to scale up the Bitcoin blockchain. You can also send twinned/wrapped Bitcoin on Bitfinity at lightning speeds.  
 
 ### How will transaction fees work?
 
-The base fee token of Bitfinity is BITFNITY (BFT).
-By leveraging the underlying low-cost capabilities of the IC, Bitfinity transactions will typically cost less than pennies.
+The base fee token of Bitfinity is BITFINITY (BFT).
+By leveraging the underlying low-cost capabilities of the IC, Bitfinity transactions will often cost nothing.
 
 DAO directed mechanisms that accumulate fees can channel a portion back to the projects running on Bitfinity!
 
@@ -30,14 +30,14 @@ While the detailed Bitfinity roadmap is available on the [web site], in general,
 
 ### How do I get started with Bitfinity?
 
-Read through the docs, the getting-started section, and mint testnet tokens from our discord channel. 
+Read through the docs, the getting-started section and mint testnet tokens from our discord channel. 
 
 [Discord](https://discord.com/invite/AQwKukrdjf)
 
 ### How will bridging tokens between Ethereum and Bitfinity work?
 
-Very easy! You'll select the direction of transfer, the token you want to transfer, and the amount.
-Your address on Bitfinity will be the same as your Ethereum address. The Bitfinity Bridge currently works with MetaMask.
+Very easy! You'll select the direction of transfer, the token you want to transfer and the amount.
+Your address on Bitfinity will be the same as your Ethereum address. The Neuro Bridge currently works with MetaMask.
 
 ### Which tokens will be supported?
 
