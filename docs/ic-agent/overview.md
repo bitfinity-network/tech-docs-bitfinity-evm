@@ -4,7 +4,9 @@ title: "Overview"
 
 # Introduction
 
-IC Agents can reserve an Ethereum address for an IC principal/IC Agent. This address can be used to send transactions to the EVM. If a transaction is sent from a reserved address by a non-IC Agent, the transaction will be rejected.
+IC Agents can reserve an Ethereum address for an IC principal/IC Agent. This address can be used to send transactions to the EVM. If a transaction is sent from a reserved address by any entity other than the registered IC Agent, the transaction will be rejected.
+
+The purpose of this registration process is to bind an Ethereum key to an IC agent, so that no other entity may use that key in conjunction with the Bitfinity EVM. This means that a canister could, for instance, hold a local key and use this to sign transactions on the EVM without the fear of losing funds from a lost or stolen private key. This only applies to the Bitfinity EVM, other EVMs cannot be protected in such a way, and it is important to keep your keys secure if used on other chains or not registered.
 
 ## Registering an EVM address
 
@@ -95,17 +97,20 @@ dfx canister call <evm_canister_principal> --ic reserve_address "(<IC_AGENT_PRIN
 
 Theses steps will reserve an EVM address for the IC principal. The reserved address can then be used to send transactions to the EVM canister, but it will only be reserved for the IC Agent's principal.
 
----
-title: "EVM Client"
----
 
-EVM Client is a package that allows you to interact with the EVM (Bitfinity). It is a wrapper around the [JSON-RPC API](../rpc.md) and provides a simple interface for interacting with the EVM via the Canister endpoint.
+## EVM Rust Canister Client
+
+
+The EVM Client is a Rust package that allows you to interact with the EVM (Bitfinity)
+from a canister using the IC API. 
+
+It is a wrapper around the [JSON-RPC API](../rpc.md) and provides a simple interface for interacting with the EVM via the Canister endpoint.
 
 ### Key Features
 
 - Integration with Internet Computer Canisters: The EVM Client is particularly designed to work in conjunction with canisters deployed on the Internet Computer. This integration allows for seamless interaction between the two environments, making it a vital tool for developers working within the Bitfinity ecosystem.
 
-- Functionality and Limitation: While the EVM Client encompasses all the essential functionalities of the EVM on Bitfinity, it is crucial to note that it does not operate as a full node. Instead, it functions as a client that connects to the EVM on Bitfinity, facilitating various operations without bearing the full responsibilities of a node.
+- Functionality: The client connects to the EVM on Bitfinity, facilitating various operations without bearing the full responsibilities of a node.
 
 ## Installation
 
