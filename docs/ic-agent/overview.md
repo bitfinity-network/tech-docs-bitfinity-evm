@@ -4,34 +4,33 @@ title: "Overview"
 
 # Introduction
 
-To use certain EVM canister features, such as `call_message`, `create_contract`, and `withdraw_tokens`, users must register an EVM address for their IC principal. Follow these steps to complete the registration process:
+IC Agents can reserve an Ethereum address for an IC principal/IC Agent. This address can be used to send transactions to the EVM. If a transaction is sent from a reserved address by a non-IC Agent, the transaction will be rejected.
 
-### Generate Ethereum signing key and EVM address
+## Registering an EVM address
 
-- Users must generate an Ethereum signing key (SIGNING_KEY) and a corresponding EVM address `(USER_ADDRESS)` on their side.
+This section provides a step-by-step guide to registering an EVM address for an IC principal. It consists of two parts:
 
-### Deposit tokens
+- Sending a transaction to the EVM canister
+- Reserving an EVM address
 
-- Users must deposit at least 100,000 tokens `(REGISTRATION_FEE)` to their EVM address using the `deposit_tokens` endpoint.
-- Before this step, ensure that there are enough tokens in the deposit account by transferring tokens to the deposit account in the token canister. Use the `token_deposit_account(token_principal)` endpoint from the EVM canister to obtain the deposit account, where `token_principal` is the principal of the associated token canister.
+### Sending a transaction to the EVM canister
 
-### Create and sign a transaction
+To send a transaction to the EVM canister, users must first create a transaction and sign it with their signing key. The transaction must have the following parameters:
 
-**Users must create a transaction with the following parameters:**
-
-- To: `0xb0e5863d0ddf7e105e409fee0ecc0123a362e14b (MINTER_ADDRESS)`
-- Value: `REGISTRATION_FEE`
+- To: `USER_ADDRESS`
+- Value: `0`
 - From: `USER_ADDRESS`
+- Data: The IC Agent's principal in bytes
 
-Then, sign the transaction with the signing key.
+The transaction must be signed with the signing key. Once signed, the transaction can be sent to the EVM canister using the `send_raw_transaction` endpoint. The caller must have sufficient tokens in their account to cover the transaction fee.
 
-### Call register_ic_agent endpoint
+This endpoint returns the transaction hash, which is required to verify the registration and reserve an EVM address.
 
-- Users must call the `register_ic_agent` endpoint, passing the signed transaction as a parameter.
+### Reserving an EVM address
 
-### Verify registration
+To reserve an EVM address, users must call the `reserve_address` endpoint with the following parameters:
 
-- After successfully completing step 3 & 4, users should call the `verify_registration` endpoint with the `SIGNING_KEY` as a parameter.
-- After step 3 & 4, other IC canisters will not be able to use the registered address when creating transactions, making it safe to expose the signing key at this point.
+- Principal: The IC Agent's principal
+- Transaction hash: The transaction hash returned by the `send_raw_transaction` endpoint
 
-In summary, to register an EVM address for an IC principal, users must generate a signing key and EVM address, deposit tokens, create and sign a transaction, call the `register_ic_agent` endpoint with the transaction, and finally, verify the registration using the `verify_registration` endpoint.
+If the transaction hash is valid, the EVM canister will reserve the address. The reserved address can then be used to send transactions to the EVM canister, but it will only be reserved for the IC Agent's principal.

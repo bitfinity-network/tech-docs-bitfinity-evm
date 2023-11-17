@@ -24,26 +24,22 @@ const config = {
       require.resolve('@docusaurus/plugin-client-redirects'),
       {
         redirects: [
-          {
-            to: '/interact/truffle',
-            from: ['/develop/start/truffle'],
-          },
-          {
-            to: '/getting-started/network-endpoints',
-            from: ['/develop/networks', '/develop/compat/gas', `/compat/gas`],
-          },
-          {
-            to: '/interact/metamask',
-            from: ['/develop/start/metamask'],
-          },
-          {
-            to: '/interact/hardhat',
-            from: ['/develop/start/hardhat'],
-          },
-          {
-            to: '/interact/block-explorer',
-            from: ['/interact/bitfinityscan'],
-          },
+          // {
+          //   to: '/interact/truffle',
+          //   from: ['/develop/start/truffle'],
+          // },
+          // {
+          //   to: '/interact/metamask',
+          //   from: ['/develop/start/metamask'],
+          // },
+          // {
+          //   to: '/interact/hardhat',
+          //   from: ['/develop/start/hardhat'],
+          // },
+          // {
+          //   to: '/interact/block-explorer',
+          //   from: ['/interact/bitfinityscan'],
+          // },
           {
             to: '/evm/rpc',
             from: ['/compact/rpc', '/develop/compat/rpc'],
@@ -56,14 +52,14 @@ const config = {
             to: '/faq',
             from: ['/develop/faq'],
           },
-          {
-            to: '/integrate/indexers/the-graph',
-            from: ['/develop/indexers/thegraph'],
-          },
-          {
-            to: '/integrate/indexers/covalent',
-            from: ['/develop/indexers/covalent'],
-          },
+          // {
+          //   to: '/integrate/indexers/the-graph',
+          //   from: ['/develop/indexers/thegraph'],
+          // },
+          // {
+          //   to: '/integrate/indexers/covalent',
+          //   from: ['/develop/indexers/covalent'],
+          // },
           //TODO:Uncomment this once the doc is ready at this path
           // {
           //   to: '/bridge/bridge-overview',
@@ -112,21 +108,28 @@ const config = {
       },
       image: 'img/og-1.jpeg',
       navbar: {
-        title: 'Documentation',
+        title: '| Documentation',
         logo: {
+          href: 'https://bitfinity.network',
           alt: 'Bitfinity logo',
           src: 'img/logo_dark.svg',
           srcDark: 'img/logo_white.svg',
-          style: {
-            marginRight: '13.5rem',
-          },
+          style : {
+            marginRight: '0rem',
+          }
         },
         items: [
+          {
+            href: 'https://bitfinity.network',
+            label: 'Home',
+            position: 'right',
+          },
           {
             href: 'https://github.com/bitfinity-network',
             label: 'GitHub',
             position: 'right',
           },
+          
         ],
       },
       footer: {

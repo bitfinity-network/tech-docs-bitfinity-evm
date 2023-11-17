@@ -310,11 +310,6 @@ No input is required.
 |:-----------|:----:|:----------------------|
 | `[0; 31]`  | gas  | The prepaid gas value |
 
-## Exit to Internet Computer
-
-**Spec**: Pending AIP
-
-## Exit to Ethereum
 
 **Spec**: Pending AIP
 
