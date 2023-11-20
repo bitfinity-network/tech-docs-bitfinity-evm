@@ -82,7 +82,8 @@ const sidebars = {
         },
       ],
     },
-    'faq'
+    'faq',
+    'tutorials'
   ],
 };
 
