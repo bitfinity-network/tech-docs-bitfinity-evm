@@ -12,6 +12,12 @@ sidebar_position: 7
 
 
 The Block Explorer offers users and developers access to tools and network statistics for in-depth insights into Bitfinity's EVM. Users can view transactions, addresses, and blocks. Developers can access charts and statistics related to smart contract execution, collator data, specific token transfers, and a list of ERC-20 tokens on Bitfinity.
+DexGuru
+
+## Alternative Block Explorers 
+
+[DexGuru Block Explorer for  Bitfinity Testnet](https://bitfinity-test.dex.guru/) provides a familiar UI with data on transactions, blocks, account balances, and more. Developers can use it to verify smart contracts and debug transactions with interactive traces and logs visualization.
+
 
 ## Local Deployment
 
