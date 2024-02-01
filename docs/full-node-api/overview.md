@@ -74,7 +74,9 @@ The JSON_RPC_URL must include all historical blocks, accessible through:
 - Testnet: `https://evm-block-extractor-server-testnet-b7emmykj3q-uc.a.run.app`
 - Mainnet: `https://evm-block-extractor-server-mainnet-b7emmykj3q-uc.a.run.app`
 
-Note: The EVMC canister URL does not encompass all historical blocks.
+:::note
+The Bitifinity EVM URL does not encompass all historical blocks.
+:::
 
 Once operational, access your full node at `localhost:8545` or a custom port if configured.
 
