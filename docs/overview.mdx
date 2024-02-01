@@ -28,7 +28,7 @@ To get started, follow the guide in the getting-started section:
  * mint test-net tokens
  * bridge your cross-chain Bitcoin assets to Bitfinity. 
 
-Currently, Bitcoin is supported, but trustless bridges for BRC-20s are in the works. 
+Currently, Bitcoin is supported in our wallet, but trustless bridges for BRC-20s Bitcoin and  the EVM are launching soon. 
 
 * To request some ETH on Bitfinity Testnet, go to [Bitfinity Testnet Faucet](https://bitfinity.network/faucet)
 
@@ -39,3 +39,38 @@ Check out our [answers to frequently asked questions (FAQs)](./faq.md).
 [metamask]: https://metamask.io
 [hardhat]: https://hardhat.org
 [remix]: https://remix.ethereum.org
+
+
+## Information on the background technology
+
+Bitfinity leverages a threshold signature scheme to custody Bitcoin. 
+Detailed information about the threshold ECDSA protocol, its implementation challenges, and potential use cases are outlined in these articles. 
+The protocol for secured and decentralised bridging of cross-chain assets has been built by researchers from the Internet Computer:
+
+- [Chain-key Summary](https://internetcomputer.org/how-it-works/chain-key-technology)
+- [Chain-Key technical Overview](https://internetcomputer.org/docs/current/developer-docs/integrations/t-ecdsa/t-ecdsa-how-it-works)
+- [Original Forum Post](https://internetcomputer.org/docs/current/developer-docs/integrations/t-ecdsa/t-ecdsa-how-it-works)
+- [Example Code for tECDSA](https://github.com/dfinity/examples/tree/master/rust/threshold-ecdsa)
+- [Audits on tECDSA](https://forum.dfinity.org/t/threshold-ecdsa-cryptography-review-by-ncc-group-third-party-security-audit-3/13853)
+- [Additional Info](https://support.dfinity.org/hc/en-us/articles/360057605551-What-is-chain-key-cryptography-)
+
+Running Bitcoin nodes on-chain. This section covers the discussions and developments related to running Bitcoin nodes on another blockhain, to realise tust-minimized bridging. 
+This integration process, which started in 2021, involves syncing Bitcoin nodes on the Internet Computer for use on Bitfinity. 
+
+- [Discussion on Direct Integration with Bitcoin](https://forum.dfinity.org/t/direct-integration-with-bitcoin/6147)
+- [Forum Post on Chain-Key Bitcoin](https://forum.dfinity.org/t/ckbtc-a-canister-issued-bitcoin-twin-token-on-the-ic-1-1-backed-by-btc/17606) 
+- [Sample Code for Interacting with Bitcoin on IC](https://github.com/dfinity/examples/tree/master/rust/basic_bitcoin) 
+- [Overview of Bitcoin Integration with Internet Computer](https://internetcomputer.org/docs/current/developer-docs/integrations/bitcoin/)
+- [Technical Overview of Bitcoin Integration with Internet Computer](https://internetcomputer.org/docs/current/developer-docs/integrations/bitcoin/bitcoin-how-it-works)
+- [Ordinals Marketplace on the IC Utilizing These Primitives](https://bioniq.io/collection/chib/inscriptions?sidebar=wallet)
+
+Connectivity with the web:  Decentralised infrastructure to make asynchronous calls to the web, removing the need for traditional oracles.
+[Outcalls Wiki](https://wiki.internetcomputer.org/wiki/HTTPS_outcalls)
+[Outcalls Technical Overview](https://internetcomputer.org/docs/current/developer-docs/integrations/https-outcalls/https-outcalls-how-it-works)
+
+In addition to the work on threshold signatures, there is an ongoing effort to develop the threshold signature scheme for Schnorr. 
+Threshold Signatures for Schnorr would enable Bitfinity to issue Taproot transactions on Bitcoin. 
+
+
+https://eprint.iacr.org/2023/1019.pdf 
+https://eprint.iacr.org/2023/1175.pdf
