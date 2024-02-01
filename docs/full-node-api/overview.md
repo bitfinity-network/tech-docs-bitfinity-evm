@@ -42,8 +42,6 @@ For detailed build instructions, refer to the [Bitfinity Readme File](https://gi
 
 ### 2. Run the Full Node
 
-The block-importer operates through two processes: one for downloading and validating blocks, and another to set up an RPC URL for the full node.
-
 #### Start the Block Importer
 
 Initialize the block importer to sync with the blockchain. Replace `<JSON_RPC_URL>` and `<DB_PATH>` with the appropriate RPC URL and your database path, respectively.

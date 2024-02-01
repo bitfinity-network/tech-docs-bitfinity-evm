@@ -22,7 +22,7 @@ You can launch a standalone version of the block explorer for access to Bitfinit
 
 To do this, you will need to run a forked Erigon Node against the Bitfinity EVM. And once this has been stood up, you can run Otterscan or Bitfinity-Otterscan against this node.
 
-[bitfinity-eragon](https://github.com/bitfinity-network/erigon)
+[bitfinity-erigon](https://github.com/bitfinity-network/erigon)
 
 [otterscan](https://github.com/wmitsuda/otterscan)
 
