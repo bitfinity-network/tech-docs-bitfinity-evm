@@ -3,30 +3,35 @@ title: Block Explorer
 sidebar_position: 7
 ---
 
-## Public Explorer
+## Bitfinity Block Explorer
 
-[Bitfinity's block explorer](https://explorer.bitfinity.network/) is based on the [otterscan](https://github.com/wmitsuda/otterscan) project and provides real-time access to blockchain data (blocks, transactions, etc.). It interfaces with a custom [erigon](https://github.com/ledgerwatch/erigon) node for continuous updates from Bitfinity.
+The Bitfinity Block Explorer is a powerful tool that provides real-time access to blockchain data, including blocks, transactions, and more. It is based on the open-source [Blockscout](https://github.com/blockscout/blockscout) project and interfaces with a custom [Reth](https://github.com/paradigmxyz/reth) node for continuous updates from the Bitfinity network.
 
+### Accessing the Block Explorer
 
-![Block Explorer](/img/block-explorer.png)
+The Bitfinity Block Explorer is available for different networks at the following links:
 
+- [Bitfinity Mainnet Explorer](https://explorer.mainnet.bitfinity.network/)
+- [Bitfinity Testnet Explorer](https://explorer.testnet.bitfinity.network/)
+- [Bitfinity Devnet Explorer](https://explorer.devnet.bitfinity.network/)
 
-The Block Explorer offers users and developers access to tools and network statistics for in-depth insights into Bitfinity's EVM. Users can view transactions, addresses, and blocks. Developers can access charts and statistics related to smart contract execution, collator data, specific token transfers, and a list of ERC-20 tokens on Bitfinity.
-DexGuru
+![Block Explorer Screenshot](/img/block-explorer.png)
 
-## Alternative Block Explorers 
+### Features and Benefits
 
-[DexGuru Block Explorer for  Bitfinity Testnet](https://bitfinity-test.dex.guru/) provides a familiar UI with data on transactions, blocks, account balances, and more. Developers can use it to verify smart contracts and debug transactions with interactive traces and logs visualization.
+The Bitfinity Block Explorer offers a wide range of features and benefits for both users and developers:
 
+- **Real-time Data**: Access up-to-date information on blocks, transactions, and network statistics.
+- **User-friendly Interface**: Easily navigate and explore the blockchain data with a intuitive and responsive UI.
+- **Developer Tools**: Gain insights into smart contract execution, collator data, token transfers, and more with charts and statistics.
+- **ERC-20 Token Support**: View a comprehensive list of ERC-20 tokens deployed on the Bitfinity network.
+- **Transaction Details**: Dive into the details of individual transactions, including sender, recipient, gas usage, and more.
+- **Address Lookup**: Quickly search and view information related to specific addresses, including balances and transaction history.
 
-## Local Deployment
+You can learn more about the Block Explorer and its features in the [Blockscout Docs](https://docs.blockscout.com/).
 
-You can launch a standalone version of the block explorer for access to Bitfinity's blocks and transactions. 
+## Alternative Block Explorers
 
-To do this, you will need to run a forked Erigon Node against the Bitfinity EVM. And once this has been stood up, you can run Otterscan or Bitfinity-Otterscan against this node. 
+In addition to the official Bitfinity Block Explorer, there are alternative explorers available for the Bitfinity network:
 
-[bitfinity-eragon](https://github.com/bitfinity-network/erigon)
-
-[otterscan](https://github.com/wmitsuda/otterscan)
-
-[bitfinity-otterscan](https://github.com/bitfinity-network/otterscan/tree/v1.30.0-modified)
+- [DexGuru Block Explorer for Bitfinity Testnet](https://bitfinity-test.dex.guru/): Provides a familiar UI with data on transactions, blocks, account balances, and
