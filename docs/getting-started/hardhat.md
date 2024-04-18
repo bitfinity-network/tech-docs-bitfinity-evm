@@ -201,7 +201,7 @@ Account 0x6A33382de9f73B846878a57500d055B981229ac4 has a total token balance:  9
 
 In some cases, instead of calling the `transfer` directly, the sender
 can approve a specific amount of tokens to be withdrawn from his account
-to specific recipient address later. This can be done by calling `approve`
+to a specific recipient address later. This can be done by calling `approve`
 then calling `transferFrom`.
 
 ```javascript
