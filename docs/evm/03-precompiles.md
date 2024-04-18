@@ -282,7 +282,7 @@ No input is required.
 
 **Spec**: Pending AIP
 
-Returns the promise results as bytes from executing a Internet Computer promise.
+Returns the promise results as bytes from executing an Internet Computer promise.
 
 ### Inputs
 
