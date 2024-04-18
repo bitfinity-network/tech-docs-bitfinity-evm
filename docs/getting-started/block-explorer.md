@@ -22,7 +22,7 @@ The Bitfinity Block Explorer is available for different networks at the followin
 The Bitfinity Block Explorer offers a wide range of features and benefits for both users and developers:
 
 - **Real-time Data**: Access up-to-date information on blocks, transactions, and network statistics.
-- **User-friendly Interface**: Easily navigate and explore the blockchain data with a intuitive and responsive UI.
+- **User-friendly Interface**: Easily navigate and explore the blockchain data with an intuitive and responsive UI.
 - **Developer Tools**: Gain insights into smart contract execution, collator data, token transfers, and more with charts and statistics.
 - **ERC-20 Token Support**: View a comprehensive list of ERC-20 tokens deployed on the Bitfinity network.
 - **Transaction Details**: Dive into the details of individual transactions, including sender, recipient, gas usage, and more.
@@ -34,4 +34,4 @@ You can learn more about the Block Explorer and its features in the [Blockscout 
 
 In addition to the official Bitfinity Block Explorer, there are alternative explorers available for the Bitfinity network:
 
-- [DexGuru Block Explorer for Bitfinity Testnet](https://bitfinity-test.dex.guru/): Provides a familiar UI with data on transactions, blocks, account balances, and
+- [DexGuru Block Explorer for Bitfinity Testnet](https://bitfinity-test.dex.guru/): Provides a familiar UI with data on transactions, blocks, and account balances. 
