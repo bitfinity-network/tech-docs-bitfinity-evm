@@ -5,7 +5,7 @@ sidebar_position: 1
 
 # EVM Overview
 
-The Bitfinity EVM is a blockchain L2 for Bitcoin, built on the IC. It accomplishes a 1:1 expeequivalence with the Ethereum protocol, but with limited on-chain block history. The block-history is instead maintained by archive nodes. 
+The Bitfinity EVM is a blockchain L2 for Bitcoin, built on the IC. It accomplishes a 1:1 equivalence with the Ethereum protocol, but with limited on-chain block history. The block-history is instead maintained by archive nodes. 
 
 :::tip
 We suggest you interact through the EVM through MetaMask or Hardhat as we provide
