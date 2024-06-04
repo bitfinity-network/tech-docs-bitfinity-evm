@@ -15,7 +15,6 @@ The Bitfinity Block Explorer is available for different networks at the followin
 - [Bitfinity Testnet Explorer](https://explorer.testnet.bitfinity.network/)
 - [Bitfinity Devnet Explorer](https://explorer.devnet.bitfinity.network/)
 
-![Block Explorer Screenshot](/img/block-explorer.png)
 
 ### Features and Benefits
 
