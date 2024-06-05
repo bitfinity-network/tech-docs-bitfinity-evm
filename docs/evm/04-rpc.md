@@ -104,7 +104,7 @@ Method | Status | Notes
   Additionally, PoW-related block metadata such as `nonce` and `difficulty`
   contain all zeroes.
 
-- There is no concept of uncle (aka ommer) blocks in the Bitfinity
+- There is no concept of uncle (aka ommer) blocks on Bitfinity.
 
 - There is no access to pending transactions.
 

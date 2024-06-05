@@ -13,7 +13,7 @@ following networks on testnet. Mainnet is due to be supported by Jan 2024:
 
 | Network             | Engine ID                  | Chain ID                | Endpoint URL                 |
 |---------------------|----------------------------|-------------------------|------------------------------|
-| [Mainnet](#mainnet) | [Bitfinity][bitfinity@Mainnet] | 355110 (0x56b29) | To be announced |
+| [Mainnet](#mainnet) | [Bitfinity][bitfinity@Mainnet] | 355110 (0x56b29) | <https://mainnet.bitfinity.network> |
 | [Testnet](#testnet) | [Bitfinity][bitfinity@Testnet] | 355113 (0x56b29) | <https://testnet.bitfinity.network> |
 
 :::note
@@ -27,7 +27,7 @@ Bitfinity computation is paid for in the Bitfinity native token.
 
 | Canister Name | Canister ID |
 |---------------|-------------|
-| Bitfinity     | TBA         |
+| Bitfinity     | `i3jjb-wqaaa-aaaaa-qadrq-cai` |
 
 ### Testnet
 

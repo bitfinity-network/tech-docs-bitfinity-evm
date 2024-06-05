@@ -27,13 +27,21 @@ Ensure you have Metamask installed. Open Metamask and in the top-right corner of
 Screenshots in this tutorial are taken from the MetaMask browser extension version 9.5.5.
 :::
 
-Fill in the form with the following information:
+Fill in the form with the following information for testnet:
+
+* Network Name: Bitfinity MainNet
+* New RPC URL: `https://mainnet.bitfinity.network/`
+* Chain ID: 355110
+* Currency Symbol: BFT
+* Block Explorer URL (Optional): `https://explorer.mainnet.bitfinity.network`
+
+Fill in the form with the following information for testnet:
 
 * Network Name: Bitfinity TestNet
 * New RPC URL: `https://testnet.bitfinity.network/`
 * Chain ID: 355113
 * Currency Symbol: BFT
-* Block Explorer URL (Optional): `https://explorer.bitfinity.network`
+* Block Explorer URL (Optional): `https://explorer.testnet.bitfinity.network`
 
 ![MetaMask-create-bitfinity-rpc](/img/metamask_create_bitfinity_rpc.png)
 
@@ -41,7 +49,7 @@ Fill in the form with the following information:
 All the Bitfinity RPC endpoint URLs and chain IDs can be found on our [Networks](../getting-started/network-endpoints.md) page.
 :::
 
-Click `Save`, and you should see `Bitfinity Testnet` is now the network selected in MetaMask.
+Click `Save`, and you should see `Bitfinity Testnet` or `Bitfinity Mainnet` is now the network selected in MetaMask.
 To see MetaMask in action, we will connect it to [Remix] and perform some transactions.
 
 ## Deploying an ERC-20 Token using Remix
