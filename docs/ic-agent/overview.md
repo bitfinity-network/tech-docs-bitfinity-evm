@@ -95,7 +95,7 @@ The transaction hash is returned by the `send_raw_transaction` endpoint.
 dfx canister call <evm_canister_principal> --ic reserve_address "(<IC_AGENT_PRINCIPAL>, <TRANSACTION_HASH>)"
 ```
 
-Theses steps will reserve an EVM address for the IC principal. The reserved address can then be used to send transactions to the EVM canister, but it will only be reserved for the IC Agent's principal.
+These steps will reserve an EVM address for the IC principal. The reserved address can then be used to send transactions to the EVM canister, but it will only be reserved for the IC Agent's principal.
 
 
 ## EVM Rust Canister Client
@@ -114,7 +114,7 @@ It is a wrapper around the [JSON-RPC API](../rpc.md) and provides a simple inter
 
 ## Installation
 
-The EVM Client is available as an rust crate. You can install it using the following command:
+The EVM Client is available as a rust crate. You can install it using the following command:
 
 ```toml
 [dependencies]
@@ -124,7 +124,7 @@ evm-canister-client = { git = "https://github.com/bitfinity-network/bitfinity-ev
 
 ## Usage in Canister
 
-In you canister code, you can import the EVM Client using the following code:
+In your canister code, you can import the EVM Client using the following code:
 
 ```rust
 use evm_canister_client::{ EvmCanisterClient, IcCanisterClient};
