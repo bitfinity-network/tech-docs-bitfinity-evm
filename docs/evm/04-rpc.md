@@ -2,9 +2,9 @@
 title: "JSON-RPC"
 ---
 
-# Compatibility with the Web3 JSON-RPC Protocol
+#Compatibility with the Web3 JSON-RPC Protocol
 
-The Bitfinity Relayer implements the Web3 JSON-RPC protocol.
+On the IC, you can access the endpoints of the JSON RPC interface listed below. Note that you can also access the full api of a full node, but without the ability to broadcast transactions using an archive node. See the section on [full nodes](/full-node-api/overview). 
 
 ## Methods
 
@@ -104,7 +104,7 @@ Method | Status | Notes
   Additionally, PoW-related block metadata such as `nonce` and `difficulty`
   contain all zeroes.
 
-- There is no concept of uncle (aka ommer) blocks in the Bitfinity
+- There is no concept of uncle (aka ommer) blocks on Bitfinity.
 
 - There is no access to pending transactions.
 

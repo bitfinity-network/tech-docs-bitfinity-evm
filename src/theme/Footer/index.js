@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
-import {useThemeConfig} from '@docusaurus/theme-common';
+import { useThemeConfig } from '@docusaurus/theme-common';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import isInternalUrl from '@docusaurus/isInternalUrl';
 import styles from './styles.module.css';
@@ -9,14 +9,12 @@ import ThemedImage from '@theme/ThemedImage';
 import IconExternalLink from '@theme/Icon/ExternalLink';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons/faGithub';
-import { faDiscourse } from '@fortawesome/free-brands-svg-icons/faDiscourse';
 import { faDiscord } from '@fortawesome/free-brands-svg-icons/faDiscord';
 import { faTelegram } from '@fortawesome/free-brands-svg-icons/faTelegram';
-import { faStackOverflow } from '@fortawesome/free-brands-svg-icons/faStackOverflow';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
-import { faYoutube } from '@fortawesome/free-brands-svg-icons/faYoutube';
 
-function FooterLink({to, href, label, prependBaseUrlToHref, ...props}) {
+import { faTwitter } from '@fortawesome/free-brands-svg-icons/faTwitter';
+
+function FooterLink({ to, href, label, prependBaseUrlToHref, ...props }) {
   const toUrl = useBaseUrl(to);
   const normalizedHref = useBaseUrl(href, {
     forcePrependBaseUrl: true,
@@ -31,7 +29,8 @@ function FooterLink({to, href, label, prependBaseUrlToHref, ...props}) {
         : {
             to: toUrl,
           })}
-      {...props}>
+      {...props}
+    >
       {href && !isInternalUrl(href) ? (
         <span>
           {label}
@@ -44,7 +43,7 @@ function FooterLink({to, href, label, prependBaseUrlToHref, ...props}) {
   );
 }
 
-function FooterLogo({sources, alt, width, height}) {
+function FooterLogo({ sources, alt, width, height }) {
   return (
     <ThemedImage
       className="footer__logo"
@@ -63,7 +62,7 @@ function CustomFooterLinks() {
         <li className="footer__item">
           <Link
             className="footer__link-item"
-            href="https://github.com/infinity-swap"
+            href="https://github.com/bitfinity-network"
             target="_blank"
             rel="nofollow noopener noreferrer"
             title="Bitfinity on GitHub"
@@ -96,7 +95,7 @@ function CustomFooterLinks() {
         <li className="footer__item">
           <Link
             className="footer__link-item"
-            href="https://twitter.com/infinity_swap"
+            href="https://twitter.com/bitfinitynet"
             target="_blank"
             rel="nofollow noopener noreferrer"
             title="Bitfinity on Twitter"
@@ -106,16 +105,16 @@ function CustomFooterLinks() {
         </li>
       </ul>
     </div>
-  )
+  );
 }
 
-function MultiColumnLinks({links}) {
+function MultiColumnLinks({ links }) {
   return (
     <>
       {links.map((linkItem, i) => (
         <div key={i} className="col footer__col">
           <div className="footer__title">{linkItem.title}</div>
-          <ul className='footer__items'>
+          <ul className="footer__items">
             {linkItem.items.map((item, key) =>
               item.html ? (
                 <li
@@ -130,7 +129,7 @@ function MultiColumnLinks({links}) {
                 <li key={item.href || item.to} className="footer__item">
                   <FooterLink {...item} />
                 </li>
-              ),
+              )
             )}
           </ul>
         </div>
@@ -139,7 +138,7 @@ function MultiColumnLinks({links}) {
   );
 }
 
-function SimpleLinks({links}) {
+function SimpleLinks({ links }) {
   return (
     <div className="footer__links">
       {links.map((item, key) => (
@@ -170,8 +169,8 @@ function isMultiColumnFooterLinks(links) {
 }
 
 function Footer() {
-  const {footer} = useThemeConfig();
-  const {copyright, links = [], logo = {}} = footer || {};
+  const { footer } = useThemeConfig();
+  const { copyright, links = [], logo = {} } = footer || {};
   const sources = {
     light: useBaseUrl(logo.src),
     dark: useBaseUrl(logo.srcDark || logo.src),
@@ -185,7 +184,8 @@ function Footer() {
     <footer
       className={clsx('footer', {
         'footer--dark': footer.style === 'dark',
-      })}>
+      })}
+    >
       <div className="container container-fluid">
         <CustomFooterLinks />
         {links &&

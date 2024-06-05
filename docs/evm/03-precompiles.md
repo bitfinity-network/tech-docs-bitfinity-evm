@@ -32,7 +32,7 @@ Definitions below from [evm.codes].
 
 :::note
 Some precompiles currently have a gas value of 0. This is temporary as it is difficult to determine
-an exact gas value. However, the ones that this applies to the gas cost are generally negligible.
+an exact gas value. However, the gas costs for the ones that this applies to are generally negligible.
 :::
 
 ## ECRecover
@@ -282,7 +282,7 @@ No input is required.
 
 **Spec**: Pending AIP
 
-Returns the promise results as bytes from executing a Internet Computer promise.
+Returns the promise results as bytes from executing an Internet Computer promise.
 
 ### Inputs
 
@@ -310,11 +310,6 @@ No input is required.
 |:-----------|:----:|:----------------------|
 | `[0; 31]`  | gas  | The prepaid gas value |
 
-## Exit to Internet Computer
-
-**Spec**: Pending AIP
-
-## Exit to Ethereum
 
 **Spec**: Pending AIP
 
