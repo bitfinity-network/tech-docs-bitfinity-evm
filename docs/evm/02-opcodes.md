@@ -6,7 +6,7 @@ sidebar_position: 2
 # Opcodes
 
 All Ethereum opcodes are represented however the opcodes in **bold** are altered
-from Ethereum. A short description is on the right hand side but an longer one
+from Ethereum. A short description is on the right hand side but a longer one
 is denoted below.
 
 The original source of the below chart comes from the [Ethereum docs].
@@ -206,6 +206,6 @@ This opcode always returns zero as there is no difficulty in Internet Computer o
 
 ### `GASLIMIT` {#gas-limit}
 
-This opcode returns the block gas limit which has been set for the Bitfinity, this value can change anytime.
+This opcode returns the block gas limit which has been set for Bitfinity, this value can change anytime.
 _0x1c9c380_
 (30000000).
