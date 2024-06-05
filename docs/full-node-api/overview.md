@@ -22,7 +22,7 @@ JSON_RPC_URL="https://${ENV}.bitfinity.network"
 URL="https://storage.googleapis.com/bitfinity-reth-snapshots-${ENV}/reth-snapshot-${DATE}.tar.gz"
 ```
 
-Then run the command below. If you do not run this command, the syncing will start from the first block, and you will need to set the JSON_RPC_URL from a source with all blocks: 
+Then run the command below to download the snapshot to the data directory. If you do not run this command, the syncing will start from the first block, and you will need to set the JSON_RPC_URL from a source with all blocks: 
 
 ```
 mkdir -p ~/.local/share/reth/bitfinity && wget -O - $URL | tar -xvzf - -C $DATA_DIR
