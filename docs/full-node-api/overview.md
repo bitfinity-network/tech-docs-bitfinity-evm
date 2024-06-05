@@ -29,7 +29,7 @@ mkdir -p ~/.local/share/reth/bitfinity && wget -O - $URL | tar -xvzf - -C $DATA_
 ```
 
 
-Once you have downloaded the latest snapshot, you can simply run the full Node with Cargo, being careful to specify the JSON_RPC_URL of interest. 
+Once you have downloaded the latest snapshot to the data directory, you can simply run the full Node with Cargo, being careful to specify the JSON_RPC_URL of interest. 
 
 ```bash
 cargo run -p reth -- node -vvv --http --http.port 8080 --http.addr 0.0.0.0 --http.api "debug,eth,net,trace,txpool,web3" --disable-discovery --ipcdisable --no-persist-peers -r $JSON_RPC_URL -i 30 -b 100 --datadir $DATA_DIR --evmc-principal  $EVMC_PRINCIPAL --send-raw-transaction-rpc-url $JSON_RPC_URL
