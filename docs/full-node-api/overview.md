@@ -83,7 +83,7 @@ reth run -d -p 8080:8080 bitfinity/reth node -vvv \
   --no-persist-peers \
   -r $JSON_RPC_URL \
   -i 30 \
-  -b 100 \
+  -b 10 \
   --datadir $DATA_DIR \
   --evmc-principal $EVMC_PRINCIPAL \
   --send-raw-transaction-rpc-url $JSON_RPC_URL
@@ -107,7 +107,7 @@ docker run -d -p 8080:8080 bitfinity/reth node -vvv \
   --no-persist-peers \
   -r $JSON_RPC_URL \
   -i 30 \
-  -b 100 \
+  -b 10 \
   --datadir $DATA_DIR \
   --evmc-principal $EVMC_PRINCIPAL \
   --send-raw-transaction-rpc-url $JSON_RPC_URL
