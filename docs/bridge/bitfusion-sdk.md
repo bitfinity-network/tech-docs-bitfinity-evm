@@ -9,6 +9,7 @@ This framework also includes a bridging widget for seamless integration into dow
 
 * Github: https://github.com/bitfinity-network/bit-fusion-sdk
 * Whitepaper: https://github.com/bitfinity-network/whitepapers
+* Website: https://bitfinity.network/bitfusion
 
 Some of the digital assets supported are:
 * Bitcoin Runes, BRC20, and other tokens (in development)
