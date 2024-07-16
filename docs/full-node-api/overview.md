@@ -1,69 +1,116 @@
 ---
-title: "Overview"
+title: "Full Node API Overview"
 ---
 
-# Overview
+# Full Node API Overview
 
-The EVM has support for a limited number of blocks. To access all the historical data, you can run a full node locally. Our full node runs a fork of Reth, which imports blocks from an off-chain data source. Additional developer information to build and run a node can be found [here.](https://github.com/bitfinity-network/reth/blob/bitfinity-archive-node/bitfinity.md)
+The Bitfinity EVM supports a limited number of blocks. To access all historical data, you can run a full node locally. Our full node runs a fork of Reth, which imports blocks from an off-chain data source. For additional developer information on building and running a node, please refer to our [GitHub repository](https://github.com/bitfinity-network/reth/blob/bitfinity-archive-node/bitfinity.md).
 
+## Quickstart Guide
 
+### 1. Download the Latest Snapshot
 
-## Quickstart
+First, download the most recent snapshot using the following commands. Make sure to update the `DATE` variable to the current date, as only the most recent week's snapshots are retained.
 
-The first step to running a full node is to get the latest snapshot. You can download the snapshot using the following command. You will need to change the date in the URL string to be that of the present day. Only the most recent week's worth of snapshots are kept.  
-``` bash
-# set variables
-DATA_DIR="~/.local/share/reth/bitfinity"
-ENV="mainnet" # or testnet 
-DATE="2024-04-03" # or current date
-EVMC_PRINCIPAL="i3jjb-wqaaa-aaaaa-qadrq-cai" # or "4fe7g-7iaaa-aaaak-aegcq-cai" for testnet canister id 
-JSON_RPC_URL="https://${ENV}.bitfinity.network" 
-
-URL="https://storage.googleapis.com/bitfinity-reth-snapshots-${ENV}/reth-snapshot-${DATE}.tar.gz"
-```
-
-Then run the command below. If you do not run this command, the syncing will start from the first block, and you will need to set the JSON_RPC_URL from a source with all blocks: 
-
-```
-mkdir -p ~/.local/share/reth/bitfinity && wget -O - $URL | tar -xvzf - -C $DATA_DIR
-```
-
-
-Once you have downloaded the latest snapshot, you can simply run the full Node with Cargo, being careful to specify the JSON_RPC_URL of interest. 
+# Set variables
 
 ```bash
-cargo run -p reth -- node -vvv --http --http.port 8080 --http.addr 0.0.0.0 --http.api "debug,eth,net,trace,txpool,web3" --disable-discovery --ipcdisable --no-persist-peers -r $JSON_RPC_URL -i 30 -b 100 --datadir $DATA_DIR --evmc-principal  $EVMC_PRINCIPAL --send-raw-transaction-rpc-url $JSON_RPC_URL
+DATA_DIR="~/.local/share/reth/bitfinity"
+ENV="mainnet" # or "testnet"
+DATE="2024-04-03" # Update to current date
+EVMC_PRINCIPAL="i3jjb-wqaaa-aaaaa-qadrq-cai" # Use "4fe7g-7iaaa-aaaak-aegcq-cai" for testnet
+JSON_RPC_URL="https://${ENV}.bitfinity.network"
+
+URL="<https://storage.googleapis.com/bitfinity-reth-snapshots-${ENV}/reth-snapshot-${DATE}.tar.gz>"
 ```
 
-#### Querying the node
+# Create directory and download snapshot
 
-Once built, you can query the node using the JSON-RPC API. For example, to get the block number, you can use the following command:
-
-```bash 
-curl -X POST -H 'content-Type: application/json' --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' http://localhost:8080
+```bash
+mkdir -p $DATA_DIR && wget -O - $URL | tar -xvzf - -C $DATA_DIR
 ```
 
-## Other Build Options
+Note: If you skip this step, syncing will start from the first block, requiring a JSON_RPC_URL source with all blocks.
 
- It is also possible to build rom source with Make and Docker
+### 2. Run the Full Node
+
+After downloading the snapshot, run the full node using Cargo:
+
+```bash
+cargo run -p reth -- node -vvv \
+  --http \
+  --http.port 8080 \
+  --http.addr 0.0.0.0 \
+  --http.api "debug,eth,net,trace,txpool,web3" \
+  --disable-discovery \
+  --ipcdisable \
+  --no-persist-peers \
+  -r $JSON_RPC_URL \
+  -i 30 \
+  -b 10 \
+  --datadir $DATA_DIR \
+  --evmc-principal $EVMC_PRINCIPAL \
+  --send-raw-transaction-rpc-url $JSON_RPC_URL
+```
+
+### 3. Query the Node
+
+Once the node is running, you can query it using the JSON-RPC API. For example, to get the current block number:
+
+```bash
+curl -X POST -H 'Content-Type: application/json' \
+  --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":1}' \
+  <http://localhost:8080>
+```
+
+## Alternative Build Options
 
 ### Build from Source
-To build and run the docker image, use the following commands:
+
+To build and run using Make:
 
 ```bash
 cd reth
 make install
 
-reth run -d -p 8080:8080 bitfinity/reth node -vvv --http --http.port 8080 --http.addr 0.0.0.0 --http.api "debug,eth,net,trace,txpool,web3" --disable-discovery --ipcdisable --no-persist-peers -r $JSON_RPC_URL -i 30 -b 100 --datadir $DATA_DIR --evmc-principal  $EVMC_PRINCIPAL --send-raw-transaction-rpc-url $JSON_RPC_URL
-
+reth run -d -p 8080:8080 bitfinity/reth node -vvv \
+  --http \
+  --http.port 8080 \
+  --http.addr 0.0.0.0 \
+  --http.api "debug,eth,net,trace,txpool,web3" \
+  --disable-discovery \
+  --ipcdisable \
+  --no-persist-peers \
+  -r $JSON_RPC_URL \
+  -i 30 \
+  -b 10 \
+  --datadir $DATA_DIR \
+  --evmc-principal $EVMC_PRINCIPAL \
+  --send-raw-transaction-rpc-url $JSON_RPC_URL
 ```
 
-### Build from Docker
-To build and run the docker image, use the following commands:
+### Build with Docker
+
+To build and run using Docker:
 
 ```bash
 cd reth
 make docker-build-push
 
-docker run -d -p 8080:8080 bitfinity/reth node -vvv --http --http.port 8080 --http.addr 0.0.0.0 --http.api "debug,eth,net,trace,txpool,web3" --disable-discovery --ipcdisable --no-persist-peers -r $JSON_RPC_URL -i 30 -b 100 --datadir $DATA_DIR --evmc-principal  $EVMC_PRINCIPAL --send-raw-transaction-rpc-url $JSON_RPC_URL
+docker run -d -p 8080:8080 bitfinity/reth node -vvv \
+  --http \
+  --http.port 8080 \
+  --http.addr 0.0.0.0 \
+  --http.api "debug,eth,net,trace,txpool,web3" \
+  --disable-discovery \
+  --ipcdisable \
+  --no-persist-peers \
+  -r $JSON_RPC_URL \
+  -i 30 \
+  -b 10 \
+  --datadir $DATA_DIR \
+  --evmc-principal $EVMC_PRINCIPAL \
+  --send-raw-transaction-rpc-url $JSON_RPC_URL
 ```
+
+This setup provides a comprehensive guide for running and interacting with a Bitfinity full node, offering flexibility in deployment methods to suit various development environments.
