@@ -35,7 +35,7 @@ const sidebars = {
     
     {
       type: 'category',
-      label: 'Bridge',
+      label: 'Bridging Technology',
       collapsible: true,
       collapsed: true,
       items: [
