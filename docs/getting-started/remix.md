@@ -19,6 +19,8 @@ Screenshots in this tutorial are taken from the MetaMask browser extension versi
 
 ## Deploying an ERC-20 Token using Remix
 
+It is important to chose the Paris version of the EVM and also Solidity version 0.8 when deploying with Remix.
+
 In a new tab, open the Remix IDE at [remix.ethereum.org](https://remix.ethereum.org).
 It might take a minute to load, but once it has, create a new file `ERC20Token.sol` in the workspace panel on the left:
 
@@ -47,6 +49,8 @@ This code is a slightly modified (the Solidity compiler and [OpenZeppelin] versi
 
 Click the `Solidity Compile` button on the far left panel (the second icon down);
 ensure your selected Solidity compiler version is 0.8 (minor versions within 0.8, e.g., 0.8.4 work too), and click `Compile ERC20Token.sol`.
+
+Ensure that the Paris version is selected as shown in the screenshot. 
 
 ![Remix-solidity-compile](/img/remix_solidity_compile.png)
 
