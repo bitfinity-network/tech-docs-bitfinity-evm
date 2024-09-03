@@ -24,6 +24,8 @@ Bitfinity gives you access to new assets on Bitcoin, but with a familiar EVM dev
 
 [Fully decentralised stack: backend in Solidity, frontend hosted in a Canister](https://www.blog.bitfinity.network/fully-decentralised-stack-backend-in-solidity-frontend-hosted-in-a-canister-2/)
 
+[Solidity Documentation](https://soliditylang.org/)
+
 ### Example Code
 
 [This repository] includes DApp boilerplates for truffle and hardhat on Bitfinity. These examples cover specific topics:
