@@ -3,7 +3,7 @@ title: BitFusion SDK
 sidebar_position: 3
 ---
 
-The BitFusion Bridge SDK is an exciting open-source SDK that leverages Chain Key Technology to create novel solutions for decentralised bridging assets from any chain to the Bitfinit EVM.
+The BitFusion Bridge SDK is an exciting open-source SDK that leverages Chain Key Technology to create novel solutions for decentralised bridging assets from any chain to the Bitfinity EVM.
 
 This framework also includes a bridging widget for seamless integration into downstream applications, providing users with a near-native experience.
 
