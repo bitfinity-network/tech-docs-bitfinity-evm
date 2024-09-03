@@ -70,7 +70,7 @@ In this example, we will go through a set of pre-defined Hardhat tasks
 that uses the Hardhat Runtime Environment ([HRE](https://hardhat.org/advanced/hardhat-runtime-environment.html)). In order to complete the tutorial,
 you should use them in the same order:
 
-### ETH Balance
+### BTF Balance
 
 The following Hardhat task uses the `Web3` plugin to get the account’s balance:
 
@@ -81,15 +81,15 @@ task("balance", "Prints an account's balance")
     const account = web3.utils.toChecksumAddress(taskArgs.account);
     const balance = await web3.eth.getBalance(account);
 
-    console.log(web3.utils.fromWei(balance, "ether"), "ETH");
+    console.log(web3.utils.fromWei(balance, "bitfinity"), "BTF");
   });
 ```
 
-To get the `ETH` balance, use the following command:
+To get the `BTF` balance, use the following command:
 
 ```bash
 npx hardhat balance --network testnet_bitfinity --account 0x6A33382de9f73B846878a57500d055B981229ac4
-2.2100102 ETH
+2.2100102 BTF
 ```
 
 You should notice that `--network` is a global built-in option (parameter)
