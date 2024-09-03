@@ -7,7 +7,7 @@ sidebar_position: 0
 # Network
 
 Ethereum Virtual Machine (EVM) support is currently available on the
-following networks on testnet. Mainnet is due to be supported by Jan 2024:
+following networks:
 
 <div class="networks-table"></div>
 
@@ -17,24 +17,9 @@ following networks on testnet. Mainnet is due to be supported by Jan 2024:
 | [Testnet](#testnet) | [Bitfinity][bitfinity@Testnet] | 355113 (0x56b29) | <https://testnet.bitfinity.network> |
 
 :::note
-Bitfinity computation is paid for in the Bitfinity native token.
+The cost for Bitfinity computation is covered in the Bitfinity native token. Mainnet curretly points to the Execution Layer until it is directly upgraded to Mainnet (no state resets).
 
 :::
-
-## Canister IDs
-
-### Mainnet
-
-| Canister Name | Canister ID |
-|---------------|-------------|
-| Bitfinity     | `i3jjb-wqaaa-aaaaa-qadrq-cai` |
-
-### Testnet
-
-| Canister Name | Canister ID |
-|---------------|-------------|
-| Bitfinity     | `4fe7g-7iaaa-aaaak-aegcq-cai` |
-
 
 ## Endpoints
 
@@ -51,3 +36,17 @@ The Testnet Web3 endpoint is at: `https://testnet.bitfinity.network` (port 443)
 [bitfinity@Mainnet]: https://bitfinity.network/
 
 [bitfinity@Testnet]: https://bitfinity.network/
+
+## Canister IDs
+
+### Mainnet
+
+| Canister Name | Canister ID |
+|---------------|-------------|
+| Bitfinity     | `i3jjb-wqaaa-aaaaa-qadrq-cai` |
+
+### Testnet
+
+| Canister Name | Canister ID |
+|---------------|-------------|
+| Bitfinity     | `4fe7g-7iaaa-aaaak-aegcq-cai` |
