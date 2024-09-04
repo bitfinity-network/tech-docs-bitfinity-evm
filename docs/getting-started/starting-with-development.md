@@ -35,6 +35,10 @@ To write, compile, and deploy smart contracts, you'll need an Integrated Develop
 
 You can find examples that use these frameworks on [GitHub](https://github.com/bitfinity-network/bitfinity-evm-examples).
 
+:::tip Use a Linter
+It's a good idea to use a Solidity linter like **Solhint** or **Solium** to catch potential syntax and security issues early in your code.
+:::
+
 ## Step 3 - Connecting Your Wallet
 
 To interact with the Bitfinity EVM, you'll need a wallet. A wallet is a software application that stores your private keys and enables you to interact with the blockchain. As the Bitfinity EVM is RPC compatible, any RPC-compatible wallet will do. However, one of the most popular options is:
@@ -60,13 +64,18 @@ Before deploying your smart contract, you need to select a network. The Bitfinit
 
 Choose the network that aligns with your current development stage. For testing and development, deploy on a Testnet first. Once your contract is thoroughly tested and ready for production, you can deploy it on the Mainnet.
 
-## Step 5 - Covering Deployment Costs (gas)
+## Step 5 - Covering Deployment Costs (Gas)
 
 Deploying a smart contract on the Bitfinity EVM requires paying a fee known as "gas." Gas is a measure of the computational work required to perform operations like deploying contracts or executing transactions.
 
 * Get BTF tokens: You'll need Bitfinity tokens (the native cryptocurrency of the Bitfinity network) in your wallet to cover the gas fees.
 * Estimate gas costs: Use your chosen IDE or wallet to estimate the gas cost for deploying your contract.
 * Ensure sufficient balance: Make sure your wallet has enough tokens to cover the deployment and future interactions with the contract.
+
+:::tip Estimate Gas Correctly
+Different operations within your contract can require different amounts of gas. To estimate gas consumption you can send a transaction request to eth_estimateGas.
+:::
+
 
 ## Step 6 - Verifying Your Deployment
 
@@ -75,6 +84,10 @@ Once your contract is deployed, you can verify it to ensure that the source code
 * Obtain contract details: After deployment, retrieve the contract's address and the ABI (Application Binary Interface).
 * Verify on Block Explorer: Use a block explorer that supports the Bitfinity EVM to verify your contract. Enter the contract address, compiler version, and source code. [Testnet Block Explorer](https://explorer.testnet.bitfinity.network/), [Mainnet Block Explorer](https://explorer.mainnet.bitfinity.network/).
 * Publish the contract: Once verified, the contract's source code and ABI will be publicly available, allowing anyone to interact with it.
+
+:::tip Contract Verification Benefits
+Verifying your contract on a block explorer allows others to view and interact with your contract more easily. It builds trust in your code by ensuring transparency.
+:::
 
 ## Step 8 - Interacting with Deployed Contracts
 
@@ -122,7 +135,7 @@ getGreeting();
 
 ---
 
-## Advanced
+## **Advanced**
 
 ## Interacting with Bitcoin
 
@@ -131,6 +144,7 @@ Directly interacting with Bitcoin in your smart contracts is a feature that is c
 ## Working with Image Assets
 
 In some decentralized applications (dApps), you may need to work with image assets, especially if you're creating Non-Fungible Tokens (NFTs) or other visual elements within your smart contracts. While smart contracts themselves cannot directly handle image data due to their limitations in storing large files, there are established methods for integrating image assets into your dApp. See the article [Complete Guide to Working with Image Assets on the Bitfinity EVM](https://www.blog.bitfinity.network/complete-guide-to-working-with-image-assets-on-the-bitfinity-evm/) for further information.
+
 
 ## Security Best Practices 
 
@@ -189,6 +203,25 @@ Utilizing well-tested security libraries can help you avoid writing your own sec
 - **OpenZeppelin**: Provides widely-used contracts such as ERC-20, ERC-721, access control (Ownable), and security-related utilities like `ReentrancyGuard` and `SafeMath`.
 - **Slither**: A static analysis tool to identify potential vulnerabilities in your smart contract code.
 - **MythX**: A powerful tool for automated analysis of Ethereum smart contracts. It can detect common vulnerabilities like reentrancy, unchecked sends, and integer overflows.
+
+:::tip Use OpenZeppelin Libraries
+OpenZeppelin provides audited and well-tested implementations of smart contract standards like **ERC-20** and **ERC-721**. Using these can save time and reduce security risks.
+:::
+
+
+## Gas Optimization Tips
+
+Optimizing gas usage can make your smart contracts more efficient and cheaper to use. Here are some tips for reducing gas consumption:
+
+- **Use smaller data types**: Use `uint8` or `uint16` instead of `uint256` when the full range is not needed.
+- **Batch transactions**: If possible, batch multiple operations in one transaction to reduce the overall gas cost.
+- **Minimize storage writes**: Writing to storage is one of the most expensive operations in Solidity. Only update state variables when necessary.
+- **Use external functions**: When calling a function that doesn't need to modify the state, declare it as `external`. It consumes less gas than internal calls.
+
+:::tip Save on Gas
+Optimize your contract's logic to minimize state changes and storage access, which can significantly reduce gas costs.
+:::
+
 
 ## Managing and Upgrading Contracts
 
