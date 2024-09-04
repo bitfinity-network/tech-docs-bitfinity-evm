@@ -3,9 +3,9 @@ title: Starting With Development
 sidebar_position: 0
 ---
 
-## Deploying a Smart Contract to the Bitfinity EVM
+# Deploying a Smart Contract to the Bitfinity EVM
 
-# Step 1 - Writing a Smart Contract
+## Step 1 - Writing a Smart Contract
 
 A smart contract is a self-executing contract with the terms of the agreement directly written into code. These contracts are stored on a blockchain and automatically execute, control, or document events and actions based on predefined conditions. Smart contracts are immutable once deployed, ensuring that the contract's terms cannot be altered.
 
@@ -25,7 +25,7 @@ contract HelloWorld {
 
 This contract defines a single string variable greet that returns the message "Hello World!" when accessed.
 
-# Step 2 - Selecting an IDE and Framework
+## Step 2 - Selecting an IDE and Framework
 
 To write, compile, and deploy smart contracts, you'll need an Integrated Development Environment (IDE) and a framework. Popular options include:
 
@@ -35,7 +35,7 @@ To write, compile, and deploy smart contracts, you'll need an Integrated Develop
 
 You can find examples that use these frameworks on [GitHub](https://github.com/bitfinity-network/bitfinity-evm-examples).
 
-# Step 3 - Connecting Your Wallet
+## Step 3 - Connecting Your Wallet
 
 To interact with the Bitfinity EVM, you'll need a wallet. A wallet is a software application that stores your private keys and enables you to interact with the blockchain. As the Bitfinity EVM is RPC compatible, any RPC-compatible wallet will do. However, one of the most popular options is:
 
@@ -47,7 +47,7 @@ To interact with the Bitfinity EVM, you'll need a wallet. A wallet is a software
 
 See the full guide for [connecting to MetaMask](/getting-started/metamask).
 
-# Step 4 - Selecting a Network
+## Step 4 - Selecting a Network
 
 :::note
 Mainnet currently points to the Execution Layer until it is directly upgraded to Mainnet (no state resets).
@@ -60,7 +60,7 @@ Before deploying your smart contract, you need to select a network. The Bitfinit
 
 Choose the network that aligns with your current development stage. For testing and development, deploy on a Testnet first. Once your contract is thoroughly tested and ready for production, you can deploy it on the Mainnet.
 
-# Step 5 - Covering Deployment Costs (gas)
+## Step 5 - Covering Deployment Costs (gas)
 
 Deploying a smart contract on the Bitfinity EVM requires paying a fee known as "gas." Gas is a measure of the computational work required to perform operations like deploying contracts or executing transactions.
 
@@ -68,7 +68,7 @@ Deploying a smart contract on the Bitfinity EVM requires paying a fee known as "
 * Estimate gas costs: Use your chosen IDE or wallet to estimate the gas cost for deploying your contract.
 * Ensure sufficient balance: Make sure your wallet has enough tokens to cover the deployment and future interactions with the contract.
 
-# Step 6 - Verifying Your Deployment
+## Step 6 - Verifying Your Deployment
 
 Once your contract is deployed, you can verify it to ensure that the source code matches the deployed bytecode. Verification is important for transparency and allows others to interact with your contract with confidence.
 
@@ -76,7 +76,7 @@ Once your contract is deployed, you can verify it to ensure that the source code
 * Verify on Block Explorer: Use a block explorer that supports the Bitfinity EVM to verify your contract. Enter the contract address, compiler version, and source code. [Testnet Block Explorer](https://explorer.testnet.bitfinity.network/), [Mainnet Block Explorer](https://explorer.mainnet.bitfinity.network/).
 * Publish the contract: Once verified, the contract's source code and ABI will be publicly available, allowing anyone to interact with it.
 
-# Step 8 - Interacting with Deployed Contracts
+## Step 8 - Interacting with Deployed Contracts
 
 Once your smart contract is deployed on the Bitfinity EVM, the next step is to interact with it. This can be done through a web interface, a script, or directly through your wallet. Interacting with your contract allows you to execute its functions, view data stored on the blockchain, and integrate it with other decentralized applications (dApps).
 
@@ -124,15 +124,15 @@ getGreeting();
 
 ## Advanced
 
-# Interacting with Bitcoin
+## Interacting with Bitcoin
 
 Directly interacting with Bitcoin in your smart contracts is a feature that is currently under development in the [BitFusion SDK](https://github.com/bitfinity-network/bit-fusion-sdk).
 
-# Working with Image Assets
+## Working with Image Assets
 
 In some decentralized applications (dApps), you may need to work with image assets, especially if you're creating Non-Fungible Tokens (NFTs) or other visual elements within your smart contracts. While smart contracts themselves cannot directly handle image data due to their limitations in storing large files, there are established methods for integrating image assets into your dApp. See the article [Complete Guide to Working with Image Assets on the Bitfinity EVM](https://www.blog.bitfinity.network/complete-guide-to-working-with-image-assets-on-the-bitfinity-evm/) for further information.
 
-# Security Best Practices 
+## Security Best Practices 
 
 Security is paramount when deploying smart contracts on the Bitfinity EVM or any blockchain. Once a smart contract is deployed, it cannot be altered, making it essential to ensure that your code is secure and free from vulnerabilities. Here are some key practices and tools to help you secure your smart contract:
 
@@ -190,7 +190,7 @@ Utilizing well-tested security libraries can help you avoid writing your own sec
 - **Slither**: A static analysis tool to identify potential vulnerabilities in your smart contract code.
 - **MythX**: A powerful tool for automated analysis of Ethereum smart contracts. It can detect common vulnerabilities like reentrancy, unchecked sends, and integer overflows.
 
-# Managing and Upgrading Contracts
+## Managing and Upgrading Contracts
 
 Once a smart contract is deployed on the Bitfinity EVM, it is generally immutable, meaning its code cannot be changed. However, managing your contract and planning for upgrades is crucial, especially as business requirements or security concerns evolve. While immutability ensures trust, there are patterns that allow for safe contract upgrades.
 
@@ -227,6 +227,6 @@ contract Proxy {
 
 ---
 
-# Conclusion
+## Conclusion
 
 Deploying a smart contract on the Bitfinity EVM involves several key steps, from writing the contract to deploying it on the network. By following these steps, you can create, deploy, and manage your smart contracts effectively. Whether you’re building decentralized applications, issuing tokens, or creating NFTs, the Bitfinity EVM provides a robust platform for blockchain development.
