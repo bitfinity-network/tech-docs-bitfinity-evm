@@ -1,6 +1,6 @@
 ---
 title: "Network"
-sidebar_position: 0
+sidebar_position: 1
 
 ---
 
@@ -17,7 +17,7 @@ following networks:
 | [Testnet](#testnet) | [Bitfinity][bitfinity@Testnet] | 355113 (0x56b29) | <https://testnet.bitfinity.network> |
 
 :::note
-The cost for Bitfinity computation is covered in the Bitfinity native token. Mainnet curretly points to the Execution Layer until it is directly upgraded to Mainnet (no state resets).
+The cost for Bitfinity computation is covered in the Bitfinity native token. Mainnet currently points to the Execution Layer until it is directly upgraded to Mainnet (no state resets).
 
 :::
 
