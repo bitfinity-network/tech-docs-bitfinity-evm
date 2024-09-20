@@ -258,6 +258,17 @@ contract Proxy {
 }
 ```
 
+## A Note on Inspect Checks
+
+To prevent spamming and misuse of the network, the EVM performs the following checks ahead of processing transactions:
+- Gas Limit: Ensures the transaction’s gas limit is within acceptable bounds.
+- Chain ID: Confirms the transaction is intended for the correct blockchain.
+- Sender Verification: Checks the transaction’s sender address and signature.
+- Token Balance: Verifies that the sender has sufficient tokens to cover the transaction costs.
+- Read-Only Execution: Simulates the transaction in read-only mode to ensure it doesn’t cause any runtime errors. If any transaction causes a panic, the transaction will be rejected outright.
+
+**Note:** if a transaction is rejected in the inspect message step, it will not show up on the block explorer as a failed transaction since the execution didn’t pass concensus.
+
 ---
 
 ## Conclusion
