@@ -93,18 +93,25 @@ Verifying your contract on a block explorer allows others to view and interact w
 
 Once your smart contract is deployed on the Bitfinity EVM, the next step is to interact with it. This can be done through a web interface, a script, or directly through your wallet. Interacting with your contract allows you to execute its functions, view data stored on the blockchain, and integrate it with other decentralized applications (dApps).
 
-### Using a Web Interface
+### Front-end and Back-end Integration
 
-If you're building a dApp, you'll likely want to create a user-friendly front-end to interact with your smart contract. Popular libraries and frameworks for this include:
+If you're building a dApp, you'll likely want to create a user-friendly front-end or back-end to interact with your smart contract. Popular libraries and frameworks for this include:
 
-- **`ethers.js`**: A lightweight library for interacting with the Ethereum blockchain, which is also compatible with the Bitfinity EVM. It's commonly used to connect a front-end application with a deployed smart contract.
-- **`web3.js`**: Another popular JavaScript library for interacting with the blockchain. It provides a rich set of APIs for sending transactions, interacting with smart contracts, and managing accounts.
+- **`ethers.js`**: A lightweight JavaScript library for interacting with the Ethereum blockchain, also compatible with the Bitfinity EVM. It’s commonly used to connect front-end applications with deployed smart contracts.
+- **`web3.js`**: Another popular JavaScript library for interacting with the blockchain. It provides a comprehensive set of APIs for sending transactions, interacting with smart contracts, and managing accounts.
+- **`web3.py`**: A Python equivalent to web3.js, which allows developers to interact with Ethereum and EVM-compatible blockchains from Python applications. It is ideal for building backend services or scripts for interacting with smart contracts.
 
 **Example:**
 
-Here’s a basic example of how you can interact with a deployed contract using `ethers.js` in a JavaScript front-end:
+Here’s a basic example of how you can interact with a deployed contract using ethers.js in a JavaScript front-end, or web3.py in a Python application:
 
-```javascript
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+<Tabs>
+<TabItem value="js" label="JavaScript">
+
+```js
 // Import ethers.js
 const { ethers } = require("ethers");
 
@@ -133,9 +140,62 @@ async function getGreeting() {
 getGreeting();
 ```
 
+</TabItem>
+<TabItem value="py" label="Python">
+
+```py
+from web3 import Web3
+
+# Connect to the Bitfinity EVM network (Testnet/Mainnet)
+provider_url = "https://testnet.bitfinity.network"
+web3 = Web3(Web3.HTTPProvider(provider_url))
+
+# Check if the connection is successful
+if web3.isConnected():
+    print("Connected to Bitfinity network")
+else:
+    print("Failed to connect")
+
+# Specify your deployed contract's address
+contract_address = web3.toChecksumAddress("0xYourContractAddress")
+
+# Define the ABI (Application Binary Interface) of your contract
+abi = [
+    {
+        "constant": True,
+        "inputs": [],
+        "name": "greet",
+        "outputs": [{"name": "", "type": "string"}],
+        "payable": False,
+        "stateMutability": "view",
+        "type": "function",
+    }
+]
+
+# Create a contract instance
+contract = web3.eth.contract(address=contract_address, abi=abi)
+
+# Function to call the `greet` function from the contract
+def get_greeting():
+    try:
+        greeting = contract.functions.greet().call()
+        print(f"Greeting from contract: {greeting}")
+    except Exception as e:
+        print(f"Error calling greet function: {e}")
+
+# Execute the function
+get_greeting()
+```
+</TabItem>
+</Tabs>
+
+:::note What is the ABI and Why Do You Need It?
+The ABI is a JSON representation of a contract's functions, events, and state variables. It tells external applications (like Python scripts or dApps) how to interact with the contract. You can retrieve the ABI from Remix, verified contracts on block explorers, web3.js or web3.py, or by using the Solidity compiler.
+:::
+
 ---
 
-## **Advanced**
+# **🔥 Advanced**
 
 ## Interacting with Bitcoin
 
