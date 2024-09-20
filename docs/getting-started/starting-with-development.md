@@ -85,7 +85,7 @@ Once your contract is deployed, you can verify it to ensure that the source code
 * Verify on Block Explorer: Use a block explorer that supports the Bitfinity EVM to verify your contract. Enter the contract address, compiler version, and source code. [Testnet Block Explorer](https://explorer.testnet.bitfinity.network/), [Mainnet Block Explorer](https://explorer.mainnet.bitfinity.network/).
 * Publish the contract: Once verified, the contract's source code and ABI will be publicly available, allowing anyone to interact with it.
 
-:::tip Contract Verification Benefits
+:::info Contract Verification Benefits
 Verifying your contract on a block explorer allows others to view and interact with your contract more easily. It builds trust in your code by ensuring transparency.
 :::
 
@@ -268,6 +268,10 @@ To prevent spamming and misuse of the network, the EVM performs the following ch
 - Read-Only Execution: Simulates the transaction in read-only mode to ensure it doesn’t cause any runtime errors. If any transaction causes a panic, the transaction will be rejected outright.
 
 **Note:** if a transaction is rejected in the inspect message step, it will not show up on the block explorer as a failed transaction since the execution didn’t pass concensus.
+
+:::caution
+If a transaction is rejected and the checklist above has been complied with, it could be useful to reset the Activity tab in MetaMask. With the correct network selected in MetaMask, go to Settings -> Advanced -> Clear activity tab and data
+:::
 
 ---
 
