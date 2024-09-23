@@ -5,27 +5,7 @@ sidebar_position: 0
 
 # Deploying a Smart Contract to the Bitfinity EVM
 
-## Step 1 - Writing a Smart Contract
-
-A smart contract is a self-executing contract with the terms of the agreement directly written into code. These contracts are stored on a blockchain and automatically execute, control, or document events and actions based on predefined conditions. Smart contracts are immutable once deployed, ensuring that the contract's terms cannot be altered.
-
-Here’s a simple example of a smart contract written in Solidity:
-
-```
-// pragma specifies the compiler version of Solidity.
-// SPDX-License-Identifier: MIT
-// compiler version must be greater than or equal to 0.8.26 and less than 0.9.0
-
-pragma solidity ^0.8.26;
-
-contract HelloWorld {
-    string public greet = "Hello World!";
-}
-```
-
-This contract defines a single string variable greet that returns the message "Hello World!" when accessed.
-
-## Step 2 - Selecting an IDE and Framework
+## Step 1: <small>_Selecting an IDE and Framework_</small>
 
 To write, compile, and deploy smart contracts, you'll need an Integrated Development Environment (IDE) and a framework. Popular options include:
 
@@ -39,7 +19,7 @@ You can find examples that use these frameworks on [GitHub](https://github.com/b
 It's a good idea to use a Solidity linter like **Solhint** or **Solium** to catch potential syntax and security issues early in your code.
 :::
 
-## Step 3 - Connecting Your Wallet
+## Step 2: <small>_Connecting Your Wallet_</small>
 
 To interact with the Bitfinity EVM, you'll need a wallet. A wallet is a software application that stores your private keys and enables you to interact with the blockchain. As the Bitfinity EVM is RPC compatible, any RPC-compatible wallet will do. However, one of the most popular options is:
 
@@ -51,7 +31,7 @@ To interact with the Bitfinity EVM, you'll need a wallet. A wallet is a software
 
 See the full guide for [connecting to MetaMask](/getting-started/metamask).
 
-## Step 4 - Selecting a Network
+## Step 3: <small>_Selecting a Network_</small>
 
 :::note
 Mainnet currently points to the Execution Layer until it is directly upgraded to Mainnet (no state resets).
@@ -64,7 +44,28 @@ Before deploying your smart contract, you need to select a network. The Bitfinit
 
 Choose the network that aligns with your current development stage. For testing and development, deploy on a Testnet first. Once your contract is thoroughly tested and ready for production, you can deploy it on the Mainnet.
 
-## Step 5 - Covering Deployment Costs (Gas)
+## Step 4: <small>_Writing a Smart Contract_</small>
+
+A smart contract is a self-executing contract with the terms of the agreement directly written into code. These contracts are stored on a blockchain and automatically execute, control, or document events and actions based on predefined conditions. Smart contracts are immutable once deployed, ensuring that the contract's terms cannot be altered.
+
+Here’s a simple example of a smart contract written in Solidity:
+
+```solidity showLineNumbers
+// pragma specifies the compiler version of Solidity.
+// SPDX-License-Identifier: MIT
+// compiler version must be greater than or equal to 0.8.26 and less than 0.9.0
+// EVM version must be Paris
+
+pragma solidity ^0.8.26;
+
+contract HelloWorld {
+    string public greet = "Hello World!";
+}
+```
+
+This contract defines a single string variable greet that returns the message "Hello World!" when accessed.
+
+## Step 5: <small>_Covering Deployment Costs (Gas)_</small>
 
 Deploying a smart contract on the Bitfinity EVM requires paying a fee known as "gas." Gas is a measure of the computational work required to perform operations like deploying contracts or executing transactions.
 
@@ -77,7 +78,7 @@ Different operations within your contract can require different amounts of gas. 
 :::
 
 
-## Step 6 - Verifying Your Deployment
+## Step 6: <small>_Verifying Your Deployment_</small>
 
 Once your contract is deployed, you can verify it to ensure that the source code matches the deployed bytecode. Verification is important for transparency and allows others to interact with your contract with confidence.
 
@@ -89,7 +90,9 @@ Once your contract is deployed, you can verify it to ensure that the source code
 Verifying your contract on a block explorer allows others to view and interact with your contract more easily. It builds trust in your code by ensuring transparency.
 :::
 
-## Step 8 - Interacting with Deployed Contracts
+![explorer-verified-contract](/img/explorer_verified_contract.png)
+
+## Step 7: <small>_Interacting with Deployed Contracts_</small>
 
 Once your smart contract is deployed on the Bitfinity EVM, the next step is to interact with it. This can be done through a web interface, a script, or directly through your wallet. Interacting with your contract allows you to execute its functions, view data stored on the blockchain, and integrate it with other decentralized applications (dApps).
 
@@ -111,7 +114,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="js" label="JavaScript">
 
-```js
+```js showLineNumbers
 // Import ethers.js
 const { ethers } = require("ethers");
 
@@ -143,7 +146,7 @@ getGreeting();
 </TabItem>
 <TabItem value="py" label="Python">
 
-```py
+```py showLineNumbers
 from web3 import Web3
 
 # Connect to the Bitfinity EVM network (Testnet/Mainnet)
@@ -193,6 +196,15 @@ get_greeting()
 The ABI is a JSON representation of a contract's functions, events, and state variables. It tells external applications (like Python scripts or dApps) how to interact with the contract. You can retrieve the ABI from Remix, verified contracts on block explorers, web3.js or web3.py, or by using the Solidity compiler.
 :::
 
+
+## Step 8: <small>_Viewing your Deployed Contracts_</small>
+
+The Bitfinity block explorer, and other explorers, allows you to view the deployed contracts on a specific address.
+Navigate to the explorer and paste your wallet address (the one used in MetaMask to deploy the contract) into the search bar.
+You’ll see a list of all the transactions from your address, including smart contract deployments and interactions.
+
+![explorer-contracts](/img/explorer_contracts.png)
+
 ---
 
 # **🔥 Advanced**
@@ -228,7 +240,7 @@ Some vulnerabilities are particularly common in smart contract development. Here
 
     **Example of a reentrancy vulnerability**:
 
-    ```solidity
+    ```solidity showLineNumbers
     // Vulnerable contract
     function withdraw(uint _amount) public {
         require(balances[msg.sender] >= _amount);
@@ -296,7 +308,7 @@ One of the most common methods for upgrading smart contracts is using a **proxy 
 
 **Example Proxy Contract:**
 
-```solidity
+```solidity showLineNumbers
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
