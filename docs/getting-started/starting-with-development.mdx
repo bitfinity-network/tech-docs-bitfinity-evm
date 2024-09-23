@@ -11,7 +11,7 @@ A smart contract is a self-executing contract with the terms of the agreement di
 
 Here’s a simple example of a smart contract written in Solidity:
 
-```
+```solidity showLineNumbers
 // pragma specifies the compiler version of Solidity.
 // SPDX-License-Identifier: MIT
 // compiler version must be greater than or equal to 0.8.26 and less than 0.9.0
@@ -111,7 +111,7 @@ import TabItem from '@theme/TabItem';
 <Tabs>
 <TabItem value="js" label="JavaScript">
 
-```js
+```js showLineNumbers
 // Import ethers.js
 const { ethers } = require("ethers");
 
@@ -143,7 +143,7 @@ getGreeting();
 </TabItem>
 <TabItem value="py" label="Python">
 
-```py
+```py showLineNumbers
 from web3 import Web3
 
 # Connect to the Bitfinity EVM network (Testnet/Mainnet)
@@ -228,7 +228,7 @@ Some vulnerabilities are particularly common in smart contract development. Here
 
     **Example of a reentrancy vulnerability**:
 
-    ```solidity
+    ```solidity showLineNumbers
     // Vulnerable contract
     function withdraw(uint _amount) public {
         require(balances[msg.sender] >= _amount);
@@ -296,7 +296,7 @@ One of the most common methods for upgrading smart contracts is using a **proxy 
 
 **Example Proxy Contract:**
 
-```solidity
+```solidity showLineNumbers
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
