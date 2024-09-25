@@ -5,7 +5,7 @@ sidebar_position: 0
 
 # Deploying a Smart Contract to the Bitfinity EVM
 
-## Step 1: <small>_Selecting an IDE and Framework_</small>
+## Step 1: Selecting an IDE and Framework
 
 To write, compile, and deploy smart contracts, you'll need an Integrated Development Environment (IDE) and a framework. Popular options include:
 
@@ -19,7 +19,7 @@ You can find examples that use these frameworks on [GitHub](https://github.com/b
 It's a good idea to use a Solidity linter like **Solhint** or **Solium** to catch potential syntax and security issues early in your code.
 :::
 
-## Step 2: <small>_Connecting Your Wallet_</small>
+## Step 2: Connecting Your Wallet
 
 To interact with the Bitfinity EVM, you'll need a wallet. A wallet is a software application that stores your private keys and enables you to interact with the blockchain. As the Bitfinity EVM is RPC compatible, any RPC-compatible wallet will do. However, one of the most popular options is:
 
@@ -31,7 +31,7 @@ To interact with the Bitfinity EVM, you'll need a wallet. A wallet is a software
 
 See the full guide for [connecting to MetaMask](/getting-started/metamask).
 
-## Step 3: <small>_Selecting a Network_</small>
+## Step 3: Selecting a Network
 
 :::note
 Mainnet currently points to the Execution Layer until it is directly upgraded to Mainnet (no state resets).
@@ -44,7 +44,7 @@ Before deploying your smart contract, you need to select a network. The Bitfinit
 
 Choose the network that aligns with your current development stage. For testing and development, deploy on a Testnet first. Once your contract is thoroughly tested and ready for production, you can deploy it on the Mainnet.
 
-## Step 4: <small>_Writing a Smart Contract_</small>
+## Step 4: Writing a Smart Contract
 
 A smart contract is a self-executing contract with the terms of the agreement directly written into code. These contracts are stored on a blockchain and automatically execute, control, or document events and actions based on predefined conditions. Smart contracts are immutable once deployed, ensuring that the contract's terms cannot be altered.
 
@@ -65,7 +65,7 @@ contract HelloWorld {
 
 This contract defines a single string variable greet that returns the message "Hello World!" when accessed.
 
-## Step 5: <small>_Covering Deployment Costs (Gas)_</small>
+## Step 5: Covering Deployment Costs (Gas)
 
 Deploying a smart contract on the Bitfinity EVM requires paying a fee known as "gas." Gas is a measure of the computational work required to perform operations like deploying contracts or executing transactions.
 
@@ -78,7 +78,7 @@ Different operations within your contract can require different amounts of gas. 
 :::
 
 
-## Step 6: <small>_Verifying Your Deployment_</small>
+## Step 6: Verifying Your Deployment
 
 Once your contract is deployed, you can verify it to ensure that the source code matches the deployed bytecode. Verification is important for transparency and allows others to interact with your contract with confidence.
 
@@ -92,7 +92,56 @@ Verifying your contract on a block explorer allows others to view and interact w
 
 ![explorer-verified-contract](/img/explorer_verified_contract.png)
 
-## Step 7: <small>_Interacting with Deployed Contracts_</small>
+## Step 7: Viewing your Deployed Contracts
+
+<Tabs>
+<TabItem value="text" label="Block Explorer">
+
+The Bitfinity block explorer _([Testnet Explorer](https://explorer.testnet.bitfinity.network/), [Mainnet Explorer](https://explorer.mainnet.bitfinity.network/))_ allows you to view the deployed contracts on a specific address. Here’s how you can use it:
+
+* **Search by Contract Address:** Copy the contract address from your deployment process (e.g., MetaMask or Hardhat) and paste it into the block explorer search bar.
+* **View Contract Source Code:** Verify your contract to make the source code publicly visible, and allow others to interact with it directly through the explorer.
+* **Check Transactions and Events:** View transaction details such as:
+Txn Hash, Block, Gas Fees
+Internal Transactions
+Token Transfers (ERC-20, ERC-721)
+Emitted Events (useful for debugging and logging)
+
+Navigate to the explorer and paste your wallet address (the one used in MetaMask to deploy the contract) into the search bar.
+You’ll see a list of all the transactions from your address, including smart contract deployments and interactions.
+
+![explorer-contracts](/img/explorer_contracts.png)
+
+</TabItem>
+
+<TabItem value="ethers" label="Ethers.js">
+    You can view the status of your deployed contract programmatically using <strong>Ethers.js</strong>. With this library, you can:
+    
+    <ul>
+      <li>Connect to the contract by its address and ABI.</li>
+      <li>Check the contract balance.</li>
+      <li>Read state variables from the contract.</li>
+    </ul>
+
+    Example code to view contract balance:
+
+    ```javascript
+    const balance = await provider.getBalance(contractAddress);
+    console.log("Contract balance:", ethers.utils.formatEther(balance));
+    ```
+  </TabItem>
+
+  <TabItem value="metaMask" label="MetaMask">
+    In MetaMask, you can view your deployed contracts by checking your transaction history. After deploying a contract, MetaMask will log this as a "Contract Creation" transaction. You can also:
+    
+    <ul>
+      <li>View interaction history with the contract.</li>
+      <li>Connect to other decentralized applications (dApps) to interact with it.</li>
+    </ul>
+  </TabItem>
+</Tabs>
+
+## Step 8: Interacting with Deployed Contracts
 
 Once your smart contract is deployed on the Bitfinity EVM, the next step is to interact with it. This can be done through a web interface, a script, or directly through your wallet. Interacting with your contract allows you to execute its functions, view data stored on the blockchain, and integrate it with other decentralized applications (dApps).
 
@@ -196,14 +245,7 @@ get_greeting()
 The ABI is a JSON representation of a contract's functions, events, and state variables. It tells external applications (like Python scripts or dApps) how to interact with the contract. You can retrieve the ABI from Remix, verified contracts on block explorers, web3.js or web3.py, or by using the Solidity compiler.
 :::
 
-
-## Step 8: <small>_Viewing your Deployed Contracts_</small>
-
-The Bitfinity block explorer, and other explorers, allows you to view the deployed contracts on a specific address.
-Navigate to the explorer and paste your wallet address (the one used in MetaMask to deploy the contract) into the search bar.
-You’ll see a list of all the transactions from your address, including smart contract deployments and interactions.
-
-![explorer-contracts](/img/explorer_contracts.png)
+For a detailed implementation of interacting with deployed contracts, check out the [Bitfinity NFT Marketplace example](https://github.com/bitfinity-network/bitfinity-examples-nft-marketplace). This repository demonstrates how to build an NFT marketplace, featuring smart contract integration using React, listing, minting, and purchasing NFTs. It also covers connecting the contract to the front-end and interacting with Metamask for wallet management, providing a complete guide from contract to deployment.
 
 ---
 
@@ -217,6 +259,33 @@ Directly interacting with Bitcoin in your smart contracts is a feature that is c
 
 In some decentralized applications (dApps), you may need to work with image assets, especially if you're creating Non-Fungible Tokens (NFTs) or other visual elements within your smart contracts. While smart contracts themselves cannot directly handle image data due to their limitations in storing large files, there are established methods for integrating image assets into your dApp. See the article [Complete Guide to Working with Image Assets on the Bitfinity EVM](https://www.blog.bitfinity.network/complete-guide-to-working-with-image-assets-on-the-bitfinity-evm/) for further information.
 
+## Event Logging and Monitoring
+
+In Solidity, **events** are a powerful way to log actions within a smart contract, which can be listened to by off-chain applications. When an event is emitted, it's recorded on the blockchain, providing a gas-efficient form of logging.
+
+#### How to Use Events in Solidity:
+1. **Declare an Event**: Define the event with parameters.
+   ```solidity
+   event Transfer(address indexed from, address indexed to, uint256 value);
+   ```
+2. **Emit the Event**: Trigger the event in your function.
+   ```solidity
+   emit Transfer(msg.sender, recipient, amount);
+   ```
+
+#### Monitoring Events:
+Tools like **Ethers.js** and **The Graph** allow real-time monitoring.
+
+- **Ethers.js**:
+   ```javascript
+   contract.on("Transfer", (from, to, amount) => {
+       console.log(`Transfer of ${amount} tokens from ${from} to ${to}`);
+   });
+   ```
+
+- **The Graph**: A decentralized indexing protocol, ideal for querying and responding to event data.
+
+Using events effectively enables interactive applications that react to blockchain changes in real time.
 
 ## Security Best Practices 
 
