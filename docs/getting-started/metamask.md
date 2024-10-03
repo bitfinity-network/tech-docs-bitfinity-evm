@@ -27,7 +27,7 @@ Ensure you have Metamask installed. Open Metamask and in the top-right corner of
 Screenshots in this tutorial are taken from the MetaMask browser extension version 9.5.5.
 :::
 
-Fill in the form with the following information for testnet:
+Fill in the form with the following information for mainnet:
 
 * Network Name: Bitfinity MainNet
 * New RPC URL: `https://mainnet.bitfinity.network/`
