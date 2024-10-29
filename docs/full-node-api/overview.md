@@ -19,7 +19,8 @@ DATA_DIR="~/.local/share/reth/bitfinity"
 ENV="mainnet" # or "testnet"
 DATE="2024-04-03" # Update to current date
 EVMC_PRINCIPAL="i3jjb-wqaaa-aaaaa-qadrq-cai" # Use "4fe7g-7iaaa-aaaak-aegcq-cai" for testnet
-JSON_RPC_URL="https://${ENV}.bitfinity.network"
+SYNC_RPC_URL="https://node.${ENV}.bitfinity.network"
+TX_FWD_URL="https://${ENV}.bitfinity.network"
 
 URL="<https://storage.googleapis.com/bitfinity-reth-snapshots-${ENV}/reth-snapshot-${DATE}.tar.gz>"
 ```
@@ -30,7 +31,7 @@ URL="<https://storage.googleapis.com/bitfinity-reth-snapshots-${ENV}/reth-snapsh
 mkdir -p $DATA_DIR && wget -O - $URL | tar -xvzf - -C $DATA_DIR
 ```
 
-Note: If you skip this step, syncing will start from the first block, requiring a JSON_RPC_URL source with all blocks.
+Note: If you skip this step, syncing will start from the first block, requiring a SYNC_RPC_URL source with all blocks.
 
 ### 2. Run the Full Node
 
@@ -45,12 +46,12 @@ cargo run -p reth -- node -vvv \
   --disable-discovery \
   --ipcdisable \
   --no-persist-peers \
-  -r $JSON_RPC_URL \
+  -r $SYNC_RPC_URL \
   -i 30 \
   -b 10 \
   --datadir $DATA_DIR \
   --evmc-principal $EVMC_PRINCIPAL \
-  --send-raw-transaction-rpc-url $JSON_RPC_URL
+  --send-raw-transaction-rpc-url $TX_FWD_URL
 ```
 
 ### 3. Query the Node
@@ -81,12 +82,12 @@ reth run -d -p 8080:8080 bitfinity/reth node -vvv \
   --disable-discovery \
   --ipcdisable \
   --no-persist-peers \
-  -r $JSON_RPC_URL \
+  -r $SYNC_RPC_URL \
   -i 30 \
   -b 10 \
   --datadir $DATA_DIR \
   --evmc-principal $EVMC_PRINCIPAL \
-  --send-raw-transaction-rpc-url $JSON_RPC_URL
+  --send-raw-transaction-rpc-url $TX_FWD_URL
 ```
 
 ### Build with Docker
@@ -105,12 +106,12 @@ docker run -d -p 8080:8080 bitfinity/reth node -vvv \
   --disable-discovery \
   --ipcdisable \
   --no-persist-peers \
-  -r $JSON_RPC_URL \
+  -r $SYNC_RPC_URL \
   -i 30 \
   -b 10 \
   --datadir $DATA_DIR \
   --evmc-principal $EVMC_PRINCIPAL \
-  --send-raw-transaction-rpc-url $JSON_RPC_URL
+  --send-raw-transaction-rpc-url $TX_FWD_URL
 ```
 
 This setup provides a comprehensive guide for running and interacting with a Bitfinity full node, offering flexibility in deployment methods to suit various development environments.
