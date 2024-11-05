@@ -17,7 +17,7 @@ Bitfinity helps to scale up the Bitcoin blockchain. You can also send twinned/wr
 
 ### How will transaction fees work?
 
-The base fee token of Bitfinity is BITFINITY (BFT).
+The base fee token of Bitfinity is BITFINITY (BTF).
 By leveraging the underlying low-cost capabilities of the IC, Bitfinity transactions will often cost nothing.
 
 DAO directed mechanisms that accumulate fees can channel a portion back to the projects running on Bitfinity!
