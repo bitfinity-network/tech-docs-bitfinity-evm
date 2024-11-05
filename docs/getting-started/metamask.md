@@ -32,7 +32,7 @@ Fill in the form with the following information for mainnet:
 * Network Name: Bitfinity MainNet
 * New RPC URL: `https://mainnet.bitfinity.network/`
 * Chain ID: 355110
-* Currency Symbol: BFT
+* Currency Symbol: BTF
 * Block Explorer URL (Optional): `https://explorer.mainnet.bitfinity.network`
 
 Fill in the form with the following information for testnet:
@@ -40,7 +40,7 @@ Fill in the form with the following information for testnet:
 * Network Name: Bitfinity TestNet
 * New RPC URL: `https://testnet.bitfinity.network/`
 * Chain ID: 355113
-* Currency Symbol: BFT
+* Currency Symbol: BTF
 * Block Explorer URL (Optional): `https://explorer.testnet.bitfinity.network`
 
 ![MetaMask-create-bitfinity-rpc](/img/metamask_create_bitfinity_rpc.png)

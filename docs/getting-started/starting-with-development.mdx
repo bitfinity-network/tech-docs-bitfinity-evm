@@ -115,30 +115,37 @@ You’ll see a list of all the transactions from your address, including smart c
 </TabItem>
 
 <TabItem value="ethers" label="Ethers.js">
-    You can view the status of your deployed contract programmatically using <strong>Ethers.js</strong>. With this library, you can:
-    
-    <ul>
-      <li>Connect to the contract by its address and ABI.</li>
-      <li>Check the contract balance.</li>
-      <li>Read state variables from the contract.</li>
-    </ul>
+You can view the status of your deployed contract programmatically using <strong>Ethers.js</strong>. With this library, you can:
 
-    Example code to view contract balance:
+* Connect to the contract by its address and ABI.
+* Check the contract balance.
+* Read state variables from the contract.
 
-    ```javascript
-    const balance = await provider.getBalance(contractAddress);
-    console.log("Contract balance:", ethers.utils.formatEther(balance));
-    ```
-  </TabItem>
+Example code to view contract balance:
 
-  <TabItem value="metaMask" label="MetaMask">
-    In MetaMask, you can view your deployed contracts by checking your transaction history. After deploying a contract, MetaMask will log this as a "Contract Creation" transaction. You can also:
-    
-    <ul>
-      <li>View interaction history with the contract.</li>
-      <li>Connect to other decentralized applications (dApps) to interact with it.</li>
-    </ul>
-  </TabItem>
+```javascript
+const balance = await provider.getBalance(contractAddress);
+console.log("Contract balance:", ethers.utils.formatEther(balance));
+```
+</TabItem>
+
+<TabItem value="metaMask" label="MetaMask">
+In MetaMask, you can view your deployed contracts by checking your transaction history. After deploying a contract, MetaMask will log this as a "Contract Creation" transaction. You can also:
+
+* View interaction history with the contract.
+* Connect to other decentralized applications (dApps) to interact with it.
+
+</TabItem>
+
+<TabItem value="remix" label="Remix">
+If you deployed your contract using **Remix** but don have the contract address, follow these steps to find and interact with it:
+
+* **Open Remix**: Navigate to [Remix IDE](https://remix.ethereum.org).
+* **Check the "Deploy & Run Transactions" Plugin**: Ensure the plugin is active. You’ll find it in the plugins section on the left side of the Remix interface.
+* **Switch to the Correct Network**: Select "Injected Web3" to connect MetaMask to the correct network (Mainnet/Testnet).
+* **View Deployed Contracts**: In the "Deployed Contracts" section at the bottom of the "Deploy & Run Transactions" tab, you'll see a list of contracts deployed during your session. Each contract will have its address displayed next to it.
+
+</TabItem>
 </Tabs>
 
 ## Step 8: Interacting with Deployed Contracts
