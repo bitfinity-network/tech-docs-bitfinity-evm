@@ -8,7 +8,7 @@ sidebar_position: 2
 
 ## Introduction
 
-Ensure that you have Metamask installed, see the guide on setting up Metamask with Bitfinity [here](/interact/metamask).
+Ensure that you have Metamask installed, see the guide on setting up Metamask with Bitfinity [here](/getting-started/metamask).
 
 In this tutorial we will walk through connecting MetaMask to the Bitfinity Testnet, deploying a simple ERC-20 contract using [Remix], and transferring the new token using MetaMask.
 
