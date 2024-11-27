@@ -13,11 +13,11 @@ following networks:
 
 | Network             | Engine ID                  | Chain ID                | Endpoint URL                 |
 |---------------------|----------------------------|-------------------------|------------------------------|
-| [Mainnet](#mainnet) | [Bitfinity][bitfinity@Mainnet] | 355110 (0x56b29) | <https://mainnet.bitfinity.network> |
+| [Mainnet](#mainnet) | [Bitfinity][bitfinity@Mainnet] | 355110 (0x56b26) | <https://mainnet.bitfinity.network> |
 | [Testnet](#testnet) | [Bitfinity][bitfinity@Testnet] | 355113 (0x56b29) | <https://testnet.bitfinity.network> |
 
 :::note
-The cost for Bitfinity computation is covered in the Bitfinity native token. Mainnet currently points to the Execution Layer until it is directly upgraded to Mainnet (no state resets).
+The cost for Bitfinity computation is covered in the Bitfinity native token.
 
 :::
 
